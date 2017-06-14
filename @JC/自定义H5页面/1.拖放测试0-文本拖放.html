@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="/_lib/utils/eventUtil.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#dropTarget {
+				width: 200px;
+				height: 200px;
+				background-color: lightcyan;
+				border: 1px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="dropTarget"></div>
+		<input type="button" id="dropEle1" value="来拖我" draggable="true" />
+		<p id="dropEle2">来拖我</p>
+		
+		<script type="text/javascript">
+			var dropTarget = document.getElementById("dropTarget");
+			var dropEle1 = document.getElementById("dropEle1");
+			var dropEle2 = document.getElementById("dropEle2");
+			
+			EventUtil.addHandler(dropEle2, "dragstart", function(event) {
+				event.dataTransfer.setData("text", event.target.id);
+			});
+			
+			EventUtil.addHandler(dropTarget, "dragover", function(event) {
+				EventUtil.preventDefault(event);
+			});
+			EventUtil.addHandler(dropTarget, "dragenter", function(event) {
+				EventUtil.preventDefault(event);
+			});
+			EventUtil.addHandler(dropTarget, "drop", function(event) {
+				EventUtil.preventDefault(event);
+				var data = event.dataTransfer.getData("text");
+				console.log(data);
+				event.target.appendChild(document.getElementById(data));
+			});
+		</script>
+	</body>
+</html>

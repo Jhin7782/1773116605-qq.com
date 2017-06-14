@@ -874,3 +874,249 @@ org.eclipse.swt.SWTException: Widget is disposed
 
 !ENTRY org.eclipse.osgi 2 1 2017-06-15 00:20:25.059
 !MESSAGE NLS unused message: BrowserComposite_LBL_Width in: com.pandora.view.browser.views.Messages
+
+!ENTRY org.eclipse.core.resources 4 1 2017-06-15 00:29:16.804
+!MESSAGE 刷新本地更改时发生了问题
+!SUBENTRY 1 org.eclipse.core.resources 4 1 2017-06-15 00:29:16.804
+!MESSAGE 刷新本地更改时发生了问题
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: 刷新本地文件系统中的资源时出错。
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.refreshResource(FileSystemResourceManager.java:923)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.refresh(FileSystemResourceManager.java:904)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1663)
+	at org.eclipse.core.internal.refresh.RefreshJob.runInWorkspace(RefreshJob.java:167)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: 缺少“@JC”的项目描述文件（.project）。此文件包含有关项目的重要信息。项目将在复原此文件之后才能正常工作。
+!SUBENTRY 2 org.eclipse.core.resources 4 271 2017-06-15 00:29:16.806
+!MESSAGE 刷新本地文件系统中的资源时出错。
+!SUBENTRY 3 org.eclipse.core.resources 4 567 2017-06-15 00:29:16.806
+!MESSAGE 缺少“@JC”的项目描述文件（.project）。此文件包含有关项目的重要信息。项目将在复原此文件之后才能正常工作。
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.844
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHMobileProjectWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.849
+!MESSAGE ID:com.aptana.ui.wizards.NewWebProject
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.854
+!MESSAGE ID:org.eclipse.ui.wizards.new.folder
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.858
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHtmlWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.862
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.866
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewCssWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.870
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewPhpWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.874
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJsonWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.877
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewJSPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.880
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.884
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPXWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.887
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewRBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.891
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewERBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.894
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewPYWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.898
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewLESSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.902
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSASSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.905
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSCSSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.909
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewMarkDownWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.912
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewCOFFEEWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.915
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewTSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.919
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewXMLWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.922
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewXsltWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.926
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewTxtWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.929
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewVueWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:44.933
+!MESSAGE ID:com.aptana.ui.wizards.new.file
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.041
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHMobileProjectWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.046
+!MESSAGE ID:com.aptana.ui.wizards.NewWebProject
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.050
+!MESSAGE ID:org.eclipse.ui.wizards.new.folder
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.054
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHtmlWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.059
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.063
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewCssWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.067
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewPhpWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.072
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJsonWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.076
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewJSPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.080
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.084
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPXWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.087
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewRBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.091
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewERBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.094
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewPYWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.098
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewLESSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.101
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSASSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.105
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSCSSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.108
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewMarkDownWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.112
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewCOFFEEWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.115
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewTSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.118
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewXMLWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.122
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewXsltWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.126
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewTxtWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.130
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewVueWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:30:50.133
+!MESSAGE ID:com.aptana.ui.wizards.new.file
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.788
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHMobileProjectWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.792
+!MESSAGE ID:com.aptana.ui.wizards.NewWebProject
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.796
+!MESSAGE ID:org.eclipse.ui.wizards.new.folder
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.800
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHtmlWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.804
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.809
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewCssWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.813
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewPhpWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.817
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJsonWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.821
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewJSPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.825
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.829
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPXWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.833
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewRBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.836
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewERBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.840
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewPYWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.843
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewLESSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.846
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSASSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.850
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSCSSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.854
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewMarkDownWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.857
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewCOFFEEWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.861
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewTSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.864
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewXMLWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.867
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewXsltWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.870
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewTxtWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.873
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewVueWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:32:41.877
+!MESSAGE ID:com.aptana.ui.wizards.new.file
+
+!ENTRY com.aptana.core 4 0 2017-06-15 00:32:53.413
+!MESSAGE (Build null) [ERROR]  *********索引存在，有保存文件， 执行保存文件的 BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/@JC

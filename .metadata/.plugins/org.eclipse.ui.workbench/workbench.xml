@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench version="2.0">
 <workbenchAdvisor/>
-<window height="1047" width="1924" x="3" y="0">
+<window height="1047" minimized="true" width="1924" x="3" y="0">
 <fastViewData/>
 <perspectiveBar/>
 <coolbarLayout>
@@ -14,35 +14,18 @@
 <coolItem id="com.pandora.ui.toolbar.contentassistant" itemType="typeToolBarContribution" x="46" y="30"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="com.aptana.editor.css" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="com.aptana.editor.html" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.css" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.html" itemType="typePlaceholder" x="-1" y="-1"/>
 </coolbarLayout>
 <page focus="true" label="工作空间 － 边改边看模式">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
-</folder>
-</info>
-<info part="org.eclipse.ui.internal.EditorStack@1e4c62a" ratio="0.5" ratioLeft="462" ratioRight="462" relationship="4" relative="DefaultEditorWorkbook">
-<folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="com.aptana.editor.html" name="index.html" partName="index.html" path="C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/@JC/客户管理/index.html" title="index.html" tooltip="@JC/客户管理/index.html" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/@JC/客户管理/index.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="39" selectionOffset="354" selectionTopPixel="0"/>
-</editor>
-<editor focus="true" id="com.aptana.editor.css" name="userInfo.css" partName="userInfo.css" path="C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/@JC/客户管理/css/userInfo.css" title="userInfo.css" tooltip="@JC/客户管理/css/userInfo.css" workbook="org.eclipse.ui.internal.EditorStack@1e4c62a">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/@JC/客户管理/css/userInfo.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="437" selectionTopPixel="456"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="项目管理器">
@@ -59,7 +42,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.views.ContentOutline" activePerspective="com.aptana.ui.RealTimePerspective">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="com.aptana.ui.RealTimePerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.aptana.ui.internal.WebPerspectiveFactory" id="com.aptana.ui.WebPerspective" label="开发视图"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -254,7 +237,7 @@
 <layout>
 <mainWindow>
 <info folder="true" part="left">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="项目管理器"/>
 <page content="org.eclipse.ui.views.ContentOutline" label="大纲"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -289,56 +272,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="com.pandora.ui.welcomeEditorFactory" id="com.pandora.editor.ui.createapp" title="HBuilder入门" url="file:/C:/mySoft/HBuilder.8.1.2.windows/HBuilder/plugins/com.pandora.ui_1.0.0.201705111632/content/getstart.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/@JC/客户管理/index.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.css" path="/@JC/客户管理/css/userInfo.css"/>
-</editors>
-<item historyLabel="HBuilder入门" index="0"/>
-<item historyLabel="index.html" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="index.html" index="1">
-<position/>
-</item>
-<item historyLabel="index.html" index="1">
-<position info="not_deleted" x="227" y="0"/>
-</item>
-<item historyLabel="userInfo.css" index="2">
-<position info="not_deleted" x="439" y="0"/>
-</item>
-<item historyLabel="index.html" index="1">
-<position info="not_deleted" x="227" y="0"/>
-</item>
-<item historyLabel="userInfo.css" index="2">
-<position info="not_deleted" x="439" y="0"/>
-</item>
-<item historyLabel="index.html" index="1">
-<position info="not_deleted" x="227" y="0"/>
-</item>
-<item historyLabel="userInfo.css" index="2">
-<position info="not_deleted" x="439" y="0"/>
-</item>
-<item historyLabel="index.html" index="1">
-<position info="not_deleted" x="320" y="0"/>
-</item>
-<item historyLabel="userInfo.css" index="2">
-<position info="not_deleted" x="437" y="0"/>
-</item>
-<item historyLabel="index.html" index="1">
-<position info="not_deleted" x="470" y="0"/>
-</item>
-<item historyLabel="index.html" index="1">
-<position info="not_deleted" x="17" y="6"/>
-</item>
-<item historyLabel="index.html" index="1">
-<position info="not_deleted" x="326" y="21"/>
-</item>
-<item active="true" historyLabel="index.html" index="1">
-<position info="not_deleted" x="354" y="39"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>

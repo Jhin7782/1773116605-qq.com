@@ -1,0 +1,79 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.main {
+	font-family: "microsoft yahei";
+	border: 1px solid #aaa;
+	background: #fff;
+	padding: 10px 10px;
+}
+
+.tit {
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 2;
+	text-indent: 1em;
+	color: #333;
+	background: #eee;
+	margin-bottom: 10px;
+}
+
+.con {
+	width: 980px;
+	height: 460px;
+}
+
+.subTit {
+	color: #666;
+}
+
+.conMain {
+	border: 1px solid #eee;
+}
+
+
+/*
+ * 客户信息
+ * */
+
+
+/*.conMain-con*/
+
+.main>.con.con-userInfo>.conMain>.conMain-con {
+	border-bottom: 1px solid #000;
+	margin-bottom: 1em;
+}
+
+
+/*.conMain-con.user-baseInfo*/
+
+.main>.con.con-userInfo>.conMain>.conMain-con.user-baseInfo {
+	display: -webkit-flex;
+	display: flex;
+}
+
+.main>.con.con-userInfo>.conMain>.conMain-con.user-baseInfo>div {
+	border: 1px solid lightblue;
+}
+
+.main>.con.con-userInfo>.conMain>.conMain-con.user-baseInfo>.userAvatar {}
+
+.main>.con.con-userInfo>.conMain>.conMain-con.user-baseInfo>.userDetail {
+	display: -webkit-flex;
+	display: flex;
+	text-align: right;
+}
+
+.userDetail-l>div>label+* {
+	display: inline-block;
+	border: 1px solid red;
+	width: 180px;
+}
+
+.main>.con.con-userInfo>.conMain>.conMain-con.user-baseInfo>.userDetail>.userDetail-l {}
+
+.main>.con.con-userInfo>.conMain>.conMain-con.user-baseInfo>.userDetail>.userDetail-r {}
+
+.main>.con.con-userInfo>.conMain>.conMain-con.user-baseInfo>.userDetail-edit {}

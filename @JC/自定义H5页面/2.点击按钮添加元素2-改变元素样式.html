@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="/_lib/utils/EventUtil.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/_lib/utils/EleUtil.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.dragTarget {
+				width: 200px;
+				height: 200px;
+				border: 1px solid;
+				display: flex;
+				display: -webkit-flex;
+				justify-content: center;
+				align-items: flex-start;
+			}
+			
+			.dragTarget img {
+				width: 100px;
+			}
+			
+			#btnGroup {
+				border: 1px solid;
+				width: 100%;
+				height: 100px;
+				flex: 1;
+				display: flex;
+				display: -webkit-flex;
+				flex-wrap: wrap;
+				justify-content:  space-around;
+				align-items: flex-start;
+			}
+			#btnGroup a {
+				border: 1px solid;
+				background-color: lightblue;
+				color: white;
+				padding: 3px;
+				cursor: pointer;
+				box-shadow: 1px 1px 1px black;
+			}
+			#btnGroup a:hover {
+				background-color: cornflowerblue;
+				box-shadow: -1px 1px 1px black;
+			}
+			
+			#dragTarget1 {}
+			
+			#dragTarget2 {}
+		</style>
+	</head>
+
+	<body>
+		<div class="dragTarget" id="dragTarget1">
+			<div id="btnGroup"></div>
+		</div>
+		<div class="dragTarget" id="dragTarget2"></div>
+		<input type="button" id="addImg" value="添加图片" />
+		<input type="button" id="addBtn" value="添加按钮" />
+		<input type="button" id="btn_radius" value="圆角按钮" />
+
+		<script src="js/点击按钮添加元素2-改变元素样式.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

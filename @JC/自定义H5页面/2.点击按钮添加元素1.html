@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="/_lib/utils/EventUtil.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/_lib/utils/EleUtil.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.dragTarget {
+				width: 200px;
+				height: 200px;
+				border: 1px solid;
+				display: flex;
+				display: -webkit-flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.dragTarget img {
+				/*display: block;
+				margin: auto;*/
+				width: 100px;
+			}
+			
+			#dragTarget1 {}
+			
+			#dragTarget2 {}
+		</style>
+	</head>
+
+	<body>
+		<div class="dragTarget" id="dragTarget1"></div>
+		<div class="dragTarget" id="dragTarget2"></div>
+		<input type="button" id="addImg" value="添加图片" />
+
+		<script type="text/javascript">
+			var dragTarget1 = document.getElementById("dragTarget1");
+			var dragTarget2 = document.getElementById("dragTarget2");
+			var addImg = document.getElementById("addImg");
+			var dragEle_img1 = null;
+
+			EventUtil.addHandler(addImg, "click", function() {
+				EleUtil.createEle("dragTarget1", "img", "img1", "img/yasuo.jpg");
+				dragEle_img1 = document.getElementById("img1");
+				dragEle_img1.draggable = true;
+				EventUtil.addHandler(dragEle_img1, "dragstart", function(e) {
+					e.dataTransfer.setData("text", EventUtil.getTarget(e).id);
+				});
+			});
+
+			EventUtil.addHandler(dragTarget1, "dragover", function(e) {
+				EventUtil.preventDefault(e);
+			});
+			EventUtil.addHandler(dragTarget2, "dragover", function(e) {
+				EventUtil.preventDefault(e);
+			});
+
+			EventUtil.addHandler(dragTarget1, "drop", function(e) {
+				EventUtil.preventDefault(e);
+				var data = e.dataTransfer.getData("text");
+				EventUtil.getTarget(e).appendChild(document.getElementById(e.dataTransfer.getData("text")));
+			});
+			EventUtil.addHandler(dragTarget2, "drop", function(e) {
+				EventUtil.preventDefault(e);
+				var data = e.dataTransfer.getData("text");
+				EventUtil.getTarget(e).appendChild(document.getElementById(e.dataTransfer.getData("text")));
+			});
+		</script>
+	</body>
+
+</html>

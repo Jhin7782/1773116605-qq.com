@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>测试按钮点击速度与力量条以及路程条关系</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/media.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/fontsize.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/adjust.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			#road {
+				background-image: url(img/640_1008.jpg);
+				background-size: 100% 100%;
+				width: 16rem;
+				height: 25.2rem;
+				position: relative;
+			}
+			#player {
+				width: 1.8rem;
+				height: 2.5rem;
+				border: 0.0625rem solid black;
+				position: absolute;
+				left: 7.1rem;
+				top: 15rem;
+			}
+			#btnleft {
+				position: absolute;
+				top: 20rem;
+				left: 3rem;
+				width: 2rem;
+				height: 1rem;
+			}
+			#btnright {
+				position: absolute;
+				top: 17rem;
+				left: 8rem;
+				width: 2rem;
+				height: 1rem;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="road">
+			<div id="player"></div>
+			<input type="button" name="" id="btnleft" class="buttonfoot" value="btnleft" />
+			<input type="button" name="" id="btnright" class="buttonfoot" value="btnright" />			
+		</div>
+	</body>
+</html>

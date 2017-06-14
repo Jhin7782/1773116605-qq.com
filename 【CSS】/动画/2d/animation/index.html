@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			@-webkit-keyframes glow {
+				0% {
+					-webkit-box-shadow: 0 0 12px rgba(72, 106, 170, 0.5);
+					border-color: rgba(160, 179, 214, 0.5);
+				}
+				100% {
+					-webkit-box-shadow: 0 0 12px rgba(72, 106, 170, 1.0), 0 0 18px rgba(0, 140, 255, 1.0);
+					border-color: rgba(160, 179, 214, 1.0);
+				}
+			}
+			
+			.anim_image {
+				border: 1px solid #beceeb;
+				padding: 3px;
+				background-color: white;
+				-webkit-box-shadow: 0 0 8px rgba(72, 106, 170, 0.5);
+				box-shadow: 0 0 8px rgba(72, 106, 170, 0.5);
+			}
+			
+			.anim_image:hover {
+				background-color: #f0f3f9;
+				-webkit-animation-name: glow;
+				-webkit-animation-duration: 1s;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="testBox" class="demo anim_box">
+			<img class="anim_image" src="/_src/img/baby01.png" />
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery UI 日期选择器（Datepicker） - 动画</title>
+		<link rel="stylesheet" type="text/css" href="/_lib/jq/css/jquery-ui.css" />
+		<script src="/_lib/jq/js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/_lib/jq/js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(function() {
+				$("#datepicker").datepicker({
+					minDate: new Date(),
+					maxDate: "+0M +9D"
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<p>日期：<input type="text" id="datepicker" /></p>
+	</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery UI 日期选择器（Datepicker） - 动画</title>
+		<link rel="stylesheet" type="text/css" href="/_lib/jq/css/jquery-ui.css"/>
+		<script src="/_lib/jq/js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/_lib/jq/js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(function() {
+				$("#datepicker").datepicker();
+				$("#anim").change(function() {
+					$("#datepicker").datepicker("option", "showAnim", $(this).val());
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<p>日期：<input type="text" id="datepicker" size="30"></p>
+
+		<p>动画：<br>
+			<select id="anim">
+				<option value="show">Show (默认)</option>
+				<option value="slideDown">滑下</option>
+				<option value="fadeIn">淡入</option>
+				<option value="blind">Blind (UI 百叶窗特效)</option>
+				<option value="bounce">Bounce (UI 反弹特效)</option>
+				<option value="clip">Clip (UI 剪辑特效)</option>
+				<option value="drop">Drop (UI 降落特效)</option>
+				<option value="fold">Fold (UI 折叠特效)</option>
+				<option value="slide">Slide (UI 滑动特效)</option>
+				<option value="">无</option>
+			</select>
+		</p>
+
+	</body>
+
+</html>

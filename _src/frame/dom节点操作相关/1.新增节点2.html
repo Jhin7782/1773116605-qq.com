@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/EleUtil.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/EventUtil.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<button id="addEle">添加&lt;li&gt;</button>
+		<ul class="myList">
+			<li>Coffee</li>
+			<li>Tea</li>
+		</ul>
+
+		<script>
+			var addEle = document.getElementById("addEle");
+			
+			var arr = [
+				"water1",
+				"water2",
+				"water3",
+				100,
+				200,
+				300
+			];
+			EventUtil.addHandler(addEle, "click", function() {
+				EleUtil.createEle("myList", "li", "drink-menu", "id", arr);
+			});
+
+
+			function myFunction() {
+				var newItem = document.createElement("li");
+				var textNode = document.createTextNode("Water");
+				newItem.appendChild(textNode);
+				list.insertBefore(newItem, list.childNodes[0]);
+			}
+		</script>
+	</body>
+
+</html>

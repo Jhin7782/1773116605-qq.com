@@ -1,0 +1,353 @@
+﻿<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="screen-orientation" content="portrait">
+		<title>机构资金雷达</title>
+		<link rel="stylesheet" href="Css/style.css">
+		<link rel="stylesheet" href="Css/autocomplete.css">
+		<script type="text/javascript" src="Scripts/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="Scripts/layer.min.js"></script>
+		<script type="text/javascript" src="Scripts/data-a.js"></script>
+		<script type="text/javascript" src="Scripts/autocomplete.js"></script>
+		<script type="text/javascript" src="Scripts/autocomplete-setup.js"></script>
+		<script type="text/javascript" src="Scripts/util.js"></script>
+		<script type="text/javascript" src="Scripts/wx.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(".but input,.zm_zc input").val("");
+				$(".but span i,.zm_zc span i").click(function() {
+					$(this).siblings("input").focus();
+				})
+				$(".but input,.zm_zc input").focus(function() {
+					$(this).siblings("i").hide();
+				})
+				$(".but input,.zm_zc input").blur(function() {
+					if($(this).val() == "") {
+						$(this).siblings("i").show();
+					} else {
+						$(this).siblings("i").hide();
+					}
+				})
+				AutoComplete.setup({
+					"inputElement": "gp",
+					"dataSource": s,
+					"displayZoneWidth": 610,
+					"maxMatchedItemNumberAllowed": 6,
+					"inputEnterCallback": function(obj) {
+						//submitOnClick();
+					},
+					"trClickCallback": function(obj) {}
+				});
+				AutoComplete.setup({
+					"inputElement": "gp1",
+					"dataSource": s,
+					"displayZoneWidth": 610,
+					"maxMatchedItemNumberAllowed": 4,
+					"inputEnterCallback": function(obj) {
+						//submitOnClick();
+					},
+					"trClickCallback": function(obj) {}
+				});
+
+				// var gpze=/^(((002|000|300|600)[\d]{3})|60[\d]{4})/; 
+				
+			})
+		</script>
+
+	</head>
+
+	<body>
+		<div class="zjld">
+			<div class="zj_top"><img src="Picture/ld_top.gif" onclick="javascript:void(0)" /></div>
+			<div class="zj_p">
+				<p>累计监控998万次，成功测算主力成本<br />8880000次</p>
+			</div>
+			<div class="zj_zp">
+				<img src="Picture/ld_zp.jpg" onclick="javascript:void(0)" />
+				<em></em>
+			</div>
+			<div class="jy">
+				<style type="text/css">
+					.textBlur {
+						text-shadow: 0 0 18px #000;
+    					color: rgba(0,0,0,0);
+    					/*color: rgb(0,0,0);*/
+    					/*color: black;*/
+					}
+				</style>
+				<p><b><span class="textBlur">两面针</span>股份 （<span class="textBlur">600249</span>）</b></p>
+				<span>
+		<i>操作建议</i><em class="textBlur">逢低布局</em>
+	</span>
+			</div>
+			<div class="but">
+				<span><input id="gp" type="text" name="tgName" maxlength="15" /> <i>请输入股票代码</i></span>
+				<a id="sm1" href="javascript:void(0)" onclick="javascript:mvclick();">立即扫描</a>
+			</div>
+			<div class="zj_c">
+				<h4><span>-<span class="textBlur">两面针</span>扫描结果-</span></h4>
+				<div class="zj_cc">
+					<h5><span><em>主力控盘:</em><i></i></span></h5>
+					<p>据统计，近10日内主力没有控盘。</p>
+					<img src="Picture/ld_c1.jpg" onclick="javascript:void(0)" />
+				</div>
+				<div class="zj_cc">
+					<h5><span><em>资金面分析:</em><i></i></span></h5>
+					<p>近5日内该股资金流入较多，远高于行业平均水平，5日共流入17323.01万元。
+					</p>
+					<img src="Picture/ld_c2.jpg" onclick="javascript:void(0)" />
+				</div>
+				<div class="zj_cc">
+					<h5><span><em>机构持仓分析:</em><i></i></span></h5>
+					<p>2016-12-31 与 2016-09-30 相比，主力机构持仓量减少34868.51万股，其中基金数没有增加，主力净减仓5家，请投资者中长期谨慎为宜。</p>
+					<img src="Picture/ld_c3.jpg" onclick="javascript:void(0)" />
+					<img src="Picture/ld_c4.jpg"/>
+				</div>
+			</div>
+			<div class="but">
+				<span><input id="gp1"  type="text" name="tgName2" maxlength="15"  /><i>请输入你要诊断的个股代码</i></span>
+				<a id="sm2" href="javascript:void(0)" onclick="javascript:mvclick();">立即扫描</a>
+			</div>
+		</div>
+
+		<input id="tgval" type="hidden" />
+
+		<div id="zm">
+			<div class="zm_zz"></div>
+			<div class="zm_zc">
+				<!-- <p>请正确填写您的手机号，以便能及时接收个股分析诊断结果</p>
+        <span><input type="text" name="tgMobile" maxlength="11" onBlur='this.value=this.value.replace(/\D/gi,"")'  onKeyUp='this.value=this.value.replace(/\D/gi,"")' /> <i>请输入扫描结果手机号</i></span>
+        <a href="javascript:void(0)" id="btnTg">立即诊股</a>
+        <p>诊断结果我们将会24小时内电话或短信通知(接收短信完全免费)</p> -->
+				<p>您的股票代码已收到，微信扫一扫</p>
+				<div class="zm_zcc">
+					<h1>领取诊股报告</h1>
+					<p>（或手动加微信号：<span style="color:red;">YD168668948</span>）</p>
+					<div class="ewm">
+						<img src="Picture/dyb171.png" alt="">
+					</div>
+					<p>(附重大利好股票一览)</p>
+					<p>今日大事件：三大信号预示A股变盘，4类股或将井喷</p>
+				</div>
+			</div>
+		</div>
+
+		<div style="text-align: center;
+	font-size: 16px;
+	line-height: 130%;
+	color: #666;
+	margin-top: 120px;
+	margin-bottom: 20px;">
+			<p>广州乐宸资产管理有限公司隶属于壹点金服</p>
+			<p>地址：广州市从化区温泉镇明月山溪明月里一街18号</p>
+			<p>联系人：曾先生&nbsp;&nbsp;&nbsp;&nbsp;手机：020-66648878</p>
+		</div>
+
+		<style type="text/css">
+			.footer_fixed {
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+				height: 212px;
+				text-align: center;
+				/*background-color: #E02828;*/
+				background-image: url(img/fixedBtm.png);
+				background-position: center bottom;
+				/*background-size: 100%;*/
+				background-repeat: no-repeat;
+				color: white;
+				font-size: 26px;
+				line-height: 150%;
+				/*padding: 0.35rem;*/
+			}
+			
+			.footer_fixed div:first-of-type {
+				position: relative;
+				top: 125px;
+				right: 185px;
+			}
+			
+			.footer_fixed div:last-of-type {
+				width: 150px;
+				height: 150px;
+				position: relative;
+				left: 420px;
+				top: -30px;
+				margin: auto;
+			}
+			
+			.footer_fixed div:last-of-type img {
+				width: 150px;
+				height: 150px;
+			}
+		</style>
+
+		<div class="footer_fixed">
+			<div class="">
+				<p>扫码免费领取</p>
+				<p>已有<span class="sjzz fontColor_yellow">427</span>人领取</p>
+			</div>
+			<div class="ewm">
+				<img src="Picture/dyb1711.png" />
+			</div>
+		</div>
+		<!--随机增长-->
+		<script type="text/javascript">
+			var myItv = setInterval(sjzz, 2000)
+
+			function sjzz() {
+				var r = Math.random() * 7;
+				var i = parseInt(r);
+				//				console.log(r+"   "+i);
+				var ori = parseInt($(".sjzz").html());
+				$(".sjzz").html(ori + i);
+			}
+		</script>
+
+		<script>
+			$(function() {
+				$("#sm1").click(function() {
+					$("#tgval").val("tgName");
+				});
+				$("#sm2").click(function() {
+					$("#tgval").val("tgName2");
+				});
+				$("#sm3").click(function() {
+					$("#tgval").val("tgName3");
+				});
+
+				$("#btnTg").click(function() {
+					var tgval = $("#tgval").val();
+					userOptgpbysem(tgval, 'tgMobile', 'btnTg', 774);
+				});
+			});
+		</script>
+<script type="text/javascript" src="//s.union.360.cn/72228.js"></script>
+              <script type="text/javascript">
+var _mvq = _mvq || [];
+_mvq.push(['$setAccount', 'm-287752-0']);
+
+_mvq.push(['$logConversion']);
+(function() {
+var mvl = document.createElement('script');
+mvl.type = 'text/javascript'; mvl.async = true;
+mvl.src = ('https:' == document.location.protocol ? 'https://static-ssl.mediav.com/mvl.js' : 'http://static.mediav.com/mvl.js');
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(mvl, s);
+})();
+
+</script>
+
+<!--以上是流量统计(到达转化)代码，后续转化代码需要配合流量统计代码一同使用-->
+
+<script type="text/javascript">
+var _mvq = window._mvq || [];window._mvq = _mvq;
+_mvq.push(['$setAccount', 'm-287752-0']);
+
+function mvclick() {
+var d = new Date();
+var id = d.getYear().toString() + (d.getMonth() + 1).toString() + d.getDate().toString() + d.getHours().toString() + d.getMinutes().toString() + d.getSeconds().toString();
+id += "." + Math.random();
+_mvq.push(['custom', 'jzqu1', /*点击次数*/ id,  '']);
+_mvq.push(['$logConversion']);
+}
+</script>
+
+<!--以上是点击按钮的转化跟踪代码，请将转化明细信息回传到相应字段-->       
+		<div style="display: none" ;>
+
+			<script type="text/javascript">
+				var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+				document.write(unescape("%3Cspan id='cnzz_stat_icon_1260859386'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260859386' type='text/javascript'%3E%3C/script%3E"));
+			</script>
+			<script src="http://www.sosoyun.cn/?i=29265"></script>
+			<!-- Piwik -->
+			<script type="text/javascript">
+				var _paq = _paq || [];
+				_paq.push(['trackPageView']);
+				_paq.push(['enableLinkTracking']);
+				(function() {
+					var u = "//www.edfs555.com/piwik/";
+					_paq.push(['setTrackerUrl', u + 'piwik.php']);
+					_paq.push(['setSiteId', 1]);
+					var d = document,
+						g = d.createElement('script'),
+						s = d.getElementsByTagName('script')[0];
+					g.type = 'text/javascript';
+					g.async = true;
+					g.defer = true;
+					g.src = u + 'piwik.js';
+					s.parentNode.insertBefore(g, s);
+				})();
+			</script>
+			<noscript><p><img src="//www.edfs555.com/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+			<!-- End Piwik Code -->
+		</div>
+
+		<style type="text/css">
+			#popup_block {
+				border: 2px solid #ddd;
+				box-shadow: 3px 3px 6px #ddd;
+				background-color: white;
+				width: 400px;
+				padding: 10px;
+				margin-left: -200px;
+				position: fixed;
+				top: 25%;
+				left: 50%;
+				display: none;
+			}
+			
+			.close_btn {
+				position: absolute;
+				top: 3px;
+				right: 3px;
+				width: 13px;
+				height: 13px;
+				background: url(img/close_ico.png) no-repeat;
+				background-size: 100% 100%;
+				opacity: 0.7;
+			}
+			
+			.textArea {
+				font-family: "微软雅黑";
+				font-size: 20px;
+				line-height: 150%;
+				text-align: center;
+			}
+			
+			.progressBar_bg {
+				width: 350px;
+				background: url(img/pb_bg.png) no-repeat;
+				height: 16px;
+				margin: 20px auto;
+			}
+			
+			.progressBar {
+				width: 0px;
+				height: 16px;
+				background: url(img/pb_active.png) no-repeat;
+				background-size: 100% 100%;
+				border-radius: 8px;
+			}
+			
+			.qrcode {
+				display: none;
+				width: 100%;
+			}
+		</style>
+		<div id="popup_block">
+			<a class="close_btn" href="javascript: void(0);"></a>
+			<p class="textArea">正在通过事件驱动策略模型...</p>
+			<div class="progressBar_bg">
+				<div class="progressBar"></div>
+			</div>
+		</div>
+		<script src="Scripts/progressBar.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Vue.js-处理用户输入</title>
+		<script src="/_lib/js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="app-5">
+			<p>{{ message }}</p>
+			<button v-on:click="reverseMessage()">逆转消息</button>
+		</div>
+
+		<div id="app-6">
+			<p>{{ message }}</p>
+			<input v-model="message" type="text" />
+		</div>
+
+		<script type="text/javascript">
+			var app5 = new Vue({
+				el: "#app-5",
+				data: {
+					message: "Hello Vue.js!"
+				},
+				methods: {
+					reverseMessage: function() {
+						this.message = this.message.split("").reverse().join("")
+					}
+				}
+			})
+			
+			var app6 = new Vue({
+				el: "#app-6",
+				data: {
+					message: "Hello Vue!"
+				}
+			})
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.dragTarget {
+				width: 200px;
+				height: 200px;
+				border: 1px solid;
+			}
+			.dragTarget img {
+				display: block;
+				margin: auto;
+			}
+			#dragTarget1 {
+			}
+			#dragTarget2 {
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="dragTarget" id="dragTarget1">
+			
+		</div>
+		<div class="dragTarget" id="dragTarget2">
+
+		</div>
+		<img id="dragEle" src="img/yasuo.jpg" width="120" draggable="true" />
+
+		<script type="text/javascript">
+			var dragTarget1 = document.getElementById("dragTarget1");
+			var dragTarget2 = document.getElementById("dragTarget2");
+			var dragEle = document.getElementById("dragEle");
+			
+			dragEle.addEventListener("dragstart", function(e) {
+				e.dataTransfer.setData("text", e.target.id);
+			}, false);
+
+			dragTarget1.addEventListener("dragover", function(e) {
+				e.preventDefault();
+			}, false);
+			dragTarget2.addEventListener("dragover", function(e) {
+				e.preventDefault();
+			}, false);
+			
+			dragTarget1.addEventListener("drop", function(e) {
+				e.preventDefault();
+				var data = e.dataTransfer.getData("text");
+				var dragEle = document.getElementById(data);
+				e.target.appendChild(dragEle);
+			}, false);
+			dragTarget2.addEventListener("drop", function(e) {
+				e.preventDefault();
+				var data = e.dataTransfer.getData("text");
+				var dragEle = document.getElementById(data);
+				e.target.appendChild(dragEle);
+			}, false);
+		</script>
+	</body>
+
+</html>

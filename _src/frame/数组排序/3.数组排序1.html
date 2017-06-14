@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr = new Array(3);
+			for (var i = 0; i < arr.length; i++) {
+				var ranFloat = Math.random();
+				var ranNum = Math.round(ranFloat * 10); //四舍五入
+				arr.push(ranNum);
+				arr.shift();
+			}
+			console.log(arr);
+			arr.reverse(); //反转数组
+			console.log(arr);
+		</script>
+	</body>
+</html>

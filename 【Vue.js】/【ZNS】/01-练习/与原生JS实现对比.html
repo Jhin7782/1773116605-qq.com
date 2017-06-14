@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="container">
+			<!--表单-->
+			<form>
+				<div class="form-group">
+					<label for="userName">用户名:</label>
+					<input type="text" id="userName" placeholder="请输入用户名" />
+				</div>
+				<div class="form-group">
+					<label for="age">年&nbsp;&nbsp;&nbsp;&nbsp;龄:</label>
+					<input type="text" id="age" placeholder="请输入年龄" />
+				</div>
+				<div class="form-group">
+					<input type="button" id="btnAdd" value="添加" />
+					<input type="reset" id="btnDelete" value="删除" />
+				</div>
+			</form>
+			<hr />
+
+			<!--表格-->
+			<table border="1" cellspacing="0" cellpadding="0" width="90%" style="margin: auto; text-align: center;">
+				<thead>
+					<tr>
+						<th>序号</th>
+						<th>名字</th>
+						<th>年龄</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody id="dataContainer">
+					<!--<tr>
+						<td>1</td>
+						<td>小秋琴</td>
+						<td>22</td>
+						<td><button>删除</button></td>
+					</tr>-->
+				</tbody>
+				<tbody>
+					<tr id="deleteAll">
+						<td colspan="4" style="text-align: right;">
+							<button>删除全部</button>
+						</td>
+					</tr>
+					<tr id="dataNull">
+						<td colspan="4">暂无数据...</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<script type="text/javascript">
+			var userName = document.getElementById("userName");
+			var age = document.getElementById("age");
+			var btnAdd = document.getElementById("btnAdd");
+			var btnDelete = document.getElementById("btnDelete");
+			var dataContainer = document.getElementById("dataContainer");
+			var deleteAll = document.getElementById("deleteAll");
+			var dataNull = document.getElementById("dataNull");
+			var str = "";
+			var index = 0;
+
+			function dataDetect() {
+				if(str.length == 0) {
+					deleteAll.style.display = "none";
+					dataNull.style.display = "tabel-row";
+				} else {
+					deleteAll.style.display = "table-row";
+					dataNull.style.display = "none";
+				}
+			}
+			dataDetect();
+
+			btnAdd.onclick = function() {
+				index += 1;
+				str += "<tr><td>" + index + "</td><td>" + userName.value + "</td><td>" + age.value + "</td><td><button id=\"tb_btn_del_" + index + "\">删除</button></td></tr>";
+				dataContainer.innerHTML = str;
+				dataDetect();
+				userName.value = "";
+				age.value = "";
+			}
+		</script>
+	</body>
+
+</html>

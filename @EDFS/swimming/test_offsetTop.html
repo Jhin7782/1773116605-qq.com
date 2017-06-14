@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				background-color: skyblue;
+			}
+			
+			#parent {
+				width: 200px;
+				height: 550px;
+				margin: 100px 300px;
+			}
+			
+			div {
+				width: 50px;
+				height: 50px;
+				margin: 20px;
+				border: 1px solid lightcoral;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			#text {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="parent">
+			<div id="d1">
+				<span id="text">
+					d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1<br />
+					d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2<br />
+					d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3<br />
+					d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4<br />
+					d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5<br />
+				</span>
+			</div>
+			<div id="d2">d2</div>
+			<div id="d3">d3</div>
+			<div id="d4">d4</div>
+			<div id="d5">d5</div>
+			<div id="d6">d6</div>
+			<div id="d7">d7</div>
+		</div>
+		<script type="text/javascript">
+//			var body = document.getElementsByTagName("body");
+			var d1 = document.getElementById("d1");
+			var text = document.getElementById("text");
+			var d2 = document.getElementById("d2");
+			var d3 = document.getElementById("d3");
+			var d4 = document.getElementById("d4");
+			var d5 = document.getElementById("d5");
+			var d6 = document.getElementById("d6");
+			var d7 = document.getElementById("d7");
+			//offsetHeight  obj自身高度，包括边框
+			//offsetTop  obj顶部距离父容器顶部的距离
+			//scrollHeight  obj实际的滚动高度，不包括边框
+			console.log("clientWidth:"+document.body.clientWidth+"  "+document.body.clientHeight);
+			console.log(document.documentElement.clientWidth+"  "+document.documentElement.clientHeight);
+			console.log("offsetWidth:"+document.body.offsetWidth+"  "+document.body.offsetHeight);
+			console.log(document.documentElement.offsetWidth+"  "+document.documentElement.offsetHeight);
+			console.log("scrollWidth:"+document.body.scrollWidth+"  "+document.body.scrollHeight);
+			console.log(document.documentElement.scrollWidth+"  "+document.documentElement.scrollHeight);
+			console.log(text.scrollLeft);
+			console.log(d2.scrollHeight);
+			console.log(d2.offsetTop);
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<!--底部随屏div begin-->
+		<style type="text/css">
+			.btmFixed {
+				background-color: rgba(0, 0, 0, 0.7);
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+				height: 100px;
+			}
+			
+			.btmWrapper {
+				text-align: center;
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+			}
+			
+			.cs_pic {
+				margin-left: -30%;
+			}
+			
+			.btnGroups {
+				border: 1px solid #ddd;
+				background-color: white;
+				position: absolute;
+				bottom: 5%;
+				left: 45%;
+				float: right;
+			}
+			
+			.stockCode {
+				width: 200px;
+				height: 40px;
+				font-size: 20px;
+				border: 0;
+			}
+			
+			.submitBtn {
+				height: 44px;
+				vertical-align: bottom;
+			}
+		</style>
+		
+		<div class="btmFixed">
+			<div class="btmWrapper">
+				<img class="cs_pic" src="img/cs_pic.png" />
+				<div class="btnGroups">
+					<input type="text" name="" class="stockCode" id="stockCode" value="" placeholder="请输入股票代码" />
+					<img class="submitBtn" id="popup_switch" src="img/zhengu_btn.gif" onclick="javascript:mvclick();" />
+				</div>
+			</div>
+		</div>
+		<!--mycode begin-->
+		<link rel="stylesheet" href="css/autocomplete.css">
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript" src="Scripts/data-a.js"></script>
+		<script type="text/javascript" src="Scripts/autocomplete.js"></script>
+		<script type="text/javascript" src="Scripts/autocomplete-setup.js"></script>
+		<script type="text/javascript" src="Scripts/util.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				AutoComplete.setup({
+					"inputElement": "stockCode",
+					"dataSource": s,
+					"displayZoneWidth": 610,
+					"maxMatchedItemNumberAllowed": 6,
+				});
+			})
+		</script>
+		<!--mycode end-->
+
+		<!--mycode begin-->
+		<style type="text/css">
+			#popup_block {
+				border: 2px solid #ddd;
+				background-color: white;
+				box-shadow: 3px 3px 6px #ddd;
+				width: 400px;
+				padding: 10px;
+				margin-left: -200px;
+				position: fixed;
+				top: 15%;
+				left: 50%;
+				display: none;
+			}
+			
+			.close_btn {
+				position: absolute;
+				top: 3px;
+				right: 3px;
+				width: 13px;
+				height: 13px;
+				background: url(img/close_ico.png) no-repeat;
+				background-size: 100% 100%;
+				opacity: 0.7;
+			}
+			
+			.textArea {
+				font-family: "微软雅黑";
+				font-size: 20px;
+				line-height: 150%;
+				margin: 20px auto;
+				text-align: center;
+			}
+			
+			.progressBar_bg {
+				width: 350px;
+				background: url(img/pb_bg.png) no-repeat;
+				height: 16px;
+				margin: 20px auto;
+			}
+			
+			.progressBar {
+				width: 0px;
+				height: 16px;
+				background: url(img/pb_active.png) no-repeat;
+				background-size: 100% 100%;
+				border-radius: 8px;
+			}
+			
+			.qrcode {
+				display: none;
+				width: 100%;
+			}
+		</style>
+
+		<div id="popup_block">
+			<a class="close_btn" href="javascript: void(0);"></a>
+			<p class="textArea">正在通过事件驱动策略模型...</p>
+			<div class="progressBar_bg">
+				<div class="progressBar"></div>
+			</div>
+
+			<img class="qrcode" src="img/qrcode.png">
+		</div>
+
+		<script type="text/javascript">
+			$("#popup_switch").click(function() {
+				if($("#stockCode").val() == "") {
+					alert("股票代码不能为空");
+				} else {
+					$("#popup_block").show();
+					$(".progressBar").animate({
+						width: "25%"
+					}, 3000, "", function() {
+						$(".textArea").html("正在通过最小二乘法OLS确定必要报酬率...");
+					});
+					$(".progressBar").animate({
+						width: "50%"
+					}, 3000, "", function() {
+						$(".textArea").html("正在通过VAR系统确认风险值...");
+					});
+					$(".progressBar").animate({
+						width: "75%"
+					}, 5000, "", function() {
+						$(".textArea").html("正在通过量价交易模型...");
+					});
+					$(".progressBar").animate({
+						width: "100%"
+					}, 5000, "", function() {
+						$(".textArea").html("计算完成，数据模型已经发往研究部整合，请通过下方老师助理咨询。");
+						$(".qrcode").show();
+					});
+				}
+			})
+
+			$(".close_btn").click(closePopup);
+
+			function closePopup() {
+				$("#popup_block").hide();
+				$(".progressBar").stop(true);
+				$(".progressBar").width("0px");
+				$(".textArea").html("正在通过事件驱动策略模型...");
+			}
+		</script>
+		<!--mycode end-->
+		<!--底部随屏div end-->
+	</body>
+
+</html>

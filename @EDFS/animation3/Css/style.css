@@ -1,0 +1,130 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*全局样式-------------------*/
+body,div,span,ul,li,ol,dl,dt,dd,em,i,h1,h2,h3,h4,h5,h6,p,input,a,img,button{ margin:0; padding:0; list-style:none; border:0;}
+em,i{ font-style:normal;}
+body{font-family:"微软雅黑", Tahoma; font-size:14px; color:#000; background:#fff; line-height:1.2em;}
+a{ color:#333; text-decoration:none;}
+a:hover{ color:#f28203; text-decoration:none;}
+
+/*全局样式 end-----------------*/
+.zjld{ width:1000px; margin: 0 auto;}
+.zjld img{display: block; margin: 0 auto;}
+.zj_top{padding:20px 0;}
+.zj_top img{ display: block; margin:0 auto;}
+.zj_p{background: url(../Images/ld_cp.jpg) no-repeat center top; height: 90px;padding-top: 14px;}
+.zj_p p{font-size: 34px; text-align: center; color: #1a1b1c; line-height: 40px;}
+.zj_zp{position: relative; margin-top:20px;}
+.zj_zp img{display: block; margin: 0 auto;}
+.zj_zp em{width:2px; position: absolute;display: block; height:135px; background: #2b2e32; top:12%; left:50%; margin-left: 6px; animation: xz 8s both infinite alternate; transform-origin:center 88%;-webkit-animation: xz 8s both infinite alternate; -webkit-transform-origin:center 88%;}
+.jy{margin-top: 20px;}
+.jy p{font-size: 24px; color: #e4382b; text-align: center;line-height: 35px;}
+.jy>span{display: block; width: 285px;margin:0 auto; overflow: hidden; background: #e4382b;font-size: 24px; line-height:40px; padding:8px 0;}
+.jy>span i{display: block; width: 42%;float:left; text-align: center; color: #fff;}
+.jy>span em{display: block; width: 50%;float: right; text-align: center;margin:0 8px; background: #fff; line-height: 40px;}
+.but{ width: 610px; margin: 20px auto 0;}
+.but span{display: block; border: 1px solid #333; border-radius:5px; height: 50px; position: relative;}
+.but span input{ width: 80%; padding:0 5%; line-height: 50px; font-size: 20px; height: 50px;}
+.but span i{display: block; width: 80%;font-size: 18px; line-height: 50px; position: absolute; left:5%; top:0; color: #666;}
+.but a{display: block;background: #f3314c; font-size: 30px; color: #fff; text-align: center; border-radius: 5px; line-height: 55px; margin-top: 15px; animation: pluse 0.5s linear infinite alternate;-webkit-animation: pluse 0.5s linear infinite alternate;}
+.zj_c h4{text-align: center;margin-top: 34px;}
+.zj_c h4 span{display:inline-block; background: url(../Images/ld_hc.png) repeat-x; line-height: 55px; font-size: 40px; height: 84px;}
+/*.zj_c h4 span:before{content: url(../images/ld_hb.png); vertical-align: middle;display:inline-block; background: #fff;}*/
+/*.zj_c h4 span:after{ content: url(../images/ld_ha.png);vertical-align: middle;display:inline-block; background: #fff;}*/
+.zj_cc{margin-top: 20px;}
+.zj_cc h5{text-align: center;padding-bottom: 10px;}
+.zj_cc h5 span{display: inline-block; position: relative;}
+.zj_cc h5 span em{display: block;background: #e4382b; color: #fff; font-size: 30px; line-height: 40px; padding:0 15px; font-weight: normal;}
+.zj_cc h5 span i{display: block; width: 100%; height: 100%;border: 1px solid #e4382b;position: absolute; right:-8px; bottom: -8px;}
+.zj_cc p{font-size: 20px; line-height: 40px; text-align: center;}
+.zj_cc img{ margin-top: 20px;}
+.bbg{background: url(../Images/bbgbg.png); margin-top: 30px; padding:15px 0;}
+.bbg p{font-size: 16px; text-align: center; color: #fff; line-height: 35px;}
+
+@keyframes xz{
+	0%,100%{ transform:rotate(-45deg);}
+	20%{transform:rotate(135deg);}
+	40%{transform:rotate(45deg);}
+	60%{transform:rotate(-45deg);}
+	80%{transform:rotate(-135deg);}
+}
+@-webkit-keyframes xz{
+	0%,100%{ -webkit-transform:rotate(-45deg);}
+	20%{-webkit-transform:rotate(135deg);}
+	40%{-webkit-transform:rotate(45deg);}
+	60%{-webkit-transform:rotate(-45deg);}
+	80%{-webkit-transform:rotate(-135deg);}
+}
+
+
+#zm{ position:fixed; width:100%; height:100%; top:0; left:0; display:none;}
+.zm_zz{ position:absolute; height:100%; width:100%; background: url(../Images/bg7.png); top:0; left:0; z-index:2;}
+.zm_zc{ width:542px; background:url(../Images/tkbg.png) no-repeat; position:absolute; left:50%; margin-left:-250px; z-index:3;  top:15%;height: 572px;}
+// .zm_zc p{ font-size:16px; text-align:center; color:#666; line-height:35px;}
+// .zm_zc span{ display:block; height:40px; border:1px solid #ccc;background: url(../Images/phone.png) no-repeat 5px center;padding-left:50px; position:relative;}
+// .zm_zc span input{ height:40px; line-height:40px;  width:100%;}
+// .zm_zc span i{ line-height:40px; font-size:16px; color:#999; width:90%; left:50px; top:0; position:absolute; text-align:left;}
+// .zm_zc a{ display:block; width:150px; line-height:40px; background: #e72323;border-bottom: 0.3rem solid #910d0d;border-radius:5px; font-size:20px; text-align:center; color:#fff; font-weight:bold; margin:15px auto 0; animation:pluse 0.5s linear alternate infinite;-webkit-animation:pluse 0.5s linear alternate infinite; }
+.zm_zc p{ font-size:24px; text-align:center; color:#666; line-height:35px;margin-top: 45px;}
+.zm_zcc{margin-top:70px;}
+.zm_zcc h1{font-size: 44px;text-align: center;color: #ff4102;}
+.zm_zcc p{font-size: 22px;margin-top: 15px;color: #6d6d6d;}
+.zm_zcc .ewm{width: 220px;height: 220px;position: absolute;left:50%;margin-left: -110px;top: 259px;}
+.zm_zcc .ewm img{width: 220px;height: 220px;}
+.zm_zcc p:nth-of-type(2){position: absolute;bottom: 40px;width: 100%;color: #fff;}
+.zm_zcc p:nth-of-type(3){position:absolute;bottom:5px;width:100%;color:#ff0;text-align:center;font-size:16px;}
+@keyframes pluse{
+	0%{ transform:scale(1)}
+	100%{transform:scale(1.05)}	
+}
+
+@-webkit-keyframes pluse{
+	0%{ -webkit-transform:scale(1)}
+	100%{-webkit-transform:scale(1.05)}	
+}
+
+
+/*end---------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+                         _(\_/) 
+                         ,((((^`\
+   、̶J̶Howe̶°          ((((  (6 \ 
+                      ,((((( ,    \
+  ,,,_              ,(((((  /"._  ,`,
+ ((((\\ ,...       ,((((   /    `-.-'
+ )))  ;'    `"'"'""((((   (      
+(((  /            (((      \
+ )) |                      |
+((  |        .       '     |
+))  \     _ '      `t   ,.')
+(   |   y;- -,-""'"-.\   \/  
+)   / ./  ) /         `\  \
+   |./   ( (           / /'
+   ||     \\          //'|
+   ||      \\       _//'||
+   ||       ))     |_/  ||
+   \_\     |_/          ||
+   `'"                  \_\
+                        `'"
+*/

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			//"use strict";
+			//生成数组
+			var arr = new Array(3);
+			for(var i = 0; i < arr.length; i++) {
+				var ranFloat = Math.random();
+				var ranNum = Math.round(ranFloat * 20); //四舍五入
+				arr.push(ranNum);
+				arr.shift();
+			}
+			console.log(arr);
+			
+			//数组重排
+			arr.sort(compareSort); //总是比较字符串，然后按升序排列数组
+			console.log(arr);
+
+			function compareSort(val1, val2) {
+				return val1 - val2;
+			}
+		</script>
+	</body>
+
+</html>

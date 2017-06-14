@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			"use strict";
+			var dg = (function digui(count) {
+				if(count >= 10) {
+					document.writeln(Math.random());
+				} else {
+					document.writeln(Math.random());
+					digui(count + 1);
+				}
+			})(1);
+		</script>
+	</body>
+
+</html>

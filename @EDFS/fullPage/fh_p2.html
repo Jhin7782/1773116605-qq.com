@@ -1,0 +1,484 @@
+﻿<html class="no-js fp-enabled" style="overflow: hidden; height: 100%;">
+
+	<head>
+		<style type="text/css">
+			@charset "UTF-8";
+			[ng\:cloak],
+			[ng-cloak],
+			[data-ng-cloak],
+			[x-ng-cloak],
+			.ng-cloak,
+			.x-ng-cloak,
+			.ng-hide:not(.ng-hide-animate) {
+				display: none !important;
+			}
+			
+			ng\:form {
+				display: block;
+			}
+			
+			.ng-animate-shim {
+				visibility: hidden;
+			}
+			
+			.ng-anchor {
+				position: absolute;
+			}
+		</style>
+		<style type="text/css">
+			@charset "UTF-8";
+			[ng\:cloak],
+			[ng-cloak],
+			[data-ng-cloak],
+			[x-ng-cloak],
+			.ng-cloak,
+			.x-ng-cloak,
+			.ng-hide:not(.ng-hide-animate) {
+				display: none !important;
+			}
+			
+			ng\:form {
+				display: block;
+			}
+			
+			.ng-animate-shim {
+				visibility: hidden;
+			}
+			
+			.ng-anchor {
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript" async="" src="//mws.fengjr.com/public/dist/mobile-web/js/analysis.min-v0.1.8.js"></script>
+		<script src="//hm.baidu.com/hm.js?a34dc7ab9118d0d0feff5655dafdbcbe"></script>
+		<script>
+			window.latencyData = {
+				responseStart: new Date().getTime()
+			}
+		</script>
+		<base href="/h5/">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="apple-itunes-app" content="app-id=955309354, app-argument=https://m.fengjr.com/h5/home">
+		<title>凤凰金融</title>
+		<meta name="description" content="凤凰金融移动版">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<style>
+			.spinner {
+				margin: 80px auto;
+				width: 20px;
+				height: 20px;
+				position: relative
+			}
+			
+			.container1>div,
+			.container2>div,
+			.container3>div {
+				width: 6px;
+				height: 6px;
+				background-color: #929292;
+				border-radius: 100%;
+				position: absolute;
+				-webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+				animation: bouncedelay 1.2s infinite ease-in-out;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both
+			}
+			
+			.spinner .spinner-container {
+				position: absolute;
+				width: 100%;
+				height: 100%
+			}
+			
+			.container2 {
+				-webkit-transform: rotateZ(45deg);
+				transform: rotateZ(45deg)
+			}
+			
+			.container3 {
+				-webkit-transform: rotateZ(90deg);
+				transform: rotateZ(90deg)
+			}
+			
+			.circle1 {
+				top: 0;
+				left: 0
+			}
+			
+			.circle2 {
+				top: 0;
+				right: 0
+			}
+			
+			.circle3 {
+				right: 0;
+				bottom: 0
+			}
+			
+			.circle4 {
+				left: 0;
+				bottom: 0
+			}
+			
+			.container2 .circle1 {
+				-webkit-animation-delay: -1.1s;
+				animation-delay: -1.1s
+			}
+			
+			.container3 .circle1 {
+				-webkit-animation-delay: -1s;
+				animation-delay: -1s
+			}
+			
+			.container1 .circle2 {
+				-webkit-animation-delay: -.9s;
+				animation-delay: -.9s
+			}
+			
+			.container2 .circle2 {
+				-webkit-animation-delay: -.8s;
+				animation-delay: -.8s
+			}
+			
+			.container3 .circle2 {
+				-webkit-animation-delay: -.7s;
+				animation-delay: -.7s
+			}
+			
+			.container1 .circle3 {
+				-webkit-animation-delay: -.6s;
+				animation-delay: -.6s
+			}
+			
+			.container2 .circle3 {
+				-webkit-animation-delay: -.5s;
+				animation-delay: -.5s
+			}
+			
+			.container3 .circle3 {
+				-webkit-animation-delay: -.4s;
+				animation-delay: -.4s
+			}
+			
+			.container1 .circle4 {
+				-webkit-animation-delay: -.3s;
+				animation-delay: -.3s
+			}
+			
+			.container2 .circle4 {
+				-webkit-animation-delay: -.2s;
+				animation-delay: -.2s
+			}
+			
+			.container3 .circle4 {
+				-webkit-animation-delay: -.1s;
+				animation-delay: -.1s
+			}
+			
+			@-webkit-keyframes bouncedelay {
+				0%,
+				100%,
+				80% {
+					-webkit-transform: scale(0)
+				}
+				40% {
+					-webkit-transform: scale(1)
+				}
+			}
+			
+			@keyframes bouncedelay {
+				0%,
+				100%,
+				80% {
+					transform: scale(0);
+					-webkit-transform: scale(0)
+				}
+				40% {
+					transform: scale(1);
+					-webkit-transform: scale(1)
+				}
+			}
+		</style>
+		<script>
+			if (location.pathname.indexOf('//') === 0) {
+				location.href = location.pathname.substr(1);
+			}
+		</script>
+	</head>
+
+	<body class="fp-viewing-page2" style="overflow: hidden; height: 100%;">
+		<!-- ngInclude: undefined -->
+		<ng-include src="'navbar'" class="ng-scope">
+			<!-- ngIf: mainBar -->
+			<div class="sub-bar clearfix ng-scope ng-hide" ng-show="!$root.env.isInApp() &amp;&amp; subTitle">
+				<!-- ngIf: $root.showBack -->
+				<div ui-yield-to="subBarLeft" class="left ng-scope" ng-if="$root.showBack">
+					<div class="back" ng-click="$root.back()"></div>
+				</div>
+				<!-- end ngIf: $root.showBack -->
+				<div ui-yield-to="subBarTitle" class="title">
+					<span ng-bind="subTitle" class="ng-binding ng-scope"></span>
+				</div>
+				<div ui-yield-to="subBarRight" class="right"></div>
+			</div>
+		</ng-include>
+		<!-- uiView: undefined -->
+		<ui-view class="ng-scope">
+			<!-- ngIf: loading -->
+
+			<div class="landing-earning-box ng-scope ng-isolate-scope fullpage-wrapper" full-page="" options="mainOptions" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, -903px, 0px); transition: all 700ms ease;">
+				<div class="section section1 fp-section fp-table" data-anchor="page" style="height: 903px; background-color: rgb(255, 181, 0);">
+					<div class="fp-tableCell" style="height:903px;">
+						<img class="logo" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/logo.5184de8f.png">
+						<div class="home-container">
+							<img class="" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/section13.5e9df264.png">
+							<img class="shake" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/section11.f8025cb8.png">
+
+							<img class="" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/section12.cf5852b7.png">
+
+							<img class="imgw" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/section14.082c8c9b.png">
+
+							<img class="shake2" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/money.bd5a9fdd.png">
+							<img class="shake3" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/money1.ed3a313e.png">
+
+							<img class="shake4" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/money3.88827601.png">
+							<img class="shake5" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/money4.3d6623f4.png">
+							<img class="shake6" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/money5.fb0a56aa.png">
+
+							<img class="shake7" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/money4.3d6623f4.png">
+							<img class="shake8" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/money5.fb0a56aa.png">
+						</div>
+						<div class="langding-earning-box1-word">上滑开启生钱模式</div>
+					</div>
+				</div>
+				<div class="section section2 fp-section fp-table active completely" data-anchor="page2" style="height: 903px; background-color: rgb(255, 181, 0);">
+					<div class="fp-tableCell" style="height:903px;">
+						<img src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/test2.767855ea.png" class="landing-earning-box2-title">
+						<div class="landing-earning-box2-jsq">
+							<img src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/jsq-jsq.3f2146a9.png">
+							<input type="tel" placeholder="输入你的闲钱" ng-model="form.money" ng-keyup="cutNum()" ng-class="{inputAnm:Input}" ng-focus="removeAnm()" ng-blur="addArrow()" class="ng-pristine ng-untouched ng-valid ng-empty inputAnm">
+							<div ng-click="getCalc()"></div>
+						</div>
+						<div class="langding-earning-box2-word">历史年化利率按9%计算</div>
+						<div class="langding-earning-box2-img">
+							<!-- ngIf: calculated -->
+						</div>
+						<a href="#page6" class="registered"><img src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/footer02.7428d04c.png"></a>
+					</div>
+				</div>
+				<div class="section section3 fp-section fp-table" data-anchor="page3" style="height: 903px; background-color: rgb(255, 181, 0);">
+					<div class="fp-tableCell" style="height:903px;">
+						<img src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/section31.c5d10f22.png" class="hade">
+						<img ng-src="" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/gy1.ad3f7a1d.gif">
+						<img ng-src="" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/gy2.c66e06c4.gif">
+						<img ng-src="" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/gy3.2d3a3b1c.gif">
+
+						<a href="#page6" class="registered"><img src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/footer.d7114491.png"></a>
+					</div>
+				</div>
+				<div class="section section4 fp-section fp-table" data-anchor="page4" style="height: 903px; background-color: rgb(255, 181, 0);">
+					<div class="fp-tableCell" style="height:903px;">
+						<div class="landing-earning-box4">
+							<img src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/jsq-section4bg.dcf62164.png" class="landing-earning-box4-img">
+							<dl class="fengjrdazhuanpan-getRegNum">
+								<!-- ngIf: regNum.yi -->
+								<!-- ngIf: regNum.wan --><span ng-if="regNum.wan" class="ng-scope"><span odometer="regNum.wan" class="fengjrdazhuanpan-num odometer odometer-auto-theme"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span>
+								</span>
+								</span>
+								</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span>
+								</span>
+								</span>
+								</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span>
+								</span>
+								</span>
+								</span>
+						</div>
+						</span>万</span>
+						<!-- end ngIf: regNum.wan -->
+						<!-- ngIf: regNum.wei --><span ng-if="regNum.wei" class="ng-scope"><span odometer="regNum.wei" class="fengjrdazhuanpan-num odometer odometer-auto-theme"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">8</span></span>
+						</span>
+						</span>
+						</span><span class="odometer-formatting-mark">,</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span>
+						</span>
+						</span>
+						</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span>
+						</span>
+						</span>
+						</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span>
+						</span>
+						</span>
+						</span>
+					</div>
+					</span>
+					</span>
+					<!-- end ngIf: regNum.wei -->人
+					</dl>
+					<dl class="fengjrdazhuanpan-getProfitNum">
+						<!-- ngIf: profitNum.yi --><span ng-if="profitNum.yi" class="ng-scope"><span odometer="profitNum.yi" class="fengjrdazhuanpan-num odometer odometer-auto-theme"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span>
+						</span>
+						</span>
+						</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span>
+						</span>
+						</span>
+						</span>
+				</div>
+				</span>亿</span>
+				<!-- end ngIf: profitNum.yi -->
+				<!-- ngIf: profitNum.wan --><span ng-if="profitNum.wan" class="ng-scope"><span odometer="profitNum.wan" class="fengjrdazhuanpan-num odometer odometer-auto-theme"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">6</span></span>
+				</span>
+				</span>
+				</span><span class="odometer-formatting-mark">,</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span>
+				</span>
+				</span>
+				</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span>
+				</span>
+				</span>
+				</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span>
+				</span>
+				</span>
+				</span>
+			</div>
+			</span>万</span>
+			<!-- end ngIf: profitNum.wan -->
+			<!-- ngIf: profitNum.wei --><span ng-if="profitNum.wei" class="ng-scope"><span odometer="profitNum.wei" class="fengjrdazhuanpan-num odometer odometer-auto-theme"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">8</span></span>
+			</span>
+			</span>
+			</span><span class="odometer-formatting-mark">,</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">5</span></span>
+			</span>
+			</span>
+			</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span>
+			</span>
+			</span>
+			</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span>
+			</span>
+			</span>
+			</span>
+			</div>
+			</span>
+			</span>
+			<!-- end ngIf: profitNum.wei -->元
+			</dl>
+			<dl class="fengjrdazhuanpan-getAmountNum">
+				<!-- ngIf: amountNum.yi --><span ng-if="amountNum.yi" class="ng-scope"><span odometer="amountNum.yi" class="fengjrdazhuanpan-num odometer odometer-auto-theme"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span>
+				</span>
+				</span>
+				</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span>
+				</span>
+				</span>
+				</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span>
+				</span>
+				</span>
+				</span>
+				</div>
+				</span>亿</span>
+				<!-- end ngIf: amountNum.yi -->
+				<!-- ngIf: amountNum.wan --><span ng-if="amountNum.wan" class="ng-scope"><span odometer="amountNum.wan" class="fengjrdazhuanpan-num odometer odometer-auto-theme"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span>
+				</span>
+				</span>
+				</span><span class="odometer-formatting-mark">,</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span>
+				</span>
+				</span>
+				</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span>
+				</span>
+				</span>
+				</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span>
+				</span>
+				</span>
+				</span>
+				</div>
+				</span>万</span>
+				<!-- end ngIf: amountNum.wan -->
+				<!-- ngIf: amountNum.wei --><span ng-if="amountNum.wei" class="ng-scope"><span odometer="amountNum.wei" class="fengjrdazhuanpan-num odometer odometer-auto-theme"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span>
+				</span>
+				</span>
+				</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span>
+				</span>
+				</span>
+				</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span>
+				</span>
+				</span>
+				</span>
+				</div>
+				</span>
+				</span>
+				<!-- end ngIf: amountNum.wei -->元
+			</dl>
+			</div>
+			<a href="#page6" class="registered"><img src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/footer.d7114491.png"></a>
+			</div>
+			</div>
+			<div class="section section6 fp-section fp-table" data-anchor="page6" style="height: 903px; background-color: rgb(255, 181, 0);">
+				<div class="fp-tableCell" style="height:903px;">
+					<p class="section6-hade ">
+						<img class="pa" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/section62.81edabbd.png">
+					</p>
+
+					<!-- ngIf: from!='bjmobile' -->
+					<div style="padding: 20% 10px;margin-top:6%; " ng-if="from!='bjmobile'" class="ng-scope">
+
+						<div class="coupon" ng-show="!clickedCoupon" ng-click="openCoupon()">
+							<img src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/section6bg.eff7c822.png" class="full">
+
+							<div class="flip-container focus focus-normal ">
+								<div class="flipper">
+									<div class="front caihongbaobg-normal flip-size-normal">
+									</div>
+									<div class="back coin-normal flip-size-normal">
+									</div>
+								</div>
+							</div>
+							<div class="focus-details">
+								<img src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/section66.a3c8c184.png">
+							</div>
+						</div>
+						<div class="coupon2 ng-hide" ng-show="clickedCoupon" ng-click="getCoupon()">
+							<img src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/section6bg1.a45aa5a5.png" class="full">
+							<div class="text2">
+								￥50.00
+								<!-- ngIf: from==='bjmobile' -->
+							</div>
+							<div class="text3 normal-text3">点击领取</div>
+						</div>
+						<div class="langding-earning-box5-word1">分享出去，让朋友一起变土豪！</div>
+						<div class="langding-earning-box5-word2">市场有风险，投资需谨慎</div>
+					</div>
+					<!-- end ngIf: from!='bjmobile' -->
+				</div>
+			</div>
+			</div>
+
+			<div class="arrow-box ng-scope" ng-show="arrow">
+				<img class="logo" src="//mws.fengjr.com/public/dist/mobile-web/img/h5/landing/arrow.f567b170.png">
+			</div>
+
+		</ui-view>
+		<!-- ngInclude: undefined -->
+		<ng-include src="'footer'" class="ng-scope">
+			<div class="fixedBottom-box ng-scope ng-hide" ng-show="!$root.env.isInApp() &amp;&amp; $root.fixedBottom">
+				<div class="fixedBottom">
+					<img src="//mws.fengjr.com/public/dist/mobile-web/img/h5/user/logo-white.7c2e55ca.png">
+					<span class="ng-binding"></span>
+					<div ng-click="$root.downloadApp()">立即下载</div>
+				</div>
+			</div>
+		</ng-include>
+		<link rel="stylesheet" href="//mws.fengjr.com/public/dist/mobile-web/css/common-2015-07-06.css">
+		<link rel="stylesheet" href="//mws.fengjr.com/public/dist/mobile-web/css/carousel-3d.min.css">
+		<link rel="stylesheet" href="//mws.fengjr.com/public/dist/mobile-web/css/rzsliders.css">
+		<link rel="stylesheet" href="//mws.fengjr.com/public/dist/mobile-web/css/h5/main-1608011952.10ae8272.css">
+		<script src="//mws.fengjr.com/public/dist/mobile-web/js/h5/TweenMax.min.js"></script>
+		<script src="//mws.fengjr.com/public/dist/mobile-web/js/h5/jquery-2.2.0.min.js"></script>
+		<script src="//mws.fengjr.com/public/dist/mobile-web/js/h5/jquery.fullPage-2.7.7.min.js"></script>
+		<script src="//mws.fengjr.com/public/dist/mobile-web/js/h5/common-2016-03-08.js"></script>
+		<script src="//mws.fengjr.com/public/dist/mobile-web/js/h5/jssor.slider.min.js"></script>
+		<script src="//mws.fengjr.com/public/dist/mobile-web/js/h5/angular-swipe.min.js"></script>
+		<script src="//mws.fengjr.com/public/dist/mobile-web/js/h5/carousel-3d.min.js"></script>
+		<script src="//mws.fengjr.com/public/dist/mobile-web/js/h5/rzslider.min.js"></script>
+		<script src="//mws.fengjr.com/public/dist/mobile-web/js/h5/main-1608011952.d2b5c6f8.js"></script>
+		<script>
+			latencyData.responseEnd = new Date().getTime();
+		</script>
+	</body>
+
+</html>

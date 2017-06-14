@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/media.css" />
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/fontsize.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/adjust.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/demo62_local.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/demo63_local.js" type="text/javascript" charset="utf-8"></script>
+		
+
+		<style type="text/css">
+			#div12 {
+				position: relative;
+				width: 16rem;
+				height: 30.875rem;
+				/*height: 26.4rem;*/
+				background-color: #da1b20;
+				overflow: hidden;
+			}
+			/*#img1_bg {
+				width: 16rem;
+				height: 15.225rem;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}*/
+			
+			#rotate {
+				width: 48.825rem;
+				height: 49.2rem;
+				position: absolute;
+				top: -4rem;
+				left: -16.5rem;
+				transform-origin: center center;
+				animation: circle 30s linear 0s infinite normal;
+				-webkit-animation: circle 30s linear 0s infinite normal;
+			}
+			
+			@keyframes circle {
+				from {
+					transform: rotate(0);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+			
+			@-webkit-keyframes circle {
+				from {
+					-webkit-transform: rotate(0);
+				}
+				to {
+					-webkit-transform: rotate(360deg);
+				}
+			}
+			
+			#img1_fg {
+				width: 16rem;
+				height: 13.9rem;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			#logo {
+				width: 3.725rem;
+				height: 1.475rem;
+				position: absolute;
+				top: 0.35rem;
+				right: 1rem;
+			}
+			
+			#slogan1 {
+				width: 12.725rem;
+				height: 8.225rem;
+				/*比例：1.547112*/
+				/*width: 12.35rem;
+				height: 7.98rem;*/
+				/*width: 2rem;
+				height: 1.29rem;*/
+				position: absolute;
+				top: 1rem;
+				left: 0.5rem;
+				animation: slogan1_scale 1.5s linear 0.3s 1 normal;
+				-webkit-animation: slogan1_scale 1.5s linear 0.3s 1 normal;
+			}
+			@keyframes slogan1_scale{
+				0%{
+					transform: scale(0);
+				}
+				50%{
+					transform: scale(1);
+				}
+				75%{
+					transform: scale(0.9);
+				}
+				100%{
+					transform: scale(1);
+				}
+			}
+			@-webkit-keyframes slogan1_scale{
+				0%{
+					-webkit-transform: scale(0);
+				}
+				50%{
+					-webkit-transform: scale(1);
+				}
+				75%{
+					-webkit-transform: scale(0.9);
+				}
+				100%{
+					-webkit-transform: scale(1);
+				}
+			}
+			
+			/*#slogan2 {
+				width: 12.6rem;
+				height: 3.575rem;
+				position: absolute;
+				top: 8.6rem;
+				left: 1rem;
+			}*/
+			
+			#slogan21 {
+				width: 10.4rem;
+				height: 1.9rem;
+				position: absolute;
+				top: 8.6rem;
+				/*left: 2.4rem;*/
+				right: -10.4rem;
+			}
+			
+			#slogan22 {
+				width: 12.6rem;
+				height: 2.075rem;
+				position: absolute;
+				top: 10.15rem;
+				/*left: 1.2rem;*/
+				left: -12.6rem;
+			}
+						
+			#people1 {
+				width: 8.3rem;
+				height: 11.05rem;
+				position: absolute;
+				top: 10.4rem;
+				left: 8.3rem;
+			}
+			
+			#location {
+				background-color: #da1b20;
+				width: 16rem;
+				height: 4.475rem;
+				position: absolute;
+				top: 26.4rem;
+			}
+			
+			#slogan3 {
+				width: 16rem;
+				height: 11.25rem;
+				position: absolute;
+				top: 17.05rem;
+			}
+			
+			#tel62 {
+				width: 12.025rem;
+				height: 1.95rem;
+				background-color: lightgray;
+				border-radius: 0.25rem;
+				font-size: 0.7rem;
+				padding-left: 0.3rem;
+				position: absolute;
+				top: 21.85rem;
+				left: 1.9875rem;
+			}
+			
+			#submit61yy {
+				width: 12.025rem;
+				height: 1.95rem;
+				background-image: url(img/bottom_button.png);
+				background-size: 100% 100%;
+				border-radius: 0.25rem;
+				position: absolute;
+				top: 23.95rem;
+				left: 1.9875rem;
+			}
+			
+			#slogan4 {
+				width: 14.675rem;
+				height: 2.775rem;
+				position: absolute;
+				top: 28rem;
+				left: 0.6625rem;
+			}
+			/*#img2 {
+				width: 16rem;
+				height: 15.65rem;
+				position: absolute;
+			}*/
+			
+			#img3,
+			#img4 {
+				position: relative;
+			}
+			
+			#div5 {
+				width: 16rem;
+				height: 15.75rem;
+				position: relative;
+				/*border: 1px solid black;*/
+			}
+			
+			#img5 {
+				width: 16rem;
+				height: 15.75rem;
+				position: absolute;
+			}
+			
+			#people2 {
+				/*width: 2.85rem;*/
+				width: 7.95rem;
+				height: 3.275rem;
+				position: absolute;
+				top: -1.55rem;
+				/*right: 3.25rem;*/
+				right: 0.1rem;
+			}
+			
+			#tipcase {
+				width: 15.6rem;
+				height: 6.225rem;
+				position: absolute;
+				top: 0.5rem;
+				left: 0.2rem;
+			}
+			
+			#tel63 {
+				width: 12.025rem;
+				height: 1.95rem;
+				background-color: lightgray;
+				border-radius: 0.25rem;
+				font-size: 0.7rem;
+				padding-left: 0.3rem;
+				position: absolute;
+				bottom: 2.6rem;
+				left: 1.9875rem;
+			}
+			
+			#submit62yy {
+				width: 12.025rem;
+				height: 1.95rem;
+				background-image: url(img/bottom_button.png);
+				background-size: 100% 100%;
+				border-radius: 0.25rem;
+				position: absolute;
+				bottom: 0.6rem;
+				left: 1.9875rem;
+			}
+			
+			.submit_btn {
+				animation: scale_btn 1s linear 0s infinite alternate;
+				-webkit-animation: scale_btn 1s linear 0s infinite alternate;
+			}
+			
+			@keyframes scale_btn {
+				from {
+					transform: scale(0.95);
+				}
+				to {
+					transform: scale(1);
+				}
+			}
+			
+			@-webkit-keyframes scale_btn {
+				from {
+					-webkit-transform: scale(0.95);
+				}
+				to {
+					-webkit-transform: scale(1);
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="div12">
+			<!--<img id="img1_bg" src="img/img1_bg.png" />-->
+			<img id="rotate" src="img/rotate.png" />
+			<img id="img1_fg" src="img/img1_fg.png" />
+			<img id="logo" src="img/logo.png"/>
+			<img id="slogan1" src="img/slogan1.png" />
+			<!--<img id="slogan2" src="img/slogan2.png" />-->
+			<img id="slogan21" src="img/slogan21.png"/>
+			<img id="slogan22" src="img/slogan22.png"/>
+			<img id="people1" src="img/people1.gif" />
+			<div id="location"></div>
+			<img id="slogan3" src="img/slogan3.png" />
+			<form id="form" action="http://www.edfs555.com/clicks/index.php?m=Home&c=Index&a=setForm&id=62" id="formsubmit62" onSubmit="javascript:return formprepare62(this);" method="post">
+				<input type="text" name="tel" id="tel62" value="" placeholder="输入手机号码" />
+				<input type="hidden" id="qudao62" name="qudao" data-title="渠道" value="新浪扶翼" />
+				<input type="hidden" id="title62" name="title" data-title="标题" value="下半年超赚钱 投资产品劲爆大揭秘" />
+				<input type="hidden" id="redirect62" name="redirect" data-title="恭喜！您已提交成功，稍后会有客服人员联系您！" value="http://m.edfs555.com" />
+				<input type="hidden" id="land62" name="land" value="" />
+				<input type="hidden" id="refer62" name="refer" value="" />
+				<input type="hidden" id="delay_time62" name="delay_time" value="" />
+				<input type="hidden" id="from62" name="from" value="" />
+				<input type="hidden" id="utm_source62" name="utm_source" value="" />
+				<input type="hidden" id="utm_medium62" name="utm_medium" value="" />
+				<input type="hidden" id="utm_term62" name="utm_term" value="" />
+				<input type="hidden" id="utm_content62" name="utm_content" value="" />
+				<input type="hidden" id="utm_campaign62" name="utm_campaign" value="" />
+				<input type="submit" name="" id="submit61yy" value="" class="submit_btn" />
+			</form>
+			<img id="slogan4" src="img/slogan4.png" />
+		</div>
+		<!--<img id="img2" src="img/2.png" />-->
+		<img id="img3" src="img/3.png" />
+		<img id="img4" src="img/4.png" />
+		<div id="div5">
+			<img id="img5" src="img/5.png" />
+			<img id="people2" src="img/people2.gif" />
+			<img id="tipcase" src="img/tipcase.png" />
+			<form id="form" action="http://www.edfs555.com/clicks/index.php?m=Home&c=Index&a=setForm&id=63" id="formsubmit63" onSubmit="javascript:return formprepare63(this);" method="post">
+				<input type="text" name="tel" id="tel63" value="" placeholder="输入手机号码" />
+				<input type="hidden" id="qudao63" name="qudao" data-title="渠道" value="品友DSP" />
+				<input type="hidden" id="title63" name="title" data-title="标题" value="100000操盘金已到账 实操实战赚翻番" />
+				<input type="hidden" id="redirect63" name="redirect" data-title="恭喜！您已提交成功，稍后会有客服人员联系您！" value="http://m.edfs555.com" />
+				<input type="hidden" id="land63" name="land" value="" />
+				<input type="hidden" id="refer63" name="refer" value="" />
+				<input type="hidden" id="delay_time63" name="delay_time" value="" />
+				<input type="hidden" id="from63" name="from" value="" />
+				<input type="hidden" id="utm_source63" name="utm_source" value="" />
+				<input type="hidden" id="utm_medium63" name="utm_medium" value="" />
+				<input type="hidden" id="utm_term63" name="utm_term" value="" />
+				<input type="hidden" id="utm_content63" name="utm_content" value="" />
+				<input type="hidden" id="utm_campaign63" name="utm_campaign" value="" />
+				<input type="submit" name="" id="submit62yy" value="" class="submit_btn" />
+			</form>
+		</div>
+
+	<script src="js/move.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		move("#slogan1").scale(1).duration("1s").end(function() {
+			move("#slogan21").set("margin-right", "14rem").end(function() {
+				move("#slogan21").set("margin-right", "13.4rem").end();
+			});
+			move("#slogan22").set("margin-left", "15.4rem").end(function(){
+				move("#slogan22").set("margin-left", "14.4rem").end();
+			});
+		});
+	</script>
+	</body>
+
+</html>

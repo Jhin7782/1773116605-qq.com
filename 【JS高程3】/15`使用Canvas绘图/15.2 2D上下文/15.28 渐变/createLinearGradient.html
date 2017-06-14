@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			canvas {
+				border: 1px solid;
+				background-color: lightblue;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="drawing" width="400" height="400">don't support canvas</canvas>
+
+		<script type="text/javascript">
+			var drawing = document.getElementById("drawing");
+			if(drawing.getContext) {
+				var context = drawing.getContext("2d");
+				var canvasGradient = context.createLinearGradient(30,30,130,130);
+				canvasGradient.addColorStop(0, "#fff");
+				canvasGradient.addColorStop(1, "black");
+				
+				context.fillStyle = canvasGradient;
+				context.fillRect(30, 30, 100, 100);
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			canvas {
+				border: 1px solid ;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="drawing" width="600" height="300">A drawing of something.</canvas>
+		
+		<script type="text/javascript">
+			var drawing = document.getElementById("drawing");
+			if (drawing.getContext) {
+				var context = drawing.getContext("2d");
+				context.strokeStyle = "cornflowerblue";
+				context.fillStyle = "crimson";
+				context.strokeRect(0, 0, 50, 50);
+				context.fillRect(80, 80, 80, 80);
+				
+				
+				var imgURI = drawing.toDataURL("image/png");
+				var image = document.createElement("img");
+				image.src = imgURI;
+				document.body.appendChild(image);
+			}
+		</script>
+	</body>
+</html>

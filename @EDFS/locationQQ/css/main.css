@@ -1,0 +1,301 @@
+﻿<!--
+
+
+
+/*** xixi_基本结构↓ start ***/
+
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+
+body {
+
+	margin: 0 auto;
+
+	width: 100%;
+
+	height: 100%;
+
+	background-color: #f3f3f3;
+
+	color: #cfccd4;
+
+	font: 12px/20px Microsoft Yahei, Verdana, Helvetica, sans-serif;
+
+	text-align: center;}
+
+a {
+
+	color: #b80910;
+
+	text-decoration: none;}
+
+a:hover {
+
+	color: #ffb602;}	/* 红变黄 */
+
+img {
+
+	border: none;}	/* 图片没框 */
+
+
+
+.xixi_zm_wap_dragon_main {
+
+	margin: 0 auto;
+
+	width: 640px;
+
+	height: auto;
+	margin-bottom:167px;
+	
+
+	text-align: center;}
+
+
+.xixi_zm_wap_dragon_headt p{ font-size:30px;font-family:"微软雅黑"; font-weight:bold; color:#faeec4;}
+.xixi_zm_wap_dragon_headt p span{ color:#4d000b;}
+.xixi_zm_wap_dragon_headt {
+
+	margin: 0 auto;
+
+	width: 640px;
+
+	height:184px;
+
+	background: transparent url('../Images/head.jpg') no-repeat top center;
+	text-align:center;
+
+	text-align: center;padding-top:410px;}	/* 头 */
+
+.xixi_zm_wap_dragon_headt a {
+
+	display: block;
+
+	width: 350px;
+
+	height:83px;
+	margin-left:136px;
+	margin-top:15px;
+	}
+	
+#QQqunAccount {
+	font-size: 26px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	/*border: 1px solid black;*/
+	margin-top: 4px;
+	margin-right: 1.4em;
+}
+	
+
+
+
+
+
+
+
+
+
+
+
+.xixi_zm_wap_dragon_head {
+
+	margin: 0 auto;
+
+	width: 640px;
+
+	height: 648px;
+
+	background: transparent url('../Images/head.gif') no-repeat top center;
+
+	text-align: center;}	/* 头 */
+
+.xixi_zm_wap_dragon_head a {
+
+	display: block;
+
+	width: 640px;
+
+	height: 127px;}
+	
+	
+	
+	
+.xixi_zm_wap_dragon_head2 {
+
+	margin: 0 auto;
+
+	width: 640px;
+
+	height: 127px;
+
+	background: transparent url('../Images/main_5.gif') no-repeat top center;
+
+	text-align: center;}	/* 头 */
+
+.xixi_zm_wap_dragon_head2 a {
+
+	display: block;
+
+	width: 640px;
+
+	height: 127px;}	
+	
+	
+.xixi_zm_wap_dragon_head3 {
+	margin-bottom:30px;
+	
+
+	
+
+	width: 640px;
+
+	height: 127px;
+
+	background: transparent url('../Images/main_6.gif') no-repeat top center;
+
+	text-align: center;}	/* 头 */
+
+.xixi_zm_wap_dragon_head3 a {
+
+	display: block;
+
+	width: 640px;
+
+	height: 127px;}		
+	
+	
+	
+	
+	
+	
+	
+
+
+
+.xixi_zm_wap_dragon_main_1 {
+
+	margin: 0 auto;
+
+	width: 640px;
+
+	height: 485px;
+
+	background: transparent url('../Images/main_1.gif') no-repeat top center;
+
+	text-align: center;}
+
+.xixi_zm_wap_dragon_main_1_1 {
+
+	float: left;
+
+	margin-top: 360px;
+
+	margin-left: 25px;
+
+	width: 170px;
+
+	height: 69px;
+
+	background: transparent url('../Images/button_1_1.gif') no-repeat top center;
+
+	text-align: center;}	/* 加群解套 */
+
+.xixi_zm_wap_dragon_main_1_2 {
+
+	float: left;
+
+	margin-top: 280px;
+
+	margin-left: 35px;
+
+	width: 180px;
+
+	height: 69px;
+
+	text-align: center;}	/* 加群诊股 */
+
+.xixi_zm_wap_dragon_main_1_3 {
+
+	float: left;
+
+	margin-top: 360px;
+
+	margin-left: 35px;
+
+	width: 170px;
+
+	height: 69px;
+
+	text-align: center;}	/* 加群抄底 */
+
+
+
+.xixi_zm_wap_dragon_main_2 {
+
+	margin: 0 auto;
+
+	
+
+	width: 640px;
+
+	height:503px;	/* 800-650 */
+
+	background: transparent url('../Images/img1.jpg') no-repeat top center;
+
+	text-align: center;}
+
+
+
+
+.xixi_zm_wap_dragon_main_4 {
+
+	margin: 0 auto;
+
+	
+
+	width: 640px;
+
+	height:406px;	/* 800-650 */
+
+	background: transparent url('../Images/img2.jpg') no-repeat top center;
+
+	text-align: center;}
+
+
+
+
+.xixi_zm_wap_dragon_bottom {
+
+	margin: 0 auto;
+
+	padding-top: 10px;
+
+	width: 640px;
+
+	height: 85px;	/* 55-10 */
+
+	background-color: #aaaaaa;
+	color:#FFF;
+
+	text-align: center;}	/* 脚 */
+
+
+
+/*** xixi_基本结构↑ end ***/
+
+
+
+-->
+
+.bottom{ width:100%; background: rgba(0, 0, 0, .5);  position:fixed; bottom:0; z-index:999;}
+.bottom_nr{ width:100%; margin:0 auto;}
+.bottom_nr .wz3{ width:100%; text-align:center; font-size:15px; color:#f73a5a; font-family:"微软雅黑"; margin-top:5px}
+.bottom_nr .wz2{ width:100%; text-align:center;  font-size:24px; margin-top:25px; margin-bottom:18px;}
+.bottom_nr .wz4{ width:100%; text-align:center; font-size:30px; color:#faeec4; font-family:"微软雅黑"; margin-bottom:5px; font-weight:bold; margin-top:34px;}
+
+#ndemo{ width:640px; height:250px;overflow:hidden; text-align:center; margin-top:30px; margin-bottom:30px;}
+#ndemo li{ font-size:18px; color:#555;font-family:"微软雅黑"; height:60px; line-height:60px; border-bottom:1px solid #dadada; background:url(../Images/dian.jpg) no-repeat 110px 25px; }
+
+

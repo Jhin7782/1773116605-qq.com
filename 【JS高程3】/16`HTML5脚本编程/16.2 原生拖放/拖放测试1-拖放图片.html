@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#dragTarget {
+				width: 200px;
+				height: 200px;
+				border: 1px solid;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="dragTarget">
+
+		</div>
+		<img id="dragEle" src="img/yasuo.jpg" width="120" draggable="true" />
+
+		<script type="text/javascript">
+			var dragTarget = document.getElementById("dragTarget");
+			var dragEle = document.getElementById("dragEle");
+
+			dragEle.addEventListener("dragstart", function(e) {
+				console.log("dragstart");
+				e.dataTransfer.setData("text", e.target.id);
+			}, false);
+
+			dragTarget.addEventListener("dragover", function(e) {
+				console.log("dragover");
+				e.preventDefault();
+			}, false);
+			dragTarget.addEventListener("drop", function(e) {
+				console.log("drop");
+				e.preventDefault();
+				var data = e.dataTransfer.getData("text");
+				console.log(data);
+				var dragEle = document.getElementById(data);
+				//dragTarget.appendChild(dragEle);
+				e.target.appendChild(dragEle);
+			}, false);
+		</script>
+	</body>
+
+</html>

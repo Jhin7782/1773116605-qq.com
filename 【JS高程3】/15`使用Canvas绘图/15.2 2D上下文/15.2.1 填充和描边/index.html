@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="drawing" width="200" height="200">A drawing of something.</canvas>
+		
+		<script type="text/javascript">
+			var drawing = document.getElementById("drawing");
+			if (drawing.getContext) {
+				var context = drawing.getContext("2d");
+				context.strokeStyle = "aquamarine";
+				context.fillStyle = "mediumaquamarine";
+			}
+		</script>
+	</body>
+</html>

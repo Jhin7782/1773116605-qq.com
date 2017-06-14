@@ -1,0 +1,228 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<meta name="screen-orientation" content="portrait">
+<title>机构资金雷达</title>
+<link rel="stylesheet" href="Css/style.css">
+<link rel="stylesheet" href="Css/autocomplete.css">
+        <script type="text/javascript" src="Scripts/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="Scripts/layer.min.js"></script>
+<script type="text/javascript" src="Scripts/data-a.js"></script>
+<script type="text/javascript" src="Scripts/autocomplete.js"></script>
+<script type="text/javascript" src="Scripts/autocomplete-setup.js"></script>
+<script type="text/javascript" src="Scripts/util.js"></script>
+<script type="text/javascript" src="Scripts/wx.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".but input,.zm_zc input").val("");
+				$(".but span i,.zm_zc span i").click(function(){
+					$(this).siblings("input").focus();
+				})
+				$(".but input,.zm_zc input").focus(function(){
+					$(this).siblings("i").hide();
+				})
+				$(".but input,.zm_zc input").blur(function(){
+					if($(this).val()==""){
+						$(this).siblings("i").show();
+					}else{
+						$(this).siblings("i").hide();
+					}
+				})
+		 	AutoComplete.setup({
+	        		"inputElement": "gp",
+	        		"dataSource": s,
+	        		"displayZoneWidth": 610,
+	        		"maxMatchedItemNumberAllowed": 6,
+	        		"inputEnterCallback": function (obj) {
+	            	//submitOnClick();
+	        		},
+	        		"trClickCallback": function (obj) {
+        			}
+    			});
+    		AutoComplete.setup({
+	        		"inputElement": "gp1",
+	        		"dataSource": s,
+	        		"displayZoneWidth": 610,
+	        		"maxMatchedItemNumberAllowed": 4,
+	        		"inputEnterCallback": function (obj) {
+	            	//submitOnClick();
+	        		},
+	        		"trClickCallback": function (obj) {
+        			}
+    			});
+				
+// var gpze=/^(((002|000|300|600)[\d]{3})|60[\d]{4})/; 
+$("#sm1,#sm2").click(function(e) {
+	var gpinput=$(this).prev("span").children("input").val();
+    if(gpinput==""){
+					alert("请输入正确的股票代码")
+					return false;	
+	}else{
+		$("#zm").fadeIn();	
+		presstj(774);
+
+	}
+});
+	$('.zm_zz').click(function () {
+              $("#zm").fadeOut();
+
+    });
+	})
+</script>
+
+</head>
+
+<body>
+<div class="zjld">
+<div class="zj_top"><img src="Picture/ld_top.gif" onclick="javascript:void(0)"/></div>
+<div class="zj_p">
+	<p>累计监控998万次，成功测算主力成本<br />8880000次</p>
+</div>
+<div class="zj_zp">
+	<img src="Picture/ld_zp.jpg" onclick="javascript:void(0)"/>
+	<em></em>
+</div>
+<div class="jy">
+	<p><b>平安银行（000001）</b></p>
+	<span>
+		<i>操作建议</i><em>持仓待涨</em>	
+	</span>
+</div>
+<div class="but">
+	<span><input id="gp" type="text" name="tgName" maxlength="15" /> <i>请输入股票代码</i></span>
+	<a id="sm1" href="javascript:void(0)" onclick="javascript:mvclick();">立即扫描</a>
+</div>
+<div class="zj_c">
+	<h4><span>-平安银行扫描结果-</span></h4>
+	<div class="zj_cc">
+		<h5><span><em>主力控盘:</em><i></i></span></h5>
+		<p>据统计，近10日内主力集中了一定的筹码，呈中度控盘状态。</p>
+		<img src="Picture/ld_c1.jpg" onclick="javascript:void(0)"/>
+	</div>
+	<div class="zj_cc">
+		<h5><span><em>资金面分析:</em><i></i></span></h5>
+		<p>近5日内该股资金总体呈流出状态。据统计，近10日内主力集中
+了一定的筹码，呈中度控盘状态。</p>
+		<img src="Picture/ld_c2.jpg" onclick="javascript:void(0)"/>
+	</div>
+	<div class="zj_cc">
+		<h5><span><em>机构持仓分析:</em><i></i></span></h5>
+		<p>2016-09-30 与 2016-06-30 相比，主力机构持仓量减少13198.55万股，其中基金净增仓17家，主力净减仓110家，暂未发现中长期投资价值。</p>
+		<img src="Picture/ld_c3.jpg" onclick="javascript:void(0)"/>
+	</div>
+</div>
+<div class="but">
+	<span><input id="gp1"  type="text" name="tgName2" maxlength="15"  /><i>请输入你要诊断的个股代码</i></span>
+	<a id="sm2" href="javascript:void(0)"  onclick="javascript:mvclick();">立即扫描</a>
+</div>
+</div>
+
+<input id="tgval" type="hidden" />
+
+<div id="zm" >
+    <div class="zm_zz"></div>
+    <div class="zm_zc">
+        <!-- <p>请正确填写您的手机号，以便能及时接收个股分析诊断结果</p>
+        <span><input type="text" name="tgMobile" maxlength="11" onBlur='this.value=this.value.replace(/\D/gi,"")'  onKeyUp='this.value=this.value.replace(/\D/gi,"")' /> <i>请输入扫描结果手机号</i></span>
+        <a href="javascript:void(0)" id="btnTg">立即诊股</a>
+        <p>诊断结果我们将会24小时内电话或短信通知(接收短信完全免费)</p> -->
+        <p>您的股票代码已收到，微信扫一扫</p>
+        <div class="zm_zcc">
+            <h1>领取诊股报告</h1>
+            <p>（或手动加微信号：<span style="color:red;">yd86161</span>）</p>
+            <div class="ewm">
+                <img src="Picture/dyb171.png"  alt="">
+            </div>
+            <p>(附重大利好股票一览)</p>
+            <p>今日大事件：三大信号预示A股变盘，4类股或将井喷</p>
+        </div>
+    </div>
+</div>
+
+<div style="text-align: center;
+	font-size: 16px;
+	line-height: 130%;
+	color: #666;
+	margin-top: 20px;">
+	<p>广州乐宸资产管理有限公司隶属于壹点金服</p>
+	<p>地址：广州市从化区温泉镇明月山溪明月里一街18号</p>
+	<p>联系人：曾先生&nbsp;&nbsp;&nbsp;&nbsp;手机：020-66648878</p>
+</div>
+
+<script>
+$(function(){
+	$("#sm1").click(function(){
+			$("#tgval").val("tgName");
+		});
+	$("#sm2").click(function(){
+			$("#tgval").val("tgName2");
+		});
+        $("#sm3").click(function(){
+			$("#tgval").val("tgName3");
+		});
+	
+	$("#btnTg").click(function(){
+		var tgval=$("#tgval").val();
+		userOptgpbysem(tgval, 'tgMobile','btnTg',774);
+		});
+	});
+	
+</script>
+              <script type="text/javascript">
+var _mvq = _mvq || [];
+_mvq.push(['$setAccount', 'm-287752-0']);
+
+_mvq.push(['$logConversion']);
+(function() {
+var mvl = document.createElement('script');
+mvl.type = 'text/javascript'; mvl.async = true;
+mvl.src = ('https:' == document.location.protocol ? 'https://static-ssl.mediav.com/mvl.js' : 'http://static.mediav.com/mvl.js');
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(mvl, s);
+})();
+
+</script>
+
+<!--以上是流量统计(到达转化)代码，后续转化代码需要配合流量统计代码一同使用-->
+
+<script type="text/javascript">
+var _mvq = window._mvq || [];window._mvq = _mvq;
+_mvq.push(['$setAccount', 'm-287752-0']);
+
+function mvclick() {
+var d = new Date();
+var id = d.getYear().toString() + (d.getMonth() + 1).toString() + d.getDate().toString() + d.getHours().toString() + d.getMinutes().toString() + d.getSeconds().toString();
+id += "." + Math.random();
+_mvq.push(['custom', 'jzqu2', /*pc2*/ id,  '']);
+_mvq.push(['$logConversion']);
+}
+</script>
+
+<!--以上是咨询1的转化跟踪代码，请将转化明细信息回传到相应字段-->            
+<div style="display: none";>
+
+
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260859386'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260859386' type='text/javascript'%3E%3C/script%3E"));</script>
+<script src="http://www.sosoyun.cn/?i=29265"></script>
+   <!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//www.edfs555.com/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//www.edfs555.com/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+</div>
+
+</body>
+</html>

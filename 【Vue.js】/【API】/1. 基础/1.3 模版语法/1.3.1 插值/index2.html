@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js-插值(属性)</title>
+		<script src="/_lib/js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div v-bind:id="dynamicId" class="d-id"></div>
+		
+		<script type="text/javascript">
+			var dId = new Vue({
+				el: ".d-id",
+				data: {
+					dynamicId: "whatever"
+				}
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<!--
+		https://segmentfault.com/a/1190000004355197?_ea=580742
+	-->
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/input-range.css" />
+		<style>
+			div {
+				margin: 100px;
+				width: 200px;
+				height: 100px;
+				background-color: yellow;
+				/* Rotate div */
+				transform: rotate(9deg);
+				-ms-transform: rotate(9deg);
+				-moz-transform: rotate(9deg);
+				-webkit-transform: rotate(9deg);
+				-o-transform: rotate(9deg);
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div>Hello World</div>
+		<input type="range" id="rotateBox-slider" value="20" min="0" max="100" step="1" />
+
+		<script type="text/javascript">
+			var rotateBoxSlider = document.getElementById("rotateBox-slider");
+			
+			var styleSheets = document.styleSheets;
+//			var styleSheet0 = styleSheets[0];
+//			var styleSheet1 = styleSheets[1];
+			var styleSheet0 = document.getElementsByTagName('link')[0].sheet;
+			var styleSheet1 = document.getElementsByTagName('style')[0].sheet;
+			document.writeln(
+				" <br />styleSheets length:" + styleSheets.length +
+				",<br />styleSheets type:" + styleSheets + 
+				",<br />styleSheets[0] type:" + styleSheet0 + 
+				",<br />styleSheets[0].cssRules type:" + styleSheet0.cssRules + 
+				",<br />styleSheets[0].cssRules length:" + styleSheet0.cssRules.length +
+				",<br />styleSheets[0].cssRules[4] type:" + styleSheet0.cssRules[4] + 
+				",<br />styleSheets[0].cssRules[4].style type:" + styleSheet0.cssRules[4].style + 
+				",<br />styleSheets[0].cssRules[4].style length:" + styleSheet0.cssRules[4].style.length + 
+				",<br />styleSheets[0].cssRules[4].style.selectorText:" + styleSheet0.cssRules[4].style.selectorText + 
+				",<br />styleSheets[0].cssRules[4].style.cssText:" + styleSheet0.cssRules[4].style.cssText + 
+				",<br />styleSheets[0].cssRules[4].style.backgroundSize:" + styleSheet0.cssRules[4].style.backgroundSize + 
+				",<br />styleSheets[0] ownerNode:" + styleSheet0.ownerNode + 
+				",<br /><br />styleSheets[1] type:" + styleSheet1 + 
+				",<br />styleSheets[1] ownerNode:" + styleSheet1.ownerNode 
+			);
+
+			rotateBoxSlider.oninput = function() {
+				console.log(this.value);
+				//这种方式的改动不会显示在源代码中
+				styleSheet0.cssRules[4].style.backgroundSize = this.value + "% 100%";
+				console.log(styleSheet0.cssRules[4].style.backgroundSize);
+			}
+		</script>
+	</body>
+
+</html>

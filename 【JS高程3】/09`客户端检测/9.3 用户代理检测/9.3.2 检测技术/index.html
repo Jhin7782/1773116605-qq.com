@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//确切知道浏览器的名字和版本号不如确切知道它使用的是什么呈现引擎。
+			//为了不在全局作用域中添加多余的变量，使用模块增强模式来封装检测脚本。
+			var client = function() {
+				//呈现引擎
+				var engine = {
+					ie: 0,
+					gecko: 0,
+					webkit: 0,
+					khtml: 0,
+					opera: 0,
+					ver: null //完整版本号
+				};
+				
+				//浏览器
+				var browser = {
+					ie: 0,
+					firefox: 0,
+					safari: 0,
+					konq: 0,
+					opera: 0,
+					chrome: 0,
+					ver: null //完整版本号
+				};
+				
+				//平台、设备和操作系统
+				var system = {
+					win: false,
+					mac: false,
+					x11: false,
+					//移动设备
+					iphone: false,
+					ipod: false,
+					ipad: false,
+					ios: false,
+					android: false,
+					nokiaN: false,
+					winMobile: false,
+					//游戏系统
+					wii: false,
+					ps: false
+				};
+			}
+		</script>
+	</body>
+</html>

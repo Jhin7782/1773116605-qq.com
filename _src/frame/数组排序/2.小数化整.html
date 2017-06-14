@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr = new Array(3);
+			for (var i = 0; i < arr.length; i++) {
+				var ranFloat = Math.random();
+				console.log(ranFloat);
+				
+				//var ranNum = Math.floor(ranFloat * 10); //下退
+				//var ranNum = Math.ceil(ranFloat * 10); //上进
+				var ranNum = Math.round(ranFloat * 10); //四舍五入
+				
+				//arr.unshift(ranFloat); //在数组前端添加数据
+				//arr.pop(); //在数组末尾弹出数据
+				arr.push(ranNum);
+				arr.shift();
+			}
+			console.log(arr);
+		</script>
+	</body>
+</html>

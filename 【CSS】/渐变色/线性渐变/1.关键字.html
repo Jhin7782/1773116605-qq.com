@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*background: linear-gradient(direction, color-stop1 <length>|<percentage>, color-stop2, ...);*/
+			/*
+			 * percentage:指定起止色位置
+			 * 从percentage开始渐变，到percentage停止渐变
+			 * */
+			.linear-gradient {
+				height: 200px;
+				/* Safari 5.1 - 6.0 */
+				background: -webkit-linear-gradient(red, blue);
+				/* Opera 11.1 - 12.0 */
+				background: -o-linear-gradient(red, blue);
+				/* Firefox 3.6 - 15 */
+				background: -moz-linear-gradient(red, blue);
+				/* 标准的语法（必须放在最后） */
+				background: linear-gradient(red 0%, blue 100%);
+			}
+			
+			.linear-gradient-toRight {
+				height: 200px;
+				/* Safari 5.1 - 6.0 */
+				background: -webkit-linear-gradient(left, red, blue);
+				/* Opera 11.1 - 12.0 */
+				background: -o-linear-gradient(right, red, blue);
+				/* Firefox 3.6 - 15 */
+				background: -moz-linear-gradient(right, red, blue);
+				/* 标准的语法（必须放在最后） */
+				background: linear-gradient(to right, red 20%, blue 80%);
+			}
+			
+			.linear-gradient-toBottomRight {
+				height: 200px;
+				/* Safari 5.1 - 6.0 */
+				background: -webkit-linear-gradient(left top, red, blue);
+				/* Opera 11.1 - 12.0 */
+				background: -o-linear-gradient(bottom right, red, blue);
+				/* Firefox 3.6 - 15 */
+				background: -moz-linear-gradient(bottom right, red, blue);
+				/* 标准的语法（必须放在最后） */
+				background: linear-gradient(to bottom right, red, blue);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="linear-gradient"></div>
+		<div class="linear-gradient-toRight"></div>
+		<div class="linear-gradient-toBottomRight"></div>
+	</body>
+
+</html>

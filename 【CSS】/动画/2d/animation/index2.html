@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.anim_image {
+				/*-webkit-transition: all 1s ease-in-out;
+				-moz-transition: all 1s ease-in-out;
+				transition: all 1s ease-in-out;*/
+				cursor: pointer;
+			}
+			
+			.anim_image_top {
+				position: absolute;
+				-webkit-transform-origin: top right;
+				-webkit-animation: scrollLoop-top 1s infinite normal linear;
+			}
+			
+			@-webkit-keyframes scrollLoop-top {
+				0% {
+					/*opacity: 0;
+					filter: Alpha(opacity=0);*/
+					-webkit-transform: scale(0);
+				}
+				100% {
+					/*opacity: 1;
+					filter: Alpha(opacity=0);*/
+					-webkit-transform: scale(1);
+				}
+			}
+			
+			.anim_image_bottom {
+				-webkit-transform-origin: bottom left;
+				-webkit-animation: scrollLoop-botttom 1s infinite normal linear;
+			}
+			
+			@-webkit-keyframes scrollLoop-botttom {
+				0% {
+					/*opacity: 1;
+					filter: Alpha(opacity=100);*/
+					-webkit-transform: scale(1);
+				}
+				100% {
+					/*opacity: 0;
+					filter: Alpha(opacity=0);*/
+					-webkit-transform: scale(0);
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="testBox" class="demo anim_box">
+			<img class="anim_image anim_image_top" src="/_src/img/baby01.png" />
+			<img class="anim_image anim_image_bottom" src="/_src/img/baby01.png" />
+		</div>
+	</body>
+
+</html>

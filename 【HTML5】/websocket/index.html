@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!--
+			http://www.ruanyifeng.com/blog/2017/05/websocket.html
+		-->
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var url = "wss://echo.websocket.org";
+			var ws = new WebSocket(url);
+
+			switch(ws.readyState) {
+				case WebSocket.CONNECTING:
+					console.log(ws.readyState);
+					break;
+				case WebSocket.OPEN:
+					console.log(ws.readyState);
+					break;
+				case WebSocket.CLOSING:
+					console.log(ws.readyState);
+					break;
+				case WebSocket.CLOSED:
+					console.log(ws.readyState);
+					break;
+				default:
+					// this never happens
+					break;
+			}
+
+			ws.onopen = function(e) {
+				console.log("connection open...");
+				console.log(ws.readyState);
+				ws.send("hello websocket!");
+			}
+			ws.onmessage = function(e) {
+				if(typeof e.data == "string") {
+					console.log("Received data string");
+				}
+				if(e.data instanceof ArrayBuffer) {
+					var buffer = event.data;
+					console.log("Received arraybuffer");
+				}
+				console.log("received message: " + e.data);
+				console.log(ws.readyState);
+				ws.close();
+				console.log(ws.readyState);
+			}
+			ws.onclose = function(e) {
+				console.log("connection closed.");
+				console.log(ws.readyState);
+				var code = e.code;
+				var reason = e.reason;
+				var wasClean = e.wasClean;
+				console.log(code + ", " + reason + ", " + wasClean);
+			}
+		</script>
+	</body>
+
+</html>

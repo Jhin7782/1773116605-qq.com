@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: "微软雅黑";
+}
+
+a {
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+p, ul, ol {
+	margin: 0;
+}
+
+input {
+	border: 0;
+}
+
+input[type="button"] {
+	-webkit-appearance: none;
+}

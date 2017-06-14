@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js-属性与方法</title>
+		<script src="/_lib/js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			var data = {
+				a: 1
+			}
+			
+			//每个 Vue.js 应用都是通过构造函数 Vue 创建一个 Vue 的根实例 启动的
+			//在实例化 Vue 时，需要传入一个选项对象，它可以包含数据、模板、挂载元素、方法、生命周期钩子等选项
+			var vm = new Vue({
+				el: "body",
+				num: 0,
+				data: data
+			})
+			
+			//每个 Vue 实例都会代理其 data 对象里所有的属性
+			console.log(data.a === vm.a);
+			
+			console.log(data === vm);
+			console.log(data.toString());
+			console.log(vm.valueOf());
+			
+			//console.log(data.a === vm.data.a);
+			console.log(vm.data);
+			console.log(vm.num);
+			console.log(vm.el);
+		</script>
+	</body>
+</html>

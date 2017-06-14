@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/test_move.css" />
+
+	</head>
+
+	<body>
+		<a href="#" id="playButton">Play</a>
+		<div class="box">asdasdasd</div>
+		<script src="js/move.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			document.getElementById('playButton').onclick = function(e) {
+				move('.box')
+					//.set('background-color', '#CCC')
+					.set('margin-left', '200px')
+					.set('color', '#066')
+					//.add('margin-left', 100)
+					//.sub('margin-left', 100)
+					//.rotate(90)
+					//.add('rotate', 45)  undefined
+					//.duration('2s')
+//					.to(500, 200)
+//					.rotate(180)
+//					.scale(.5)
+//					.set('background-color', '#888')
+//					.set('border-color', 'black')
+//					.duration('2s')
+//					.skew(50, -10)
+//					.then()
+//					.set('opacity', 0)
+//					.duration('0.3s')
+//					.scale(0.1)
+//					.pop()
+					.end();
+			};
+		</script>
+	</body>
+
+</html>

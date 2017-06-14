@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+//			"use strict";
+			var weidingyi,
+				obj1 = new Object(),
+				obj2 = new Object;
+			obj1 = "070";
+			obj2 = 070;
+			console.log(obj1.valueOf() + "," + obj2.valueOf());
+			console.log(Number(true) + "," + Number(false));
+			console.log(Number(070));
+			console.log(Number("070"));
+			console.log(Number(null));
+			console.log(Number(weidingyi));
+			console.log(Number("   -00123"));
+			console.log(Number("  +.00123."));
+			console.log(Number("0xf") + "," + Number("-0xf"));
+			console.log(Number("123.."));
+			console.log(Number(obj1) + "," + Number(obj2));
+			
+			console.log(parseInt("  .00123.."));
+			console.log(parseInt("  +0.00123.."));
+			console.log(parseInt(070));
+			console.log(parseInt("070"));
+			console.log(parseInt("0x70"));
+			console.log(parseInt("070", 8));
+			
+			console.log(parseFloat("7.0"));
+			console.log(parseFloat("7.0.7"));
+			console.log(parseFloat("3.125e7"));
+			console.log(parseFloat(".070"));
+			console.log(parseFloat(".0x70"));
+			
+		</script>
+	</body>
+
+</html>

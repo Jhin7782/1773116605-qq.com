@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box-shadow {
+				border: 1px solid;
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				
+				/*两者都有用*/				
+				/*-webkit-box-shadow: 10px 10px 0 blue;
+				box-shadow: -10px -10px 0 red;*/
+				
+				/*→↓←↑*/
+				/*-webkit-box-shadow: 20px 0px 0px 0px blue, 0px 20px 0px 0px blue, -20px 0px 0px 0px blue, 0px -20px 0px 0px blue;
+				box-shadow: 20px 0px 0px 0px red, 0px 20px 0px 0px red, -20px 0px 0px 0px red, 0px -20px 0px 0px red;*/
+				
+				/*←↑→↓*/
+				/*-webkit-box-shadow: 20px 0px 0px 0px blue inset, 0px 20px 0px 0px blue inset, -20px 0px 0px 0px blue inset, 0px -20px 0px 0px blue inset;
+				box-shadow: 20px 0px 0px 0px red inset, 0px 20px 0px 0px red inset, -20px 0px 0px 0px red inset, 0px -20px 0px 0px red inset;*/
+				
+				-webkit-box-shadow: 20px 0px 0px 0px blue, 0px 20px 0px 0px blue, -20px 0px 0px 0px blue, 0px -20px 0px 0px blue,
+									20px 0px 0px 0px blue inset, 0px 20px 0px 0px blue inset, -20px 0px 0px 0px blue inset, 0px -20px 0px 0px blue inset;
+				box-shadow: 20px 0px 0px 0px red, 0px 20px 0px 0px red, -20px 0px 0px 0px red, 0px -20px 0px 0px red,
+							20px 0px 0px 0px red inset, 0px 20px 0px 0px red inset, -20px 0px 0px 0px red inset, 0px -20px 0px 0px red inset;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box-shadow"></div>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			Undefined——undefined,
+			Null——null,
+			Boolean——true/false,
+			Number,
+			String,
+			Object——obj/null
+		-->
+		
+		<script type="text/javascript">
+			var _undefined, //声明未初始化
+				//_undefined1, //未声明
+				_null = null,
+				_boolean = true,
+				_number = NaN,
+				_string = "",
+				_object = {},
+				_function = function() {
+					console.log("function");
+				};
+			console.log(typeof _undefined);
+			console.log(typeof _undefined1);
+			console.log(typeof _null);
+			console.log(typeof _boolean);
+			console.log(typeof _number);
+			console.log(typeof _string);
+			console.log(typeof _object);
+			console.log(typeof _function);
+		</script>
+	</body>
+</html>

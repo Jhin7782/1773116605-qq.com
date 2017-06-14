@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			canvas {
+				border: 1px solid;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="drawing" width="400" height="400">don't support canvas</canvas>
+
+		<script type="text/javascript">
+			var drawing = document.getElementById("drawing");
+			if(drawing.getContext) {
+				var context = drawing.getContext("2d");
+				context.shadowColor = "crimson";
+				context.shadowOffsetX = -5;
+				context.shadowOffsetY = 5;
+				context.shadowBlur = 0;
+				
+				context.strokeStyle = "#6495ED";
+				context.fillStyle = "rgba(88, 88, 88, 0.5)";
+				context.fillRect(10, 0, 50, 50);
+				context.strokeRect(100, 0, 50, 50);
+			}
+		</script>
+	</body>
+
+</html>

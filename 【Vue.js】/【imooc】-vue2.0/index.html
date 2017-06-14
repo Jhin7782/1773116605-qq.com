@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body id="Body">
+		
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#Body',
+				template: '<div>{{ fruit }}</div>',
+				data: {
+					fruit: 'apple'
+				}
+			})
+			
+			console.log(vm.fruit);
+		</script>
+	</body>
+
+</html>

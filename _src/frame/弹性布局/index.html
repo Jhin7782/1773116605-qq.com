@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!--
+			http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool
+		-->
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#box {
+				border: 1px solid;
+				width: 120px;
+				height: 300px;
+				/*任何一个容器都可以指定为 Flex 布局*/
+				display: -webkit-flex;
+				display: flex;
+				/*flex-flow: row wrap;*/
+				flex-direction: row;
+				flex-wrap: wrap;
+				align-content: center; /*控制多行元素整体的对齐方式*/
+				justify-content: center;
+				align-items: center;
+			}
+			
+			/*设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效*/
+			/*默认属性：*/
+			#box button:nth-child(1) {
+				order: 0;
+				/*flex: 0 1 auto;*/
+				flex-grow: 0;
+				flex-shrink: 1;
+				flex-basis: auto;
+				/**/
+				align-self: auto;
+			}
+			#box button:nth-child(2) {
+				order: 1;
+				flex-grow: 1;
+				flex-shrink: 0;
+			}
+			#box button:nth-child(3) {
+				order: 2;
+				flex-grow: 1;
+				flex-shrink: 1;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+			<button>btn1</button>
+			<button>btn2</button>
+			<button>btn3</button>
+			<button>btn4</button>
+			<button>btn5</button>
+			<button>btn6</button>
+		</div>
+
+		<script type="text/javascript">
+//			var btn_NL = document.querySelectorAll("#box>button");
+//			for(var i = 0; i < btn_NL.length; i++) {
+//				//btn_NL[i]["id"] = i;
+//				//btn_NL[i].setAttribute("id", i);
+//				btn_NL[i].id = i;
+//				for(var j = btn_NL.length; j > 0; j--) {
+//					if(j + i == btn_NL.length) {
+//						btn_NL[i].style.order = j;
+//						break;
+//					}
+//				}
+//			}
+		</script>
+	</body>
+
+</html>

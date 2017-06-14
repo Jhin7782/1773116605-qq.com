@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			canvas {
+				border: 1px solid;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="cvs" width="" height=""></canvas>
+
+		<script type="text/javascript">
+			var a = document.createElement('a');
+			var TN = document.createTextNode("下载");
+			a.appendChild(TN);
+			document.body.insertBefore(a, document.body.childNodes[0]);
+			a.href = "javascript: void(0);"
+			a.onclick = downloadImg;
+
+			function downloadImg() {
+				var dataurl = document.getElementById('cvs').toDataURL('image/png').replace("image/png", "image/octet-stream");
+				a.href = dataurl;
+				a.download = "sample.png";
+			}
+		</script>
+	</body>
+
+</html>

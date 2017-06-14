@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/media.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/fontsize.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/adjust.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			#bg {
+				position: relative;
+				background-image: url(img/p4/failed_bg.jpg);
+				background-size: 100% 100%;
+				width: 16rem;
+				
+			}
+			img {
+				width: 13rem;
+				position: absolute;
+				top: 4rem;
+				left: 1.5rem;
+				display: block;
+			}
+			#eweipan {
+				/*background-color: #F5E5AB;*/
+				background-color: #FF5F5F;
+				position: absolute;
+				top: 15.15rem;
+				left: 5.685rem;
+				font-size: 1rem;
+				line-height: 1.5rem;
+				/*color: #f21414;*/
+				color: white;
+				font-family: "黑体";
+				border-radius: 0.5rem;
+				padding: 0.2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="bg">
+			<img src="img/p4/qrcode_popup.png"/>
+			<div id="eweipan"><span style="font-size: 1.5rem;">e</span>微盘交易</div>
+		</div>
+		<script type="text/javascript">
+			var bg = document.getElementById("bg");
+			var client_height = document.documentElement.clientHeight;
+			bg.style.height = client_height / 40 + "rem";
+		</script>
+	</body>
+</html>

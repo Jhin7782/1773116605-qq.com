@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/input-range.css"/>
+		<style>
+			div {
+				margin: 100px;
+				width: 200px;
+				height: 100px;
+				background-color: yellow;
+				/* Rotate div */
+				-webkit-transform: rotate(0deg);
+				-moz-transform: rotate(9deg);
+				-ms-transform: rotate(9deg);
+				transform: rotate(9deg);
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="rotateBox">Hello World</div>
+		<input type="range" id="slideBar" value="0" min="0" max="100" step="1" />
+		
+		<script type="text/javascript">
+			var slideBar = document.getElementById("slideBar");
+			var rotateBox = document.getElementById("rotateBox");
+			var styleTag_slideBar = document.createElement("style");
+			var styleTag_rotateBox = document.createElement("style");
+			document.head.appendChild(styleTag_slideBar);
+			document.head.appendChild(styleTag_rotateBox);
+			var styleSheet_slideBar = styleTag_slideBar.sheet;
+			var styleSheet_rotateBox = styleTag_rotateBox.sheet;
+			
+			var cssRule_slideBar = "input[type=range]::-webkit-slider-runnable-track {background-size: " + this.value + "% 100%;}";
+			styleSheet_slideBar.insertRule(cssRule_slideBar, 0);
+			var cssRule_rotateBox = "#rotateBox {-webkit-transform: rotate(" + this.value + "deg);";
+			styleSheet_rotateBox.insertRule(cssRule_rotateBox, 0);
+			
+			slideBar.oninput = function() {
+				//这种方式的改动不会显示在源代码中
+				styleSheet_slideBar.cssRules[0].style.backgroundSize = this.value + "% 100%";
+				styleSheet_rotateBox.cssRules[0].style.webkitTransform = "rotate(" + this.value * 3.6 + "deg)";
+			}
+				
+		</script>
+	</body>
+
+</html>

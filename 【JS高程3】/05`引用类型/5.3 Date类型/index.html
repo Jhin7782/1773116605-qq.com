@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var now = new Date();
+			console.log("当前日期和时间：" + now);
+			
+			console.log("typeof now: " + typeof now);
+			
+			//与字符串拼接注意使用括号
+			console.log("instanceof new Date(): " + (now instanceof Date));
+			//console.log((now instanceof Date) + "——instanceof new Date()");
+			//var nowType = now instanceof Date;
+			//console.log("instanceof new Date():" + nowType);
+			
+
+			/**
+			 * 如果想根据特定的日期和时间创建日期对象，
+			 * 必须传入表示该日期的毫秒数
+			 * */
+
+			/**
+			 * Date.parse("Month,date,year,hour:minute:second"); 
+			 * 0. 接收一个表示日期的字符串参数；
+			 * 1. 一定要按照“月 日 年 时:分:秒”的顺序；
+			 * 2. “时:分:秒”之间必须用英文冒号“:”连接；
+			 * 3. “月 日 年”之间，以及“月 日 年”与“时:分:秒”之间：用空格，英文逗号或左斜杠连接都可以；
+			 * 4. “月”可以用英文（或其简写）也可以用数字表示。
+			 * */
+			//var someDate = new Date("7/7/1993");
+			var someDate = new Date(Date.parse("7/7/1993"));
+			var someDate = new Date(Date.parse("July 7,1993"));
+			var someDate = new Date(Date.parse("Wed July 7 1993 07:11:28 GMT+0800"));
+			var someDate = new Date(Date.parse("July 7 1993 07:11:28"));
+			console.log("用Date.parse()方法指定日期和时间：" + someDate);
+
+			/**
+			 * Date.UTC(year, Month,date, hour, minute, second, millisecond); 
+			 * 1. 年和月是必需的两个参数；
+			 * 2. 日期和时间会在传递的值上自动加上时区。
+			 * */
+			//var anotherDate = new Date(1993, 6, 7);
+			var anotherDate = new Date(Date.UTC(1993, 6));
+			var anotherDate = new Date(Date.UTC(1993, 6, 7));
+			var anotherDate = new Date(Date.UTC(1993, 6, 6, 23, 11, 28, 001));
+			console.log("用Date.UTC()方法指定日期和时间：" + anotherDate);
+
+			/**
+			 * ECMAScript 5 添加了 Date.now() 方法，
+			 * 返回表示调用这个方法时的日期和时间的毫秒数
+			 * */
+
+			//开始时间
+			var start = Date.now();
+			console.log("开始时间start:" + start);
+
+			//调用函数
+			function doSomething() {
+				document.writeln("i'm doing something!");
+			}
+			for (var i = 0; i < 1000; i++) {
+				doSomething();
+			}
+
+			//结束时间
+			var stop = Date.now();
+			console.log("结束时间  stop:" + stop);
+
+			//时间差
+			var result = stop - start;
+			console.log("时间差result：" + result);
+			
+			/**
+			 * 若浏览器不支持该方法，则：
+			 * */
+			var start2 = +new Date();
+			var stop2 = +new Date();
+			var result2 = stop2 - start2;
+			console.log("typeof start2: " + typeof start2 + ", typeof stop2: " + typeof stop2);
+			console.log("时间差result2：" + result2);
+
+
+			/**
+			 * 5.3.1 继承的方法：
+			 * 1. toLocalString();
+			 * 2. toString();
+			 * 3. valueOf();
+			 * */
+			console.log("toLocalString()：" + anotherDate.toLocaleString());
+			console.log("toString()：" + anotherDate.toString());
+			console.log(someDate.valueOf() + "," + anotherDate.valueOf());
+			console.log(someDate < anotherDate);
+			
+			
+			/**
+			 * 5.3.2 日期格式化方法：
+			 * 1. toDateString();
+			 * 2. toTimeString();
+			 * 3. toLocalDateString();
+			 * 4. toLocalTimeString();
+			 * 5. toUTCString(); ECMAScript 推荐现在编写的代码一律使用 toUTCString() 方法；
+			 * 6. toGMTString(); 等价于上一个方法，其存在目的在于确保向后兼容。
+			 * */
+			console.log("toDateString()：" + anotherDate.toDateString());
+			console.log("toTimeString()：" + anotherDate.toTimeString());
+			//console.log("toLocalDateString()：" + anotherDate.toLocalDateString());
+			//console.log("toLocalTimeString()：" + anotherDate.toLocalTimeString());
+			console.log("toUTCString()：" + anotherDate.toUTCString());
+			console.log("toGMTString()：" + anotherDate.toGMTString());
+			
+			
+			/**
+			 * 5.3.3 日期/时间组件方法：
+			 * */
+			
+			
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+		<!--<script src="js/jquery1.42.min.js" type="text/javascript" charset="utf-8"></script>-->
+		<!--<script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>-->
+		<!--<script src="js/form44.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="http://www.edfs555.com/_source/form/form44/js/form44.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			/***************************************/
+			
+			.popup {
+				position: fixed;
+				left: 50%;
+				width: 381px;
+				height: 374px;
+				margin-left: -190px;
+				top: 50%;
+				margin-top: -187px;
+				z-index: 99;
+				display: block;
+			}
+			
+			.popup>div:first-child {
+				height: 71px;
+				background: url(img/popup_title.png) no-repeat;
+				position: relative;
+			}
+			
+			.popup>div:first-child a {
+				display: block;
+				width: 32px;
+				height: 32px;
+				position: absolute;
+				top: -15px;
+				right: -5px;
+			}
+			/*****************************/
+			
+			.popup>div:last-child {
+				background: #ededed;
+				border-radius: 0 0 5px 5px;
+				overflow: hidden;
+				padding-top: 20px;
+			}
+			
+			.popup>div:last-child p {
+				height: 51px;
+				width: 322px;
+				margin: 10px auto;
+			}
+			
+			.popup>div:last-child p:nth-child(3) {
+				overflow: hidden;
+			}
+			
+			.popup>div:last-child p:nth-of-type(4) {
+				height: 70px;
+				margin-top: 20px;
+			}
+			
+			.popup>div:last-child p input {
+				background: url(img/popup_con.png) no-repeat;
+			}
+			
+			.popup>div:last-child p input[type="text"] {
+				height: 51px;
+				display: block;
+				width: 237px;
+				padding-left: 70px;
+				padding-right: 15px;
+			}
+			
+			.popup>div:last-child p:nth-child(2) input[type="text"] {
+				background-position: 0 -51px;
+			}
+			
+			.popup>div:last-child p:nth-child(3) input[type="text"] {
+				background-position: 0 -102px;
+				float: left;
+				width: 110px;
+			}
+			
+			.popup>div:last-child p:nth-child(3) input[type="button"] {
+				width: 120px;
+				float: left;
+				display: block;
+				height: 51px;
+				background-position: 0 -154px;
+				margin-left: 5px;
+				cursor: pointer;
+			}
+			
+			.popup>div:last-child p:nth-of-type(4) input[type="submit"] {
+				width: 167px;
+				display: block;
+				height: 70px;
+				background-position: -141px -154px;
+				margin: 0 auto;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="popup">
+			<div>
+				<a class="close_btn" href="javascript:void(0)" title="关闭">
+					<img src="img/close_btn.png" alt="">
+				</a>
+			</div>
+			<div>
+				<form id="form" action="http://www.edfs555.com/clicks/index.php?m=Home&c=Index&a=setForm&id=44" id="formsubmit44" onSubmit="javascript:return formprepare44(this);" method="post">
+					<p>
+						<input name="tcName" type="text" placeholder="请输入用户名">
+					</p>
+					<p>
+						<input id="phone44" type="text" name="phone" placeholder="请输入手机号">
+					</p>
+					<p>
+						<input type="text" id="code44" name="code" value="" placeholder="请输入验证码">
+						<a id="getCode44" data-url="/clicks/index.php?m=Home&c=Index&a=getCode">
+							<input value="获取验证码" type="button">
+						</a>
+					</p>
+					<input type="hidden" id="redirect44" name="redirect" data-title="恭喜！您已申领成功，稍后会有客服人员联系您！" value="http://m.edfs555.com" />
+					<input type="hidden" id="land44" name="land" value="" />
+					<input type="hidden" id="refer44" name="refer" value="" />
+					<input type="hidden" id="delay_time44" name="delay_time" value="" />
+					<input type="hidden" id="from44" name="from" value="" />
+					<input type="hidden" id="utm_source44" name="utm_source" value="" />
+					<input type="hidden" id="utm_medium44" name="utm_medium" value="" />
+					<input type="hidden" id="utm_term44" name="utm_term" value="" />
+					<input type="hidden" id="utm_content44" name="utm_content" value="" />
+					<input type="hidden" id="utm_campaign44" name="utm_campaign" value="" />
+					<p>
+						<input type="submit" value="" />
+					</p>
+				</form>
+			</div>
+		</div>
+	</body>
+
+</html>

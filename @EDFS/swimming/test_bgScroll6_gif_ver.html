@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/media.css" />
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/fontsize.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/adjust.js" type="text/javascript" charset="utf-8"></script>
+
+		<style type="text/css">
+			#p1_bg {
+				/*background-image: url(img/p1/p1_bg_640_1136.png);
+				background-size: 100% 100%;*/
+				width: 16rem;
+				/*height: 28.4rem;*/
+				position: relative;
+			}
+			#enter {
+				background: transparent;
+				background-image: url(img/p1/p1_btn_263_85.png);
+				background-size: 100% 100%;
+				position: absolute;
+				left: 4.7125rem;
+				bottom: 1rem;
+				width: 6.575rem;
+				height: 2.125rem;
+			}
+		
+			#demo {
+				background-color: lightgreen;
+				width: 16rem;
+				/*height: 19rem;*/
+				overflow: hidden;
+				position: relative;
+				display: none;
+			}
+			
+			#demo1 {
+				position: absolute;
+				bottom: 0rem;
+				left: 0rem;
+				/*-webkit-transition: bottom 0.3s ease;*/
+			}
+			
+			#player_left {
+				width: 1.8rem;
+				height: 3.6rem;
+				position: absolute;
+				left: 7.1rem;
+				bottom: 7rem;
+				/*border: 0.0625rem solid palevioletred;
+				width: 2rem;
+				height: 3rem;
+				text-align: center;
+				line-height: 3rem;
+				color: seagreen;
+				left: 7rem;
+				bottom: 8rem;*/
+			}
+			#player_right {
+				width: 1.8rem;
+				height: 3.6rem;
+				position: absolute;
+				left: 7.1rem;
+				bottom: 7rem;
+				display: none;
+			}
+			
+			#player_slow {
+				width: 2.425rem;
+				height: 3.675rem;
+				position: absolute;
+				left: 6.7875rem;
+				bottom: 7rem;
+			}
+			
+			#btns {
+				/*background-color: sandybrown;*/
+				text-align: center;
+				position: absolute;
+				left: 1.5rem;
+				bottom: 1rem;
+			}
+			
+			#btn_left {
+				width: 4rem;
+				height: 3rem;
+				margin-right: 5rem;
+				background-color: lightcoral;
+				border-radius: 2rem;
+			}
+			
+			#btn_right {
+				width: 4rem;
+				height: 3rem;
+				background-color: lightcoral;
+				border-radius: 2rem;
+			}
+			
+			#mc_play {
+				background-image: url(img/p2/mcbg.png);
+				width: 1.4rem;
+				height: 1.4rem;
+				position: fixed;
+				right: 0.5rem;
+				top: 0.5rem;
+				animation: reverseRotataZ 4s linear infinite normal;
+				-webkit-animation: reverseRotataZ 4s linear infinite normal;
+				animation: rotataZ 4s linear infinite normal;
+				-webkit-animation: rotataZ 4s linear infinite normal;
+			}
+			
+			@-webkit-keyframes reverseRotataZ {
+				0% {
+					-webkit-transform: rotateZ(0deg);
+				}
+				100% {
+					-webkit-transform: rotateZ(-360deg);
+				}
+			}
+			
+			@-webkit-keyframes rotataZ {
+				0% {
+					-webkit-transform: rotateZ(0deg);
+				}
+				100% {
+					-webkit-transform: rotateZ(360deg);
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="p1">
+			<img id="p1_bg" src="img/p1/p1_bg_640_963.png"/>
+			<input type="button" name="enter" id="enter" value="" onclick="enter()" />
+		</div>
+		<div id=demo>
+			<div id=demo1>
+				<img src="img/p2/bg_640_5019.png" />
+			</div>
+			<!--<img id="player_left" src="img/p2/player_left.png"/>
+			<img id="player_right" src="img/p2/player_right.png"/>-->
+			<img id="player_slow" src="img/p2/player_slow.gif"/>
+
+			<div id="btns">
+				<input type="button" name="" id="btn_left" value="btn_left" />
+				<input type="button" name="" id="btn_right" value="btn_right" />
+			</div>
+
+			<span id="musicControl">
+        		<a id="mc_play" class="stop" onclick="play_music();">
+            		<audio id="musicfx" loop="loop" autoplay="autoplay" preload="auto">
+               			<source src="raw/rather_be.mp3" type="audio/mpeg">
+           			 </audio>
+       			 </a>
+ 			</span>
+		</div>
+
+		<script type="text/javascript">
+//			var p1 = document.getElementById("p1");
+			var demo = document.getElementById("demo");
+			var demo1 = document.getElementById("demo1");
+			var player_left = document.getElementById("player_left");
+			var palyer_right = document.getElementById("player_right");
+			var btn_left = document.getElementById("btn_left");
+			var btn_right = document.getElementById("btn_right");
+			var per1 = 0;
+			var count = 1;
+			btn_left.addEventListener("touchstart", handleStart1, false);
+			btn_right.addEventListener("touchstart", handleStart2, false);
+
+			function handleStart1(evt) {
+				evt.preventDefault(); //阻止事件的默认行为
+				per1 -= 0.525;
+//				alert(demo.scrollTop+"  "+demo1.scrollTop+"  "+demo.offsetHeight+"  "+demo1.offsetHeight+"  "+demo.offsetTop+"  "+demo1.offsetTop);
+				
+				if(demo1.offsetTop < -20 && count== 1){
+					demo1.style.bottom = per1 + "rem";
+				}
+//				count -= 1;
+				
+				$("#player_left").hide();
+				$("#player_right").show();
+			}
+			function handleStart2(evt) {
+				evt.preventDefault(); //阻止事件的默认行为
+				per1 -= 0.525;
+//				alert(demo.scrollTop+"  "+demo1.scrollTop+"  "+demo.offsetHeight+"  "+demo1.offsetHeight+"  "+demo.offsetTop+"  "+demo1.offsetTop);
+				
+				if(demo1.offsetTop < -20 && count == 1){
+					demo1.style.bottom = per1 + "rem";
+				}
+//				count += 1;				
+				
+				$("#player_left").show();
+				$("#player_right").hide();
+			}
+			
+			
+			var client_height = document.documentElement.clientHeight;
+			
+			alert(client_height);
+//			p1.style.height = client_height / 40 + "rem";
+			demo.style.height = client_height / 40 + "rem";
+
+			function play_music() {
+				if ($('#mc_play').hasClass('on')) {
+					$('#mc_play audio').get(0).pause();
+					$('#mc_play').attr('class', 'stop');
+				} else {
+					$('#mc_play audio').get(0).play();
+					$('#mc_play').attr('class', 'on');
+				}
+				$('#music_play_filter').hide();
+				event.stopPropagation(); //阻止冒泡 
+			}
+			
+			
+			function enter () {
+				$("#p1").hide();
+				$("#demo").show();
+			}
+			
+		</script>
+	</body>
+
+</html>

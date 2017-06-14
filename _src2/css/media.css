@@ -1,0 +1,95 @@
+/*全局-------------------*/
+
+body,
+div,
+span,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+em,
+i,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+input,
+a,
+img,
+button {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: 0;
+}
+
+em,
+i {
+	font-style: normal;
+}
+
+html {
+	font-size: 20px;
+	line-height: 1.35rem;
+}
+
+body {
+	font-family: "微软雅黑", Tahoma;
+	color: #000;
+	min-width: 320px;
+	max-width: 640px;
+	margin: 0 auto;
+	font-size: 20px;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+input[type="button"] {
+	-webkit-appearance: none;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+
+/*全局----end--------*/
+
+@media screen and (max-width: 640px) and (min-width:560px) {
+	html {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 560px) and (min-width:480px) {
+	html {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 480px) and (min-width:400px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 400px) and (min-width:320px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	html {
+		font-size: 12px;
+	}
+}

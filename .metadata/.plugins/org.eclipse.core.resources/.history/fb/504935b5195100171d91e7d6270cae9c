@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/userInfo.css" />
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="tit">
+				客户信息详情
+			</div>
+			<div class="con con-userInfo">
+				<div class="subTit">
+					客户信息
+				</div>
+				<div class="conMain">
+					<div class="conMain-con user-baseInfo">
+						<div class="userAvatar">
+							user Avatar
+						</div>
+						<div class="userDetail">
+							<div class="userDetail-l">
+								<div class="userName">
+									<label for="userName">客户姓名:</label>
+									<input type="text" name="userName" id="userName" value="" />
+								</div>
+								<div class="userTel">
+									<label for="userTel">手机号:</label>
+									<input type="text" name="userTel" id="userTel" value="" />
+								</div>
+								<div class="userType">
+									<label for="userType">客户类型:</label>
+									<span class="btnGroup">
+										<input type="button" name="userType" id="userType" value="个人" />
+										<input type="button" name="userType" id="userType" value="单位" />
+									</span>
+								</div>
+								<div class="userTag">
+									<label for="userTag">标记:</label>
+									<input type="text" name="userTag" id="userTag" value="" />
+								</div>
+								<div class="userSex">
+									<label for="userSex">性别:</label>
+									<input type="text" name="userSex" id="userSex" value="" />
+								</div>
+								<div class="userIdNum">
+									<label for="userIdNum">身份证/机构码:</label>
+									<input type="text" name="userIdNum" id="userIdNum" value="" />
+								</div>
+								<div class="userBirthday">
+									<label for="userBirthday">生日:</label>
+									<input type="text" name="userBirthday" id="userBirthday" value="" />
+								</div>
+								<div class="userRemark">
+									<label for="userRemark">备注:</label>
+									<input type="text" name="userRemark" id="userRemark" value="" />
+								</div>
+							</div>
+							<div class="userDetail-r">
+								<div class="userPrivilege">
+									<label for="userPrivilege">客户特权:</label>
+
+								</div>
+								<div class="userPrivilege">
+									<label for="userPrivilege">微信关注:</label>
+
+								</div>
+								<div class="userPrivilege">
+									<label for="userPrivilege">积分:</label>
+
+								</div>
+								<div class="userPrivilege">
+									<label for="userPrivilege">创建时间:</label>
+
+								</div>
+							</div>
+						</div>
+						<div class="btn userDetail-edit">
+							编辑客户
+						</div>
+					</div>
+					<div class="conMain-con user-consumeRecord">
+
+					</div>
+					<div class="conMain-con user-userAnalyse">
+
+					</div>
+					<div class="conMain-con user-userRole">
+
+					</div>
+				</div>
+			</div>
+			<div class="con con-carInfo">
+				<div class="subTit">
+					车辆情况
+				</div>
+				<div class="conMain">
+
+				</div>
+			</div>
+			<div class="con con-vipInfo">
+				<div class="subTit">
+					会员卡情况
+				</div>
+				<div class="conMain">
+
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

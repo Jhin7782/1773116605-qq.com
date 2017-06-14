@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/media.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/fontsize.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/adjust.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body {
+				background-color: #FFD57B;
+				position: relative;
+			}
+			
+			#qrcode_block {
+				width: 16rem;
+				background-color: white;
+				padding: 0.5rem;
+			}
+			#qrcode_img {
+				width: 6.45rem;
+				height: 6.45rem;				
+				margin: 0rem auto 0.15rem;
+			}
+			.qrcode_p {
+				color: red;
+				font-family: "微软雅黑";
+				font-size: 0.5rem;
+				text-align: center;
+				line-height: 0.6rem;
+			}
+			
+			#wechat {
+				width: 16rem;
+				text-align: center;
+				font-weight: bold;
+				margin-top: 0.2rem ;
+			}
+			#wechat_account {
+				background-color: red;
+				color: yellow;
+				font-size: 1rem;
+				line-height: 1.5rem;
+				margin-bottom: 0.2rem;
+			}
+			
+			#clickme {
+				color: red;
+				font-family: "微软雅黑";
+				font-size: 0.5rem;
+				line-height: 0.6rem;
+				/*text-align: center;*/
+				width: 16rem;
+				margin: 1.5rem auto;
+				text-decoration: underline;
+			}
+			
+			#showImg {
+				width: 14.725rem;
+				height: 22.7rem;
+				position: absolute;
+				top: 1.5rem;
+				left: 0.6375rem;
+				display: none;
+			}
+			#closeImg {
+				width: 0.9rem;
+				height: 0.9rem;
+				position: absolute;
+				top: 2rem;
+				right: 1.25rem;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/p4_2/banner.png"/>
+		<div id="qrcode_block">
+			<img id="qrcode_img" src="img/p4_2/qrcode.jpg"/>
+			<p class="qrcode_p">扫码免费领取金币</p>
+			<p class="qrcode_p">不花钱日赚百元</p>
+		</div>
+		<!--<p id="clickme" onclick="show()">点击查看金币使用特权>></p>-->
+		<div id="wechat">
+			<p id="wechat_account">微信号：eweipanjiaoyi</p>
+			<p>长按复制微信号关注公众号【e微盘交易】</p>
+		</div>
+		<button id="clickme" onclick="show()">点击查看金币使用特权>></button>
+		<img id="showImg" src="img/p4_2/showImg2.png"/>
+		<img id="closeImg" src="img/p4_2/close.png"/>
+		
+		<script type="text/javascript">
+			function show () {
+				$("#showImg").show("normal");
+				$("#closeImg").show("normal");
+			}
+			$("#closeImg").bind("click", function() {
+				$("#showImg").hide();
+				$("#closeImg").hide();
+			});
+		</script>
+	</body>
+</html>

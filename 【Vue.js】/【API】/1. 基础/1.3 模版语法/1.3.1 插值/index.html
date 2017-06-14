@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js-插值(纯文本与纯HTML)</title>
+		<script src="/_lib/js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<span id="rawText">Message: {{ msg }}</span>
+		<hr />
+		<span id="onceText" v-once>never change message: {{ msg }}</span>
+		<hr />
+
+		<div id="rawHtml" v-html="rawHtml"></div>
+
+		<script type="text/javascript">
+			var rawText = new Vue({
+				el: "#rawText",
+				data: {
+					msg: "rawText <input type=\"button\" value=\"btn\" />"
+				}
+			})
+
+			var onceText = new Vue({
+				el: "#onceText",
+				data: {
+					msg: "onceText"
+				}
+			})
+
+			var rawHtml = new Vue({
+				el: "#rawHtml",
+				data: {
+					rawHtml: "rawHtml <input type=\"button\" value=\"btn\" />"
+				}
+			})
+		</script>
+	</body>
+
+</html>

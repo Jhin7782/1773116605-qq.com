@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="/_lib/utils/eventUtil.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.dragTarget {
+				width: 200px;
+				height: 200px;
+				border: 1px solid;
+				
+				display: flex;
+				display: -webkit-flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.dragTarget img {
+				display: block;
+				margin: auto;
+			}
+			#dragTarget1 {
+			}
+			#dragTarget2 {
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="dragTarget" id="dragTarget1"></div>
+		<div class="dragTarget" id="dragTarget2"></div>
+		<img id="dragEle_img" src="img/yasuo.jpg" width="120" draggable="true" />
+		<p id="dragEle_p" draggable="true">pppppppppppppppp</p>
+		<input type="text" id="dragEle_inputText" value="" draggable="false" />
+
+		<script type="text/javascript">
+			var dragTarget1 = document.getElementById("dragTarget1");
+			var dragTarget2 = document.getElementById("dragTarget2");
+			var dragEle_img = document.getElementById("dragEle_img");
+			var dragEle_p = document.getElementById("dragEle_p");
+			var dragEle_inputText = document.getElementById("dragEle_inputText");
+			
+			
+			//dragstart设置effectAllowed
+			EventUtil.addHandler(dragEle_img, "dragstart", function(e) {
+				e.dataTransfer.setData("text", EventUtil.getTarget(e).id);
+			});
+			EventUtil.addHandler(dragEle_p, "dragstart", function(e) {
+				e.dataTransfer.setData("text", EventUtil.getTarget(e).id);
+				e.dataTransfer.effectAllowed = "copy";
+			});
+			EventUtil.addHandler(dragEle_inputText, "dragstart", function(e) {
+				e.dataTransfer.setData("text", EventUtil.getTarget(e).id);
+			});
+			//dragenter设置dropEffect
+			EventUtil.addHandler(dragEle_inputText, "dragenter", function(e) {
+				EventUtil.preventDefault(e);
+				e.dataTransfer.dropEffect = "copy";
+			});
+			EventUtil.addHandler(dragTarget1, "dragenter", function(e) {
+				EventUtil.preventDefault(e);
+				e.dataTransfer.dropEffect = "none";
+			});
+			EventUtil.addHandler(dragTarget2, "dragenter", function(e) {
+				EventUtil.preventDefault(e);
+				e.dataTransfer.dropEffect = "move";
+				//e.dataTransfer.dropEffect = "copy";
+				//e.dataTransfer.dropEffect = "link";
+			});
+			//dragover阻止默认事件
+			EventUtil.addHandler(dragTarget1, "dragover", function(e) {
+				EventUtil.preventDefault(e);
+			});
+			EventUtil.addHandler(dragTarget2, "dragover", function(e) {
+				EventUtil.preventDefault(e);
+			});
+			//drop处理dataTransfer
+			EventUtil.addHandler(dragTarget1, "drop", function(e) {
+				EventUtil.preventDefault(e);
+				var data = e.dataTransfer.getData("text");
+				console.log(data);
+				EventUtil.getTarget(e).appendChild(document.getElementById(e.dataTransfer.getData("text")));
+			});
+			EventUtil.addHandler(dragTarget2, "drop", function(e) {
+				EventUtil.preventDefault(e);
+				var data = e.dataTransfer.getData("text");
+				console.log(data);
+				EventUtil.getTarget(e).appendChild(document.getElementById(e.dataTransfer.getData("text")));
+			});
+			
+		</script>
+	</body>
+
+</html>

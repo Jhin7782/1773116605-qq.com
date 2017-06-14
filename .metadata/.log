@@ -1,0 +1,858 @@
+!SESSION 2017-06-14 23:36:04.556 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -ready -application com.aptana.commandline.launcher.LauncherApplication
+Command-line arguments:  -os win32 -ws win32 -arch x86 -ready -data C:\Users\zzk\AppData\Roaming\HBuilder\userprofiles\1773116605@qq.com -application com.aptana.commandline.launcher.LauncherApplication
+
+!ENTRY com.pandora.core.utils 4 0 2017-06-14 23:36:05.707
+!MESSAGE (Build null) [ERROR]  remote-debugging-port == 9222
+
+!ENTRY org.eclipse.ui 2 0 2017-06-14 23:36:05.801
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-06-14 23:36:05.801
+!MESSAGE Could not parse key sequence: plug-in='com.pandora.ui', id='org.eclipse.ui.edit.text.contentAssist.proposals', keySequence='Ctrl+Sapce'
+
+!ENTRY com.aptana.rcp 4 0 2017-06-14 23:36:05.967
+!MESSAGE ********HBuilder正常启动：preStartup********
+
+!ENTRY com.aptana.scripting 4 0 2017-06-14 23:36:07.286
+!MESSAGE (Build null) [ERROR]  An error occurred while parsing scope 'Build–in constant' : Cannot recover from the syntax error
+
+!ENTRY com.aptana.scripting 4 0 2017-06-14 23:36:07.290
+!MESSAGE (Build null) [ERROR]  An error occurred while parsing scope 'library class/type' : Cannot recover from the syntax error
+
+!ENTRY com.aptana.rcp 4 0 2017-06-14 23:36:07.533
+!MESSAGE ---------------------start check----------------------
+
+!ENTRY com.aptana.rcp 4 0 2017-06-14 23:36:07.536
+!MESSAGE check mode
+
+!ENTRY com.aptana.rcp 4 0 2017-06-14 23:36:07.603
+!MESSAGE workspace : file:\C:\Users\zzk\AppData\Roaming\HBuilder\userprofiles\1773116605@qq.com
+
+!ENTRY com.aptana.rcp 4 0 2017-06-14 23:36:07.859
+!MESSAGE {hbcallrcptimes=1, allTime=3152, loginPageShowTime=start:2017-6-14 23:36:4:448  end:null, -1_hbuilderExeTime=0, 0_beforeRCPTime=105, 1_beforeLauncherApplicationTime=1006, postEmptyWorkbenchWindowOpened=start:1497454565584  end:null, postWorkbenchWindowLayoutOpened=start:null  end:null, 2_getRunningPortTime=18, 3_startServerTime=7, 4_beforeIdeApplicationTime=0, 4.1_IDEApplication.start=1136, 5_createDisplayTime=46, 6_getRawLocationURITime=start:1497454565630  end:null, 7_beforeCheckInstanceLocationTime=start:null  end:1497454565691, 8_checkInstanceLocationTime=4, 9_initCEF=0, 10_beforeInitialize=181, 11_initialize=82, 12_beforePreStartup=12, 13_preStartup=24, 14_beforePreWindowOpenTime=62, 15_preWindowOpenTime=10, 16_beforePostWindowCreateTime=1192, 17_postWindowCreateTime=141, 18_beforeLockTime=140, importProjectsFromCodeDirTime=249, 19_LockTime=0, 20_beforePostWindowOpenTime=61, userLoginConnectionTime=start:null  end:null, defaultLoginConnectionTime=238, tokenTime=start:2017-6-14 23:36:4:448  end:null, ideReadyTime=-206, activeEditor=com.pandora.ui.startpage.BrowserEditor, outline=false, eclipsestarttime=, hbkillrcptimes=0, hbuilderversion=8.1.3.201705121932, logintype=0, projectNumber=1}
+
+!ENTRY com.aptana.rcp 4 0 2017-06-14 23:36:08.009
+!MESSAGE ********HBuilder正常启动：postStartup********
+
+!ENTRY com.pandora.rcp.upgrade 4 0 2017-06-14 23:36:08.048
+!MESSAGE (Build null) [ERROR]  HBuilder当前版本: 8.1.3.201705121932
+
+!ENTRY com.aptana.editor.css 4 0 2017-06-14 23:36:08.072
+!MESSAGE (Build null) [ERROR]  开始清理css错误marker...
+
+!ENTRY com.aptana.editor.css 4 0 2017-06-14 23:36:08.142
+!MESSAGE (Build null) [ERROR]  清理css错误marker结束
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:36:08.194
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/HelloHBuilder
+
+!ENTRY com.pandora.index.store 4 0 2017-06-14 23:36:08.207
+!MESSAGE (Build null) [ERROR]  IndexStoreService started!!!
+
+!ENTRY com.pandora.stats.core 1 0 2017-06-14 23:36:08.230
+!MESSAGE 
+
+!ENTRY com.aptana.rcp 4 0 2017-06-14 23:36:08.344
+!MESSAGE cancel lock
+
+!ENTRY com.pandora.launcher.core 4 0 2017-06-14 23:36:08.397
+!MESSAGE (Build null) [ERROR]  系统找不到指定的文件。
+!STACK 0
+com.sun.jna.platform.win32.Win32Exception: 系统找不到指定的文件。
+	at com.sun.jna.platform.win32.Advapi32Util.registryGetStringValue(Advapi32Util.java:552)
+	at com.pandora.launcher.core.iphone.jna.LibraryFinder.loadPath(LibraryFinder.java:58)
+	at com.pandora.launcher.core.iphone.jna.LibraryFinder.<clinit>(LibraryFinder.java:50)
+	at com.pandora.launcher.core.iphone.jna.md.LibraryInstance.getMDLibrary(LibraryInstance.java:15)
+	at com.pandora.launcher.core.iphone.jna.idevice.win.WinDeviceLibrary.<clinit>(WinDeviceLibrary.java:68)
+	at com.pandora.launcher.core.iphone.jna.idevice.DeviceLibraryRegistry.getDeviceLibrary(DeviceLibraryRegistry.java:15)
+	at com.pandora.launcher.core.iphone.IPhoneLauncher.<init>(IPhoneLauncher.java:79)
+	at com.pandora.launcher.core.listener.DeviceStartupListener.earlyStartup(DeviceStartupListener.java:29)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:87)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:66)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$69.run(Workbench.java:2726)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.pandora.launcher.core 4 0 2017-06-14 23:36:08.417
+!MESSAGE (Build null) [ERROR]  系统找不到指定的文件。
+!STACK 0
+com.sun.jna.platform.win32.Win32Exception: 系统找不到指定的文件。
+	at com.sun.jna.platform.win32.Advapi32Util.registryGetStringValue(Advapi32Util.java:552)
+	at com.pandora.launcher.core.iphone.jna.LibraryFinder.loadPath(LibraryFinder.java:58)
+	at com.pandora.launcher.core.iphone.jna.LibraryFinder.getMDLibrary(LibraryFinder.java:122)
+	at com.pandora.launcher.core.iphone.jna.md.LibraryInstance.getMDLibrary(LibraryInstance.java:15)
+	at com.pandora.launcher.core.iphone.jna.idevice.win.WinDeviceLibrary.<clinit>(WinDeviceLibrary.java:68)
+	at com.pandora.launcher.core.iphone.jna.idevice.DeviceLibraryRegistry.getDeviceLibrary(DeviceLibraryRegistry.java:15)
+	at com.pandora.launcher.core.iphone.IPhoneLauncher.<init>(IPhoneLauncher.java:79)
+	at com.pandora.launcher.core.listener.DeviceStartupListener.earlyStartup(DeviceStartupListener.java:29)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:87)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:66)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$69.run(Workbench.java:2726)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.pandora.launcher.core 4 0 2017-06-14 23:36:08.434
+!MESSAGE (Build null) [ERROR]  添加Android设备监听......
+
+!ENTRY com.pandora.launcher.core 4 0 2017-06-14 23:36:08.449
+!MESSAGE (Build null) [ERROR]  系统找不到指定的文件。
+!STACK 0
+com.sun.jna.platform.win32.Win32Exception: 系统找不到指定的文件。
+	at com.sun.jna.platform.win32.Advapi32Util.registryGetStringValue(Advapi32Util.java:552)
+	at com.pandora.launcher.core.iphone.jna.LibraryFinder.loadPath(LibraryFinder.java:58)
+	at com.pandora.launcher.core.iphone.jna.LibraryFinder.getMDLibrary(LibraryFinder.java:122)
+	at com.pandora.launcher.core.iphone.jna.md.LibraryInstance.getMDLibrary(LibraryInstance.java:15)
+	at com.pandora.launcher.core.iphone.jna.idevice.win.WinDeviceLibrary.addNotificationHandler(WinDeviceLibrary.java:73)
+	at com.pandora.launcher.core.iphone.IPhoneLauncher$5.run(IPhoneLauncher.java:653)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.pandora.launcher.core 4 0 2017-06-14 23:36:08.479
+!MESSAGE (Build null) [ERROR]  library is null!!!!!
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2017-06-14 23:36:08.986
+!MESSAGE C:\mySoft\HBuilder.8.1.2.windows\HBuilder\p2\org.eclipse.equinox.p2.repository\cache\content-561804826.jar 是合法的jar
+
+!ENTRY com.aptana.parsing 4 0 2017-06-14 23:36:09.052
+!MESSAGE (Build null) [ERROR]  无效的属性类型“.webkit.SearchBoxImpl@4135441”属性“searchBoxJavaBridge_”
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2017-06-14 23:36:09.729
+!MESSAGE C:\mySoft\HBuilder.8.1.2.windows\HBuilder\p2\org.eclipse.equinox.p2.repository\cache\content1190459293.jar 是合法的jar
+
+!ENTRY com.aptana.index.core 4 0 2017-06-14 23:36:10.199
+!MESSAGE (Build null) [ERROR]  [INDEX_PROCESS_DEBUG] !SESSION 2017/06/14 23:36:10
+
+!ENTRY com.aptana.index.core 4 0 2017-06-14 23:36:10.538
+!MESSAGE (Build null) [ERROR]  [INDEX_PROCESS_DEBUG] INDEXER_SERVER_STARTED_SUCESSED
+
+!ENTRY com.aptana.scripting 4 0 2017-06-14 23:36:10.795
+!MESSAGE (Build null) [ERROR]  loadBundles异常
+!STACK 0
+org.jruby.exceptions.RaiseException: (Errno::EINVAL) =::
+	at org.jruby.RubyHash.replace(org/jruby/RubyHash.java:1623)
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.877
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHMobileProjectWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.881
+!MESSAGE ID:com.aptana.ui.wizards.NewWebProject
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.884
+!MESSAGE ID:org.eclipse.ui.wizards.new.folder
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.888
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHtmlWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.891
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.895
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewCssWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.899
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.902
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPXWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.905
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewCOFFEEWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.909
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewERBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.912
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewJSPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.915
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJsonWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.918
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewLESSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.921
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewPhpWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.925
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewMarkDownWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.928
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewRBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.931
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSASSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.934
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSCSSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.937
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewTSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.940
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewTxtWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.943
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewVueWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:36:13.947
+!MESSAGE ID:com.aptana.ui.wizards.new.file
+
+!ENTRY com.pandora.stats.core 4 0 2017-06-14 23:37:11.241
+!MESSAGE (Build null) [ERROR]  list job time: 3003
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.884
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHMobileProjectWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.884
+!MESSAGE ID:com.aptana.ui.wizards.NewWebProject
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.900
+!MESSAGE ID:org.eclipse.ui.wizards.new.folder
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.900
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHtmlWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.900
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.900
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewCssWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.915
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.915
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPXWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.915
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewCOFFEEWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.931
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewERBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.931
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewJSPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.931
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJsonWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.931
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewLESSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.947
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewPhpWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.947
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewMarkDownWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.947
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewRBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.947
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSASSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.962
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSCSSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.962
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewTSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.962
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewTxtWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.962
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewVueWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:47:56.978
+!MESSAGE ID:com.aptana.ui.wizards.new.file
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.765
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/@EDFS
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.765
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/@JC
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.765
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/_src
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.780
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/_src2
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.780
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/_temp
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.794
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/_test
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.795
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【Bootstrap】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.795
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【CSS】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.810
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【ES5】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.813
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【GitHub-Desktop】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.813
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【HTML5】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.831
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【HTML】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.836
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【JQuery】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.836
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【JS高程3】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.836
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【LESS】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.852
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【Node.js】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.852
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【React.js】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.867
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【Vue.js】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:05.867
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【vue-cli】
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.169
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHMobileProjectWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.173
+!MESSAGE ID:com.aptana.ui.wizards.NewWebProject
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.177
+!MESSAGE ID:org.eclipse.ui.wizards.new.folder
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.181
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHtmlWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.185
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.190
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewCssWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.194
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.198
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPXWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.202
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewCOFFEEWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.206
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewERBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.209
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewJSPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.213
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJsonWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.216
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewLESSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.220
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewPhpWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.223
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewMarkDownWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.226
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewRBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.230
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSASSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.234
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSCSSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.237
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewTSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.240
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewTxtWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.244
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewVueWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:49:25.247
+!MESSAGE ID:com.aptana.ui.wizards.new.file
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:49.042
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/mySpace/【ES6】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:49:49.200
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/mySpace/【Webpack】
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.885
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHMobileProjectWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.890
+!MESSAGE ID:com.aptana.ui.wizards.NewWebProject
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.894
+!MESSAGE ID:org.eclipse.ui.wizards.new.folder
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.898
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHtmlWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.902
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.906
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewCssWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.910
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.914
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPXWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.919
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewCOFFEEWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.923
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewERBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.926
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewJSPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.930
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJsonWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.933
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewLESSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.936
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewPhpWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.941
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewMarkDownWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.944
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewRBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.948
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSASSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.951
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSCSSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.954
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewTSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.958
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewTxtWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.961
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewVueWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:04.964
+!MESSAGE ID:com.aptana.ui.wizards.new.file
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.271
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHMobileProjectWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.275
+!MESSAGE ID:com.aptana.ui.wizards.NewWebProject
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.280
+!MESSAGE ID:org.eclipse.ui.wizards.new.folder
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.284
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHtmlWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.288
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.293
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewCssWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.297
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.304
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPXWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.307
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewCOFFEEWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.311
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewERBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.314
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewJSPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.317
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJsonWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.321
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewLESSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.325
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewPhpWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.328
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewMarkDownWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.332
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewRBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.335
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSASSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.338
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSCSSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.342
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewTSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.345
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewTxtWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.349
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewVueWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:50:18.353
+!MESSAGE ID:com.aptana.ui.wizards.new.file
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.348
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHMobileProjectWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.363
+!MESSAGE ID:com.aptana.ui.wizards.NewWebProject
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.363
+!MESSAGE ID:org.eclipse.ui.wizards.new.folder
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.363
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHtmlWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.363
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.363
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewCssWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.379
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.379
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPXWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.379
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewCOFFEEWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.379
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewERBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.379
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewJSPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.395
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJsonWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.395
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewLESSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.395
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewPhpWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.395
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewMarkDownWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.395
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewRBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.410
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSASSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.410
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSCSSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.410
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewTSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.410
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewTxtWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.410
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewVueWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:52:11.426
+!MESSAGE ID:com.aptana.ui.wizards.new.file
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.218
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHMobileProjectWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.218
+!MESSAGE ID:com.aptana.ui.wizards.NewWebProject
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.218
+!MESSAGE ID:org.eclipse.ui.wizards.new.folder
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.218
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHtmlWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.234
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.234
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewCssWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.234
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.234
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPXWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.250
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewCOFFEEWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.250
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewERBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.250
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewJSPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.250
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJsonWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.265
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewLESSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.265
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewPhpWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.265
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewMarkDownWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.265
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewRBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.281
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSASSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.281
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSCSSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.281
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewTSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.281
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewTxtWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.297
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewVueWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-14 23:53:13.297
+!MESSAGE ID:com.aptana.ui.wizards.new.file
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:53:53.168
+!MESSAGE (Build null) [ERROR]  *********索引存在，不执行 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/@JC
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:53:53.184
+!MESSAGE (Build null) [ERROR]  *********索引存在，不执行 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/_src
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:53:53.200
+!MESSAGE (Build null) [ERROR]  *********索引存在，不执行 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/_src2
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:53:53.215
+!MESSAGE (Build null) [ERROR]  *********索引存在，不执行 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/_temp
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:53:53.231
+!MESSAGE (Build null) [ERROR]  *********索引存在，不执行 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/_test
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:53:53.246
+!MESSAGE (Build null) [ERROR]  *********索引存在，不执行 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【CSS】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:53:53.262
+!MESSAGE (Build null) [ERROR]  *********索引存在，不执行 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【ES5】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:53:53.262
+!MESSAGE (Build null) [ERROR]  *********索引存在，不执行 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【HTML5】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:53:53.262
+!MESSAGE (Build null) [ERROR]  *********索引存在，不执行 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【HTML】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:53:53.278
+!MESSAGE (Build null) [ERROR]  *********索引存在，不执行 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【JQuery】
+
+!ENTRY com.aptana.core 4 0 2017-06-14 23:53:53.278
+!MESSAGE (Build null) [ERROR]  *********索引存在，不执行 FULL BUILD **********C:/Users/zzk/AppData/Roaming/HBuilder/userprofiles/1773116605@qq.com/【JS高程3】
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.010
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHMobileProjectWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.010
+!MESSAGE ID:com.aptana.ui.wizards.NewWebProject
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.025
+!MESSAGE ID:org.eclipse.ui.wizards.new.folder
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.025
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewHtmlWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.025
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.025
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewCssWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.041
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.041
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewASPXWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.041
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewCOFFEEWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.041
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewERBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.041
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewJSPWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.057
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewJsonWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.057
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewLESSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.057
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewPhpWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.057
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewMarkDownWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.057
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewRBWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.072
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSASSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.072
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewSCSSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.072
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewTSWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.072
+!MESSAGE ID:com.pandora.projects.ui.wizards.NewTxtWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.072
+!MESSAGE ID:com.pandora.projects.ui.files.wizards.NewVueWizard
+
+!ENTRY com.aptana.rcp 1 0 2017-06-15 00:07:51.088
+!MESSAGE ID:com.aptana.ui.wizards.new.file
+
+!ENTRY org.eclipse.core.commands 4 2 2017-06-15 00:08:09.729
+!MESSAGE 从插件调用代码时出现问题：“org.eclipse.core.commands”。
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4282)
+	at org.eclipse.swt.SWT.error(SWT.java:4197)
+	at org.eclipse.swt.SWT.error(SWT.java:4168)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:468)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:340)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:525)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:806)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:703)
+	at org.eclipse.ui.menus.CommandContributionItem$4.run(CommandContributionItem.java:374)
+	at org.eclipse.ui.menus.CommandContributionItem.updateCommandProperties(CommandContributionItem.java:391)
+	at org.eclipse.ui.menus.CommandContributionItem.access$6(CommandContributionItem.java:363)
+	at org.eclipse.ui.menus.CommandContributionItem$3.commandChanged(CommandContributionItem.java:355)
+	at org.eclipse.core.commands.Command$1.run(Command.java:511)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.commands.Command.fireCommandChanged(Command.java:506)
+	at org.eclipse.core.commands.Command.access$0(Command.java:498)
+	at org.eclipse.core.commands.Command$2.handlerChanged(Command.java:1010)
+	at org.eclipse.core.commands.AbstractHandler.fireHandlerChanged(AbstractHandler.java:78)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.access$0(HandlerProxy.java:1)
+	at org.eclipse.ui.internal.handlers.HandlerProxy$1.propertyChange(HandlerProxy.java:256)
+	at org.eclipse.ui.internal.services.EvaluationAuthority.firePropertyChange(EvaluationAuthority.java:236)
+	at org.eclipse.ui.internal.services.EvaluationAuthority.refsWithSameExpression(EvaluationAuthority.java:157)
+	at org.eclipse.ui.internal.services.EvaluationAuthority.sourceChanged(EvaluationAuthority.java:129)
+	at org.eclipse.ui.internal.services.ExpressionAuthority.sourceChanged(ExpressionAuthority.java:311)
+	at org.eclipse.ui.internal.services.ExpressionAuthority.sourceChanged(ExpressionAuthority.java:290)
+	at org.eclipse.ui.AbstractSourceProvider.fireSourceChanged(AbstractSourceProvider.java:99)
+	at org.eclipse.ui.internal.services.WorkbenchSourceProvider.checkActivePart(WorkbenchSourceProvider.java:406)
+	at org.eclipse.ui.internal.services.WorkbenchSourceProvider.checkActivePart(WorkbenchSourceProvider.java:305)
+	at org.eclipse.ui.internal.services.WorkbenchSourceProvider$1.partDeactivated(WorkbenchSourceProvider.java:252)
+	at org.eclipse.ui.internal.PartListenerList$4.run(PartListenerList.java:117)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.PartListenerList.fireEvent(PartListenerList.java:57)
+	at org.eclipse.ui.internal.PartListenerList.firePartDeactivated(PartListenerList.java:115)
+	at org.eclipse.ui.internal.PartService.firePartDeactivated(PartService.java:240)
+	at org.eclipse.ui.internal.PartService.setActivePart(PartService.java:302)
+	at org.eclipse.ui.internal.WWinPartService.updateActivePart(WWinPartService.java:134)
+	at org.eclipse.ui.internal.WWinPartService.access$0(WWinPartService.java:125)
+	at org.eclipse.ui.internal.WWinPartService$WWinListener.partDeactivated(WWinPartService.java:50)
+	at org.eclipse.ui.internal.PartListenerList2$4.run(PartListenerList2.java:115)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.PartListenerList2.fireEvent(PartListenerList2.java:55)
+	at org.eclipse.ui.internal.PartListenerList2.firePartDeactivated(PartListenerList2.java:113)
+	at org.eclipse.ui.internal.PartService.firePartDeactivated(PartService.java:244)
+	at org.eclipse.ui.internal.PartService.setActivePart(PartService.java:302)
+	at org.eclipse.ui.internal.WorkbenchPagePartList.fireActivePartChanged(WorkbenchPagePartList.java:57)
+	at org.eclipse.ui.internal.PartList.setActivePart(PartList.java:136)
+	at org.eclipse.ui.internal.WorkbenchPage.setActivePart(WorkbenchPage.java:3658)
+	at org.eclipse.ui.internal.WorkbenchPage.toggleFastView(WorkbenchPage.java:4002)
+	at org.eclipse.ui.internal.WorkbenchPage.hideFastView(WorkbenchPage.java:3982)
+	at org.eclipse.ui.internal.WorkbenchPage.saveState(WorkbenchPage.java:3500)
+	at org.eclipse.ui.internal.WorkbenchWindow.saveState(WorkbenchWindow.java:2992)
+	at org.eclipse.ui.internal.Workbench.saveState(Workbench.java:2996)
+	at org.eclipse.ui.internal.Workbench.recordWorkbenchState(Workbench.java:2527)
+	at org.eclipse.ui.internal.Workbench.saveMemen(Workbench.java:4191)
+	at sun.reflect.GeneratedMethodAccessor85.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.aptana.editor.common.CommonEditorPlugin$7$2.run(CommonEditorPlugin.java:952)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:164)
+	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:158)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4140)
+	at org.eclipse.swt.widgets.Display.msgFilterProc(Display.java:3472)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:256)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4206)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3748)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2957)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2921)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2755)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:689)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:678)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at com.aptana.rcp.IDEApplication.start(IDEApplication.java:224)
+	at com.aptana.commandline.launcher.application.LauncherApplication.start(LauncherApplication.java:94)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:348)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:183)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:655)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1491)

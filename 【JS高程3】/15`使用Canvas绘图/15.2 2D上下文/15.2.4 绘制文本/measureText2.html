@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			canvas {
+				border: 1px solid;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="drawing" width="800" height="400">不支持</canvas>
+
+		<script type="text/javascript">
+			var drawing = document.getElementById("drawing");
+			if(drawing.getContext) {
+				var context = drawing.getContext("2d");
+				var fontSize = 100;
+				context.font = fontSize + "px Arial";
+				context.textAlign = "start";
+				context.textBaseline = "top";
+				//返回一个对象实例，如果直接用这个实例放入以下循环中，会导致死循环
+				//var TextMetrics = context.measureText("hello fillText();");
+				while(context.measureText("hello fillText();").width > 140) {
+					console.log(context.measureText("hello fillText();").width);
+					fontSize--;
+					context.font = fontSize + "px Arial";
+				}
+				console.log(context.measureText("hello fillText();").width);
+				context.fillText("hello fillText();", 10, 10, 100);
+			}
+		</script>
+	</body>
+
+</html>

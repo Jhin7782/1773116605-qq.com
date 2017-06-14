@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul {
+				list-style: none;
+			}
+			
+			li {
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul class="menu-list">
+			<li class="menu-item">1</li>
+			<li class="menu-item">2</li>
+			<li class="menu-item">3</li>
+		</ul>
+		
+		<!--
+			其实根本思路就是把绑定事件后面的函数中的参数i跟循环当中的i区分开来
+		-->
+		
+		<script type="text/javascript">
+			var li_NL = document.querySelectorAll(".menu-list> li");
+			for(var i = 0; i < li_NL.length; i++) {
+				myFunc(i); //先把正确参数传过去，再在那边做处理
+			}
+
+			function myFunc(i) {
+				li_NL[i].onclick = function() {
+					console.log(i); //此时的i是myFunc函数中的命名参数i
+				}
+			}
+		</script>
+	</body>
+
+</html>

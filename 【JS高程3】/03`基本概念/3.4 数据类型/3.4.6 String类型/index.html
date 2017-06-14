@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var text1 = "hi,123";
+			document.write(Number(text1) + "<br />");
+			document.write(parseInt(text1) + "<br />");
+			document.write(text1.length + "<br />");
+			
+			var text2 = "123,hi";
+			document.write(Number(text2) + "<br />");
+			document.write(parseInt(text2) + "<br />");
+			document.write(text2.length + "<br />");
+
+			var text3 = "";
+			document.write(typeof text3 + "<br />");
+			document.write(Number(text3) + "<br />");
+			document.write(parseInt(text3) + "<br />");
+			document.write(text3.length + "<br />");
+			
+			var a = "";
+			if (a) {
+				console.log(1);
+			} else {
+				console.log(0);
+			}
+		</script>
+	</body>
+
+</html>

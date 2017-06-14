@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			canvas {
+				border: 1px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="drawing" width="400" height="400">A drawing of something.</canvas>
+		
+		<script type="text/javascript">
+			//画布
+			var drawing = document.getElementById("drawing");
+			if (drawing.getContext) {
+				//画笔
+				var context = drawing.getContext("2d");
+				//填充
+				context.fillStyle = "rgba(255, 0, 0, 0.5)";
+				context.fillRect(0, 0, 50, 50);
+				context.fillStyle = "rgba(0, 0, 255, 0.5)";
+				context.fillRect(25, 25, 50, 50);
+				//描边
+				//线条属性
+				context.lineWidth = 10;
+				context.lineCap = "square";
+				context.lineJoin = "bevel";
+				context.strokeStyle = "lightblue";
+				context.strokeRect(0, 100, 50, 50);
+				context.strokeStyle = "lightcoral";
+				context.strokeRect(25, 125, 50, 50);
+				//clearRect();
+				context.fillStyle = "lightpink";
+				context.fillRect(150, 50, 100, 100);
+				context.fillStyle = "rgba(12, 123, 223, 0.5)";
+				context.fillRect(200, 100, 100, 100);
+				context.clearRect(215, 115, 20, 20);
+			}
+		</script>
+	</body>
+</html>

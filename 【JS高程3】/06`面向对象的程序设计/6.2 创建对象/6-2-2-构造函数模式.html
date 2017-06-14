@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			/**
+			 * 调用构造函数会经历以下4个步骤：
+			 * 1. 创建一个新对象；
+			 * 2. 将构造函数的作用域赋给新对象（因此this就指向了这个新对象）；
+			 * 3. 执行构造函数中的代码（为这个新对象添加属性）；
+			 * 4. 返回新对象。
+			 * */
+			function Person(name, age, job) {
+				this.name = name;
+				this.age = age;
+				this.job = job;
+//				this.sayName = function() {
+//					console.log(this.name);
+//				};
+				this.sayName = sayName;
+			}
+			
+			function sayName () {
+				console.log(this.name);
+			}
+			
+			var person1 = new Person("yy", 24, "FonntEnd Engineer");
+			var person2 = new Person("qq", 22, "Designer");
+			
+			person1.sayName();
+			person2.sayName();
+			
+			console.log(person1.constructor == Person);
+			console.log(person1 instanceof Object);
+			console.log(person1 instanceof Person);
+			
+			//两个“sayName”是【两个】完全相等的属性，
+			//都是一个指向内存中【唯一一个】的“sayName()”函数的指针
+			console.log(person1.sayName == person2.sayName);
+		</script>
+	</body>
+
+</html>

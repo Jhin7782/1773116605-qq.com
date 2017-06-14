@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			canvas {
+				border: 1px solid;
+				vertical-align: top;
+			}
+		</style>
+	</head>
+
+	<body>
+		<img class="grayscale" src="/_lib/img/baby01.png" alt="Description of my picture" />
+		<script type="text/javascript">
+			window.addEventListener("load", removeColors);
+
+			function showColorImg() {
+				this.style.display = "none";
+				this.nextSibling.style.display = "inline";
+			}
+
+			function showGrayImg() {
+				this.previousSibling.style.display = "inline";
+				this.style.display = "none";
+			}
+
+			function removeColors() {
+				var img_NL = document.getElementsByClassName("grayscale");
+				var drawing = document.createElement("canvas"),
+					ctx = drawing.getContext("2d");
+				for(var img_id = 0; img_id < img_NL.length; img_id++) {
+					var img = img_NL[img_id],
+						img_width = img.offsetWidth,
+						img_height = img.offsetHeight;
+					drawing.width = img_width;
+					drawing.height = img_height * 2;
+					document.body.appendChild(drawing);
+					console.log(img + ", " + img_width + ", " + img_height);
+					ctx.drawImage(img, 0, 0);
+					//获取canvas上的图像数据
+					var imgData = ctx.getImageData(0, 0, img_width, img_height),
+						rgba = imgData.data, //图像数据的rgba值
+						rgba_length = imgData.data.length; //图像数据的rgba值长度
+					for(nPixel = 0; nPixel < rgba_length; nPixel += 4) {
+						//取rgb的平均值
+						var rgb_avg = (rgba[nPixel] + rgba[nPixel + 1] + rgba[nPixel + 2]) / 3;
+						//分别将r，g，b都设置为平均值（rgb相等即为灰色）
+						rgba[nPixel] = rgba[nPixel + 1] = rgba[nPixel + 2] = rgb_avg;
+					}
+					//绘制新图像
+					ctx.putImageData(imgData, 0, img_height);
+					//将canvas上的信息转为img
+					var new_img = new Image();
+					new_img.src = drawing.toDataURL();
+//					oGrayImg.onmouseover = showColorImg;
+//					oColorImg.onmouseout = showGrayImg;
+					ctx.clearRect(0, 0, img_width/2, img_height*2);
+//					img.style.display = "none";
+					img.parentNode.insertBefore(new_img, img);
+				}
+			}
+		</script>
+	</body>
+
+</html>

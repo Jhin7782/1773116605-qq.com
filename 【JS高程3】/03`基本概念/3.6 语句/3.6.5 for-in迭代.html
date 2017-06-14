@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			//var propName;
+			if(window != null || window != undefined) {
+				for(var propName in window) {
+					document.writeln(propName);
+				}
+			}
+
+			var obj = {
+				name: "whatever",
+				age: 24
+			}
+			for(var attr in obj) {
+				console.log(attr + ": " + obj[attr]);
+			}
+			
+			var obj11 = {
+				"name": "whatever",
+				"age": 24
+			}
+			for(var attr11 in obj11) {
+				console.log(attr11 + ": " + obj11.attr11);
+			}
+			
+			///////////////////////////////////////////////
+			
+			var obj2 = new Object();
+			obj2.name = "whatever2";
+			obj2.age = 42;
+			
+			for(var attr2 in obj2) {
+				console.log(attr2 + ": " + obj2[attr2]);
+			}
+			
+			var obj22 = new Object();
+			obj22.name = "whatever2";
+			obj22.age = 42;
+			
+			for(var attr22 in obj22) {
+				console.log(attr22 + ": " + obj22.attr22);
+			}
+		</script>
+	</body>
+
+</html>

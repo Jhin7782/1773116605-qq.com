@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var num = 0;
+			start:
+			for (var i = 0; i < 10; i++) {
+				for (var j = 0; j < 10; j++) {
+					if (i ==5 && j == 5) {
+						//break start;
+						continue start;
+					}
+					num++;
+				}
+			}
+			console.log(num);
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="/_lib/utils/eventUtil.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#dropTarget {
+				width: 200px;
+				height: 200px;
+				background-color: lightcyan;
+				border: 1px solid;
+			}
+			#dragInput {
+				padding: 10px 40px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="dropTarget"></div>
+		<input type="button" id="dragInput" value="来拖我" draggable="true" />
+		<button id="dragBtn" draggable="true">dragBtn</button>
+		<p id="dragP" draggable="true">来拖我</p>
+		
+		<script type="text/javascript">
+			var dropTarget = document.getElementById("dropTarget");
+			var dragInput = document.getElementById("dragInput");
+			var dragBtn = document.getElementById("dragBtn");
+			var dragP = document.getElementById("dragP");
+			
+			EventUtil.addHandler(dragInput, "dragstart", function(event) {
+				event.dataTransfer.setData("text", event.target.id);
+			});
+			EventUtil.addHandler(dragBtn, "dragstart", function(event) {
+				event.dataTransfer.setData("text", event.target.id);
+			});
+			EventUtil.addHandler(dragP, "dragstart", function(event) {
+				event.dataTransfer.setData("text", event.target.id);
+			});
+			
+			EventUtil.addHandler(dropTarget, "dragover", function(event) {
+				EventUtil.preventDefault(event);
+			});
+			EventUtil.addHandler(dropTarget, "dragenter", function(event) {
+				EventUtil.preventDefault(event);
+			});
+			EventUtil.addHandler(dropTarget, "drop", function(event) {
+				EventUtil.preventDefault(event);
+				var data = event.dataTransfer.getData("text");
+				console.log(data);
+				event.target.appendChild(document.getElementById(data));
+			});
+		</script>
+	</body>
+</html>

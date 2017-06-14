@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery UI 日期选择器（Datepicker） - 选择一个日期范围</title>
+		<link rel="stylesheet" type="text/css" href="/_lib/jq/css/jquery-ui.css" />
+		<script src="/_lib/jq/js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/_lib/jq/js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(function() {
+				var now = new Date();
+				console.log(now);
+				$("#from").datepicker({
+//					defaultDate: "+1w",
+//					changeMonth: true,
+//					numberOfMonths: 1,
+					minDate: now,
+					onClose: function(selectedDate) {
+						console.log("on close");
+						$("#to").datepicker("option", "minDate", selectedDate);
+					}
+				});
+				$("#to").datepicker({
+					defaultDate: "+1w",
+					changeMonth: true,
+					numberOfMonths: 1,
+					onClose: function(selectedDate) {
+						$("#from").datepicker("option", "maxDate", selectedDate);
+					}
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<label for="from">从</label>
+		<input type="text" id="from" name="from">
+		<label for="to">到</label>
+		<input type="text" id="to" name="to">
+
+	</body>
+
+</html>

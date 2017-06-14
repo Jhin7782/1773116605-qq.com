@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			var exist = document.getElementById("exist");
+			console.log(exist);
+			console.log(document.getElementById("exist"));
+			if (exist) {
+				console.log("is exist");
+			} else {
+				console.log("is not exist");
+			}
+			exist.innerHTML = "exist.innerHTML";
+			console.log("after operate exist");
+		</script>
+	</body>
+</html>

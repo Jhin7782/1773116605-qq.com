@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<a id="1">top</a>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<a href="#" onclick="goToTopXX('1')">go to top</a>
+		
+
+		<script type="text/javascript">
+			/**
+			 * 实现页内跳转
+			 */
+			function goToTopXX(obj) {
+				var _targetTop = $('#' + obj).offset().top; //获取位置
+				jQuery("html,body").animate({
+					scrollTop: _targetTop
+				}, 300); //跳转
+			}
+		</script>
+	</body>
+
+</html>

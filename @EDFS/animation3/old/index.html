@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>涨停牛股盘前免费送</title>
+	<!-- <link href="http://img.9666sr.com/sr/images/common/logo_new.ico" type="image/x-icon" rel="shortcut icon" /> -->
+	<link rel="stylesheet" type="text/css" href="Css/animate.min.css">
+	<link href="Css/reset2015.css" rel="stylesheet" type="text/css" />
+		<link href="Css/common.css" rel="stylesheet" type="text/css" />
+		<!--<script src="Scripts/183.js"></script>-->
+		<script type="text/javascript" src="js/common.js"></script>
+		<style type="text/css">
+/*注册 s*/
+   #dataBoxTemplate{ display: none; }
+  .layui-layer-page {width: 592px; border-radius: 10px; background: #fff;}
+  .layui-layer-page .layui-layer-content{padding:50px;text-align:center; overflow: visible!important;position:relative; }
+  .dataBox_ul li{margin-bottom:15px;color:#000;}
+  .dataBoxInfo{font-family:'microsoft Yahei';color: #f35a48; font-size: 20px; text-align:left; margin-bottom: 20px;}
+  .dataBox_ul li input{font-family:'microsoft Yahei';border:2px solid #ccc;text-align:center;width:490px;height:75px;color:#000;border-radius:10px;  font-size: 18px;}
+  .btn{border:none;width:100%;font-family:'microsoft Yahei';color:#fff;text-align:center;border-radius:0.08rem;font-size: 16px;border-radius: 10px;height:75px;cursor:pointer;}
+  .dataBox_ul li.imgCode input{width:50%;margin-right:2%;}
+  .ident img{width:47%;border-radius:3px;vertical-align:middle;}
+  #getCode{background:#ddd;color:#000;border:2px solid #ccc;}
+  #submitBtn{background:#f35a48;font-size: 30px}
+  #submitBtn:hover{background:#cc3b2a;} 
+  .layermcont .noClick{color:#fff;}
+  .closePopBtn{ display: block;width: 60px; height: 60px; position: absolute;right:0;top:-60px;}
+ .closePopBtn span::before, .closePopBtn span::after {
+  content: " "; position: absolute; right: 0; top: 30px; width: 60px; height: 1px; background: #fff;
+    -webkit-transform: rotateZ(45deg); -moz-transform: rotateZ(45deg); -ms-transform: rotateZ(45deg); -o-transform: rotateZ(45deg); transform: rotateZ(45deg);
+  }
+  .closePopBtn span::after { -webkit-transform: rotateZ(-45deg); -moz-transform: rotateZ(-45deg); -ms-transform: rotateZ(-45deg); -o-transform: rotateZ(-45deg); transform: rotateZ(-45deg);}
+  .layui-layer-btn{ text-align: center!important; }
+  .layui-layer-btn .layui-layer-btn0{background:#f35a48!important;border-color:#f35a48!important; }
+/*注册 end*/
+		html,body{width: 100%; min-height:100%;min-width:1303px; overflow-x:hidden;}
+		body{background: url(Images/bg-body.png) center top no-repeat #f39c35; }
+		.top{ width: 1200px; margin:0 auto;height:806px; position: relative; }
+		.top .logo{padding:80px 0 0 33px;}
+		.live-room{color: #ffd58a; padding:10px 0 0 235px; font-size: 20px;}
+		.live-room span{font-weight:bold; margin:0 3px;}
+
+@keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 -196px; }
+}
+        .btn-register{width: 283px; height: 91px; position: absolute; bottom:30px; left: 465px; cursor:pointer;background: url(Images/btn.png) 0 0 no-repeat;-webkit-animation:animatedBackground 800ms steps(2) infinite;-moz-animation:animatedBackground 800ms steps(2) infinite;animation:animatedBackground 800ms steps(2) infinite;}
+
+		.container{ width: 1200px; margin:0 auto; background: #ffeac5; }
+		.title{position: relative;}
+		.title-01{ top:-27px; left: -23px; }
+		.title-02{left: -53px;}
+		.title-03{left: -22px;}
+		.tab-wrap{width: 1115px; margin-left: 53px; position: relative; overflow: hidden;}
+		.tab-box{width:555px; height:419px; float: left; background: url(Images/bg-con01.png) 0 0 no-repeat; }
+		.tab-menu{width:568px; float: right; margin-left: -10px}
+		.tab-menu li{ padding-left: 77px; height: 88px;background: #f5e4c6; border-bottom: 1px solid #ddc9aa; border-top: 1px solid #ffeac5; cursor:pointer;color:#333;  }
+		.tab-menu li span{ display: inline-block; padding:20px 0; height: 48px; width:100px;font-size: 18px; border-left: 2px solid #ffeac5; text-align: center; }
+		.tab-menu li span.date{color:#666; position: relative; top:-10px; border-left: 0;width: 80px;}
+		.tab-menu li span.info{width: 120px; }
+		.tab-menu li.current{ background: url(Images/icon-current.png) 430px center no-repeat #fddbaa; color:#f35a48; }
+		.tab-menu li.current span.date{color:#f35a48; }
+
+		
+		.tab-box{ position: relative;} 
+		.tab-box div{ margin:27px 0 0 57px; display: none;}
+		.bg-img{ display: block; width: 211px; height: 314px;position: absolute; right: 0; top:0;  background: url(Images/img-bg.png) 0 0 no-repeat; }
+
+		.con-02{padding:0 32px; margin-top: 55px; overflow:hidden;}
+		.con-02-l{width: 470px; float: left; padding-top: 30px;}
+		.con-02-l p{padding:0 55px; font-size: 18px; line-height: 28px; color:#333; margin-bottom: 25px;}
+		.con-02-l p strong{font-size:24px;color:#f35a48}
+		.con-02-r{width: 620px; height: 357px; background: url(Images/img-con2.png) 0 0 no-repeat; float: right; position: relative;}
+		.con-02-r img{ position: absolute;}
+		.con-02-r img.img01{left:142px; top:227px;}
+		.con-02-r img.img02{left:248px; top:144px;}
+		.con-02-r img.img03{left:314px; top:29px;}
+
+		.content-03{ background: url(Images/con-bg-foot.png) center top no-repeat; margin-top: 30px;  padding-bottom: 50px;}
+		.content-03 p{color:#666; font-size: 17px; text-align: center;}
+		.risks-01{width: 480px; height: 40px; border:1px solid #666; line-height: 40px; margin:0 auto 10px; border-radius: 20px; }
+		.title-03 .btn-register{left:700px; top: 70px;}
+		.js-getCMSjsonp{ background: #fff; padding-top: 32px; }
+		html {
+			overflow: auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="top">
+		<!-- <div class="logo"><a href="http://www.9666.cn" target="_blank"><img src="Picture/logo.png"></a></div> -->
+	<!-- 	<p class="live-room" data-url="http://product.9666.cn/">牛仔网<span>&middot;</span>霹雳股侠直播室</p> -->
+		<div class="btn-register js-cbga" data-gak="djlq1" onclick="javascript:mvclick();"></div>
+		</div>
+		<div class="container">
+			<div class="content content-01">
+				<div class="title title-01"><img src="Picture/title-01.png"></div>
+				<div class="tab-wrap">
+					<ul class="tab-menu">
+					<li class="current"><span class="date">11月16日</span><span class="name">000505<br/>ST珠江</span><span  class="info">昨日提示<br />09:33涨停</span></li>
+					<li><span class="date">11月15日</span><span class="name">000505<br/>ST珠江</span><span  class="info">09:28提示<br />11:21涨停</span></li>
+					<li><span class="date">11月14日</span><span class="name">300461<br/>田中精机</span><span  class="info">09:28提示<br />10:24涨停</span></li>
+					<li><span class="date">11月10日</span><span class="name">601500<br/>通用股份</span><span  class="info">07:40提示<br />10:56涨停</span></li>
+				
+					</ul>
+					<div class="tab-box">
+						<span class="bg-img"></span>
+						<div style="display: block;"><img src="Picture/stzj2.jpg"></div>
+						<div><img src="Picture/stzj.jpg"></div>
+						<div><img src="Picture/tzjj.jpg"></div>
+						<div><img src="Picture/tygf2.jpg"></div>
+						
+
+						
+						
+						
+					</div>
+				</div>
+			</div>
+			<div class="content content-02">
+				<div class="title title-02"><img src="Picture/title-02.png"></div>
+				<div class="con-02">
+					<div class="con-02-l">
+						<p>每日开盘前直播室提示当日涨停潜力股，帮您锁定操作目标；盘中实时跟踪个股涨跌，捕捉涨停信号，<strong>帮您最大化收益！</strong></p>
+						<p>你还在为盯盘烦恼吗？<br /><strong>涨停牛股盘前发布，无需盯盘！</strong></p>
+						<p>选择股市直播室平台，每日不可错过的涨停牛股等你来！</p>
+					</div>
+					<div class="con-02-r">
+						<img class="animation img01 bounceInLeft" data-wow-delay="1.0s" src="Picture/img-con2-01.png">
+						<img class="animation img02 bounceInRight" data-wow-delay="2.0s" src="Picture/img-con2-02.png">
+						<img class="animation img03 bounceInDown" data-wow-delay="3.0s" src="Picture/img-con2-03.png">
+					</div>
+				</div>
+			</div>
+			<div class="content content-03">
+				<div class="title title-03"><img src="Picture/title-03.png"><div class="btn-register js-cbga" data-gak="djlq2" onclick="javascript:mvclick();"></div></div>
+				<!-- <p class="risks-01">中国证监会批准的证券投资咨询机构（编号：ZX0177）</p> -->
+				<p class="risks-02">风险提示：<strong>股市有风险  投资需谨慎</strong></p>
+			</div>
+		</div>
+	</div>
+	<!--footer start-->
+	<!-- <div id="CBFoot-GetCMSjsonp" class="js-getCMSjsonp" data-key="cms:live:global:index:bottom:footer"></div>   -->   <!--公用底部  -->
+    <script src="Scripts/global_foot.js"></script>
+	<!--footer end-->
+	
+	
+	<link rel="stylesheet" type="text/css" href="Css/base.css"/>
+	<script src="Scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="Scripts/popup_switch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="Scripts/screenWidth.js" type="text/javascript" charset="utf-8"></script>
+	<!--my code-->
+		<div class="sider_fixed" onclick="javascript:mvclick();">
+			<img src="img/wechat_icon.gif" />
+		</div>
+		
+		<div class="shadow"></div>
+		
+		<div class="center_fixed_bg marginBottom4rem">
+			<img src="img/popupBG1.png"/>
+			<a class="close_btn">x</a>
+			<div class="bgColor_red2">
+				<img class="qrcode" src="img/qrcode.png"/>
+				<p>马上扫一扫跟上千人抢限时福利<br />或者搜索老师助理微信号</p>
+				<p style="color: #fff100; margin-bottom: 1rem;">↓立即领取战法↓</p>
+				<span class="wechat_account">yd86161</span>
+				<img src="img/popupBG2.png"/>
+				<p>立即领取<span>名师战法课程</span></p>
+				<p>错过后悔一生</p>
+				<p class="close_btn2">放弃大赚机会</p>
+			</div>
+		</div>
+	
+	
+	
+	<script type="text/javascript" src="Scripts/layer.min.js"></script>
+ 	<script type="text/javascript" src="Scripts/actregister.js"></script>
+    <script type="text/javascript" src="Scripts/wow.min.js"></script>
+    
+    <SCRIPT type=text/javascript>kfguin="3001038377";ws="www.16sucai.com"; companyname="每日涨停牛股免费送"; welcomeword=" 亲爱的股民您好，今天的牛股已久候多时。Q我免费拿哦。"; type="1";</SCRIPT>
+	<script type="text/javascript" src="js/kf.js"></script>
+  <script>
+ var newUrl=$(".live-room").data("url");
+ $(function(){
+ 	//animation
+      if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+        new WOW({
+          boxClass: 'animation'
+        }).init();
+      };
+ 	//注册
+//页签切换
+$(".tab-menu li").click(function(){
+	$(this).addClass("current").siblings().removeClass("current");
+	var _index=$(this).index();
+	$(this).parent().parent(".tab-wrap").children(".tab-box").children("div").eq(_index).show().siblings("div").hide();
+}) 
+_gaq.push(['_trackEvent', window.location.href, 'plgx', window.location.href, 0, true]);
+})
+</script>
+<script src="Scripts/tongji_pc.js"></script>
+<script src="Scripts/tongji_setcookie.js"></script>
+              <script type="text/javascript">
+var _mvq = _mvq || [];
+_mvq.push(['$setAccount', 'm-287752-0']);
+
+_mvq.push(['$logConversion']);
+(function() {
+var mvl = document.createElement('script');
+mvl.type = 'text/javascript'; mvl.async = true;
+mvl.src = ('https:' == document.location.protocol ? 'https://static-ssl.mediav.com/mvl.js' : 'http://static.mediav.com/mvl.js');
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(mvl, s);
+})();
+
+</script>
+
+<!--以上是流量统计(到达转化)代码，后续转化代码需要配合流量统计代码一同使用-->
+
+<script type="text/javascript">
+var _mvq = window._mvq || [];window._mvq = _mvq;
+_mvq.push(['$setAccount', 'm-287752-0']);
+
+function mvclick() {
+var d = new Date();
+var id = d.getYear().toString() + (d.getMonth() + 1).toString() + d.getDate().toString() + d.getHours().toString() + d.getMinutes().toString() + d.getSeconds().toString();
+id += "." + Math.random();
+_mvq.push(['custom', 'jzqu2', /*pc2*/ id,  '']);
+_mvq.push(['$logConversion']);
+}
+</script>
+
+<!--以上是咨询1的转化跟踪代码，请将转化明细信息回传到相应字段-->            
+<div style="display: none";>
+
+
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260859386'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260859386' type='text/javascript'%3E%3C/script%3E"));</script>
+<script src="http://www.sosoyun.cn/?i=26853"></script>
+   <!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//www.edfs555.com/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//www.edfs555.com/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+</div>
+<!--以上是打开获取微信号按钮的转化跟踪代码，请将转化明细信息回传到相应字段-->            
+<!--注册框 开始-->
+<!--注册框 结束-->
+</body>
+</html>

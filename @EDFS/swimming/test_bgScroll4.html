@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/media.css" />
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/fontsize.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/adjust.js" type="text/javascript" charset="utf-8"></script>
+
+		<style type="text/css">
+			#demo {
+				background-color: lightgreen;
+				width: 16rem;
+				/*height: 19rem;*/
+				overflow: hidden;
+				position: relative;
+			}
+			
+			#demo1 {
+				position: absolute;
+				bottom: 0rem;
+				left: 0rem;
+				-webkit-transition: bottom 0.3s ease;
+			}
+			
+			#player {
+				position: absolute;
+				border: 0.0625rem solid palevioletred;
+				width: 2rem;
+				height: 3rem;
+				text-align: center;
+				line-height: 3rem;
+				color: seagreen;
+				left: 7rem;
+				bottom: 8rem;
+			}
+			
+			#btns {
+				/*background-color: sandybrown;*/
+				text-align: center;
+				position: absolute;
+				left: 1.5rem;
+				bottom: 1rem;
+			}
+			
+			#btn_left {
+				width: 4rem;
+				height: 3rem;
+				margin-right: 5rem;
+				background-color: lightcoral;
+				border-radius: 2rem;
+			}
+			
+			#btn_right {
+				width: 4rem;
+				height: 3rem;
+				background-color: lightcoral;
+				border-radius: 2rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id=demo>
+			<div id=demo1>
+				<img src="img/bg640_2073.jpg" />
+			</div>
+			<div id="player">
+				player
+			</div>
+
+			<div id="btns">
+				<input type="button" name="" id="btn_left" value="btn_left" />
+				<input type="button" name="" id="btn_right" value="btn_right" />
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var demo = document.getElementById("demo");
+			var demo1 = document.getElementById("demo1");
+			var btn_left = document.getElementById("btn_left");
+			var btn_right = document.getElementById("btn_right");
+			var per1 = 0;
+
+//			btn_left.onclick = function() {
+//				per1 -= 0.525;
+//				demo1.style.bottom = per1 + "rem";
+//			}
+//			btn_right.onclick = function() {
+//				per1 -= 0.525;
+//				demo1.style.bottom = per1 + "rem";
+//			}
+			btn_left.addEventListener("touchstart", handleStart1, false);
+			function handleStart1(evt) {
+             	evt.preventDefault(); //阻止事件的默认行为
+             	per1 -= 0.525;
+				demo1.style.bottom = per1 + "rem";
+			}
+			btn_right.addEventListener("touchstart", handleStart1, false);
+			function handleStart1(evt) {
+             	evt.preventDefault(); //阻止事件的默认行为
+             	per1 -= 0.525;
+				demo1.style.bottom = per1 + "rem";
+			}
+			
+//			setTimeout(
+//				function() {
+				var client_height = document.documentElement.clientHeight;
+				alert(client_height);
+				demo.style.height = client_height/40 + "rem";
+//			}
+//			, 100);
+		</script>
+	</body>
+
+</html>

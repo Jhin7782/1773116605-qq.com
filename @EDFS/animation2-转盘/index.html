@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>这一把玩大了 百万红包抽到你手软</title>
+<link type="text/css" rel="stylesheet" href="css/css.css" />
+<link rel="stylesheet" href="css/demo.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.min.js"></script>
+<script type="text/javascript" src="Scripts/awardrotate.js"></script>
+<script src="Scripts/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="Scripts/randomPassword.js" type="text/javascript" charset="utf-8"></script>
+<script src="Scripts/createElement.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+var i = 1;
+var url = 'https://jq.qq.com/?_wv=1027&k=41jFNGi';
+$(function (){
+var chars = [1,2,4,5];
+
+function generateMixed(n) {
+     var res = "";
+     for(var i = 0; i < n ; i ++) {
+         var id = Math.ceil(Math.random()*4);
+         res += chars[id];
+         console.log(res);
+     }
+     return Number(res);
+}
+
+	var rotateTimeOut = function (){
+		$('#rotate').rotate({
+			angle:0,
+			animateTo:2160,
+			duration:8000,
+			callback:function (){
+				alert('网络超时，请检查您的网络设置！');
+			}
+		});
+	};
+	var bRotate = false;
+
+	var rotateFn = function (awards, angles, txt){
+		bRotate = !bRotate;
+		$('#rotate').stopRotate();
+		$('#rotate').rotate({
+			angle:0,
+			animateTo:angles+1800,
+			duration:8000,
+			callback:function (){
+				if(awards==0){
+				    $(".que_title").text("差一点，再接再厉！");
+					$(".que_box1").text('天呐撸，居然啥都没有');
+					$(".close_box a").text('再 来 一 次');
+					//$(".close_box").click(function(){window.open(url);return false;});
+					$(".que_box2").hide();
+				}else{
+				    $(".que_title").text("哇塞！恭喜您！");
+					$(".que_box1").text('抽中'+txt);
+					$(".close_box a").text('领 取 红 包');
+					//$(".close_box").click(function(){window.open(url);});
+					$(".que_box2").show();
+				}
+				$("#que_pop").show();
+				bRotate = !bRotate;
+			}
+		})
+	};
+
+	$('.pointer').click(function (){
+
+		if(bRotate)return;
+		var item = generateMixed(1);
+
+		switch (item) {
+			case 0:
+				console.log(0);
+				//var angle = [26, 88, 137, 185, 235, 287, 337];
+				rotateFn(0, 337, '谢谢参与');
+				break;
+			case 1:
+				console.log(1);
+				//var angle = [88, 137, 185, 235, 287];
+				rotateFn(1, 367, 'ThinkPad E450 14英寸笔记本');
+				break;
+			case 2:
+				console.log(2);
+				//var angle = [137, 185, 235, 287];
+				rotateFn(2, 88, '20元豹子号连钞套票');
+				break;
+			case 3:
+				console.log(3);
+				//var angle = [137, 185, 235, 287];
+				rotateFn(3, 137, '谢谢参与');
+				break;
+			case 4:
+				console.log(4);
+				//var angle = [185, 235, 287];
+				rotateFn(4, 185, '10元豹子号连钞套票');
+				break;
+			case 5:
+				console.log(5);
+				//var angle = [185, 235, 287];
+				rotateFn(5, 285, 'iphone7 128G黑色');
+				break;
+			case 6:
+				console.log(6);
+				//var angle = [235, 287];
+				rotateFn(6, 235, '谢谢参与');
+				break;
+			case 7:
+				console.log(7);
+				//var angle = [287];
+				rotateFn(7, 287, '20元豹子号连钞套票');
+				break;
+			
+			case 8:
+				//var angle = [287];
+				rotateFn(7, 287, '谢谢参与');
+				break;
+			case 9:
+				//var angle = [287];
+				rotateFn(7, 287, '谢谢参与');
+				break;			
+		}
+
+ 
+	});
+});
+
+function c(){
+	$('#que_pop').hide();
+	//window.open(url);
+}
+function rnd(n, m){
+	return Math.floor(Math.random()*(m-n+1)+n)
+}
+
+  //在关闭页面时弹出确认提示窗口
+    $(window).bind('beforeunload', function(){ 
+//  	alert("您确定要离开吗");
+        return '您确定要离开吗？'; 
+    });
+</script>
+
+
+</head>
+
+<body>
+<div class="bg">
+	<Div class="banners"><img src="Picture/dzp_01.jpg" /><img src="Picture/dzp_02.jpg" /><img src="Picture/dzp_03.jpg" /></Div>	
+</div>
+<div class="turntable">
+	<div class="turntables">
+		<div class="turntable_l fl">
+			<!--中奖弹窗-->
+			<div class="que_pop" id="que_pop" style="display:none">
+				<span class="close" id="close"  value="关闭" onclick="c()">关闭</span>
+				<h2 class="que_title">哇塞！恭喜您！</h2>
+				<div class="que_box1">抽中20元豹子连钞套票</div>
+				<div class="que_box2">注：为避免违规操作，请加活动专属微信客服咨询详情（微信号：<span style="color: red; font-weight: bold;">yd85025</span>）</div>
+				<!--<div class="close_box"><h1><a href="https://jq.qq.com/?_wv=1027&k=41jFNGi" target="_blank">领 取 红 包</a></h1></div>-->
+				<img style="width: 50%; margin-left: 25%; margin-top: 5%;" src="Picture/qrcode.jpg"/>
+		  	</div>
+			<!--中奖弹窗-->
+		
+			 <div class="turntable-bg">
+				<div class="pointer"><img style="cursor:pointer" src="Picture/pointer.png" alt="pointer"/></div>
+				<div class="rotate" ><img id="rotate" src="Picture/award_bg.png" alt="turntable"/></div>
+			</div>
+		</div>
+		
+		
+		<div class="turntable_r fr">
+			<div class="turn_title">
+				<div class="turn_titles">转盘中奖名单</div>
+				<div class="turn_hb" id="turn_hb_byfor">
+					
+					<div class="turn_hbs">
+						<div class="fl"><img src="Picture/hongbao.jpg" /></div>
+						<div class="fr zjmd"><span id="randomPassword"></span><br /> <span>抽中</span><span id="award">iphone7</span></div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	addEleDivs("turn_hb_byfor", 30);
+	randomPwd_for("randomPassword", 30, 4);
+	award_for("award", 30);
+</script>
+
+
+
+<div class="guizebg">
+	<div class="guize">
+		<div class="jdxq"><h1>活动详情：</h1></div>
+		<div class="guizes">
+			<div class="guize1 fl ml15">
+				<div class="fl gz01"><img src="Picture/gz01_07.png" /></div>
+				<div class="fr gztitles"><h1>参与用户范围</h1><p>本活动由壹点金服举办，活动仅限999人参与，超出该人数将取消参与资格！</p></div>
+			</div>
+			<div class="guize1 fl">
+				<div class="fl gz01"><img src="Picture/gz01_09.png" /></div>
+				<div class="fr gztitles"><h1>活动说明</h1><p>奖励根据抽奖次数范围，阶梯变化，抽奖次数越多，中大奖的机率越高。</p></div>
+			</div>
+			<div class="guize1 fr">
+				<div class="fl gz01"><img src="Picture/gz01_11.png" /></div>
+				<div class="fr gztitles"><h1>领取奖励</h1><p>赠品领取有一定门槛，详情加活动专属客服微信咨询；活动禁止作弊，一经发现，扣除所有赠品所得。</p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<script type="text/javascript">
+			jQuery(".turntable_r").slide({
+				mainCell: ".turn_title .turn_hb",
+				autoPage: true,
+				effect: "top",
+				autoPlay: true,
+				vis: 4
+			});
+//			jQuery(".txtScroll-top").slide({
+//				titCell: ".hd ul",
+//				mainCell: ".bd ul",
+//				autoPage: true,
+//				effect: "top",
+//				autoPlay: true,
+//				vis: 5
+//			});
+		</script>
+
+
+<div class="botbg">
+	<div class="bots">本活动最终解释权归壹点金服拥有，壹点金服将保留随时修改活动规则的权利</div>
+</div>
+
+<!--<IFRAME frameBorder=1 id=heads src="https://jq.qq.com/?_wv=1027&k=41jFNGi" style="display:none"></IFRAME>-->
+
+
+<div style="display: none";>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?57c8a58e11feb3069916efcf909a8ad6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259549778'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1259549778' type='text/javascript'%3E%3C/script%3E"));</script>
+ 
+   <!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//www.edfs555.com/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//www.edfs555.com/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+</div>
+</body>
+</html>
+
+
+
+
+
+

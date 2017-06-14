@@ -1,0 +1,18 @@
+﻿@charset "utf-8";
+td span {
+    font-size: 14px;
+    color: #000000;
+}
+
+a{
+    text-decoration: none;
+}
+
+td a{
+    margin-top: 5px;
+    padding: 5px 20px;
+    background-color: #ff261a;
+    border-radius: 5px;
+    border: 1px solid;
+
+}

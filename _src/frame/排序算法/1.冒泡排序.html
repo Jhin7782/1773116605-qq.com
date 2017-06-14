@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			//生成数组
+			var arr = new Array(5);
+			for(var i = 0; i < arr.length; i++) {
+				var ranFloat = Math.random();
+				var ranNum = Math.round(ranFloat * 20); //四舍五入
+				arr.push(ranNum);
+				arr.shift();
+			}
+			console.log(arr);
+			
+			//冒泡排序
+			function bubbleSort(arr) {
+				for(var i = 0; i < arr.length; i++) {
+					for(var j = 0; j < arr.length; j++) {
+						if (arr[i] < arr[j]) { //先降序后升序
+							temp = arr[i];
+							arr[i] = arr[j];
+							arr[j] = temp;
+						}
+					}
+				}
+			}
+			bubbleSort(arr);
+			console.log(arr);
+		</script>
+	</body>
+
+</html>

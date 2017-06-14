@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.8.0.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<span id="floatNum">
+			0.0
+		</span>
+		<script type="text/javascript">
+			var floatNum = $("#floatNum").html();
+			var afterParse = parseInt(floatNum);
+			console.log(afterParse);
+			
+//			afterParse += 0.01;
+//			$("#floatNum").html(afterParse);
+			setInterval(function() {
+				afterParse += 1;
+				$("#floatNum").html(afterParse);
+			}, 500);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+.scale_yy {
+	animation: scaleyy 1s linear 0s infinite alternate;
+	-webkit-animation: scaleyy 1s linear 0s infinite alternate;
+	-moz-animation: scaleyy 1s linear 0s infinite alternate;
+	-ms-animation: scaleyy 1s linear 0s infinite alternate;
+}
+@keyframes scaleyy{
+	from{
+		transform: scale(0.975);
+	}
+	to{
+		transform: scale(1.025);
+	}
+}
+@-webkit-keyframes scaleyy{
+	from{
+		-webkit-transform: scale(0.975);
+	}
+	to{
+		-webkit-transform: scale(1.025);
+	}
+}
+@-moz-keyframes scaleyy{
+	from{
+		-moz-transform: scale(0.975);
+	}
+	to{
+		-moz-transform: scale(1.025);
+	}
+}
+@-ms-keyframes scaleyy{
+	from{
+		-ms-transform: scale(0.975);
+	}
+	to{
+		-ms-transform: scale(1.025);
+	}
+}

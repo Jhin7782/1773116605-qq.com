@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul {
+				list-style: none;
+			}
+			
+			li {
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul class="menu-list">
+			<li class="menu-item">1</li>
+			<li class="menu-item">2</li>
+			<li class="menu-item">3</li>
+		</ul>
+
+		<script type="text/javascript">
+			var li_NL = document.querySelectorAll(".menu-list> li");
+			for(var i = 0; i < li_NL.length; i++) {
+				li_NL[i].onclick = function() {
+					console.log(i); //此时 i=3
+				}
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			body {
+				background: lightgreen;
+			}
+			/*清除默认样式*/
+			input[type=range] {
+				display: block;
+				margin: 10% auto;
+				-webkit-appearance: none;
+				width: 300px;
+				border-radius: 15px;
+				background: white;
+				background: -webkit-linear-gradient(0deg, white, cornflowerblue 20%, white 20%, white);
+				background: linear-gradient(90deg, white, cornflowerblue 20%, white 20%, white);
+			}
+			/*重设滑块样式*/
+			input[type=range]::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				width: 25px;
+				height: 25px;
+				margin-top: -5px;
+				border: 1px solid rgba(133, 133, 133, 1);
+				border-radius: 50%;
+				background: #fff;
+				box-shadow: 1px 1px 2px #777;
+			}
+			/*重置轨道样式*/
+			input[type=range]::-webkit-slider-runnable-track {
+				height: 15px;
+				-webkit-border-radius: 15px;
+				border-radius: 15px;
+				box-shadow: 0 1px 1px #ddd, 0 1px 1px #666 inset;
+			}
+			
+			input[type=range]:focus {
+				-webkit-tap-highlight-color: none;
+				border: none;
+				outline: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="range" name="rangeSlider" id="rangeSlider" value="20" min="0" max="100" step="1" />
+		
+		<script type="text/javascript">
+			var rangeSlider = document.getElementById("rangeSlider");
+			rangeSlider.oninput = function() {
+				rangeSlider.style.background = "linear-gradient(90deg, cornflowerblue, white " + this.value + "%, white)";
+			}
+		</script>
+	</body>
+
+</html>

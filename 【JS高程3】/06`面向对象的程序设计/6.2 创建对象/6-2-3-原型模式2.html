@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			function Person() {}
+			
+			Person.prototype = {
+				//constructor: Person,
+				name: "yy",
+				age: 24,
+				job: "FrontEnd Engineer",
+				sayName: function() {
+					console.log(this.name);
+				}
+			};
+
+			var person1 = new Person();
+			var person2 = new Person();
+
+			person1.sayName();
+			person2.sayName();
+			
+			/**
+			 * 由于完全重写了默认的prototype对象，因此constructor属性也变成了
+			 * 新对象的constructor属性（指向Object构造函数），不再指向Person函数
+			 * */
+			console.log(person1 instanceof Object);
+			console.log(person1 instanceof Person);
+			console.log(person1.constructor == Person);
+			console.log(person1.constructor == Object);
+
+			console.log(person1.sayName == person2.sayName);
+			
+			/**
+			 * isPrototypeOf()方法：
+			 * 若（某个实例对象的）[Prototype]属性（指针）
+			 * 指向调用isPrototypeOf()方法的对象（Person.prototype），
+			 * （即指向该实例的原型对象），
+			 * 则该方法返回true。
+			 * */
+			console.log(Person.prototype.isPrototypeOf(person1));
+			console.log(Person.prototype.isPrototypeOf(person2));
+			
+			/**
+			 * ECMAScript 5 增加了一个新方法：Object.getPrototypeOf()
+			 * 该方法返回某个对象的原型对象
+			 * */
+			console.log(Object.getPrototypeOf(person1) == Person.prototype);
+			console.log(Object.getPrototypeOf(person1).name);
+			
+			/**
+			 * hasOwnProperty()方法：
+			 * 可以检测一个属性是存在于实例中，还是存在于原型中。
+			 * 这个方法只在给定属性存在于对象实例中时，才会返回true。
+			 * */
+			console.log(Person.prototype.hasOwnProperty("name"));
+			
+			console.log(person1.hasOwnProperty("name"));
+			person1.name = "qq";
+			console.log(person1.hasOwnProperty("name"));
+			person1.name = null;
+			console.log(person1.hasOwnProperty("name"));
+			delete person1.name;
+			console.log(person1.hasOwnProperty("name"));
+			
+			/**
+			 * in 操作符
+			 * 只要通过对象能够访问到给定属性就返回true
+			 * */
+			console.log("name" in person1);
+			
+			/**
+			 * 同时使用 hasOwnProperty()方法和 in 操作符，
+			 * 就可以确定该属性到底是存在于对象中，还是存在于原型中。
+			 * */
+			function hasPrototypeProperty (object, propertyName) {
+				return !object.hasOwnProperty(propertyName) && (propertyName in object);
+			}
+			console.log(hasPrototypeProperty(person1, "name"));
+
+			/**
+			 * Object.getOwnPropertyDescriptor(object, propertyname);
+			 * 获取指定对象的自身属性描述符。
+			 * 自身属性描述符是指直接在对象上定义（而非从对象的原型继承）的描述符。
+			 * 返回属性的描述符。
+			 * */
+			var descriptor = Object.getOwnPropertyDescriptor(Person.prototype, "name");
+			console.log(descriptor);
+			for (var prop in descriptor) {
+				console.log(prop + ":" + descriptor[prop]);
+			}
+			var jsonText = JSON.stringify(descriptor);
+			console.log(jsonText);
+			
+			console.log(Object.getOwnPropertyDescriptor(person1, "name"));
+		</script>
+	</body>
+
+</html>

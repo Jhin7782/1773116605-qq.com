@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="myList">
+			<li>li1</li>
+			<li>li2</li>
+			<li>li3</li>
+		</ul>
+		
+		<script type="text/javascript">
+			var myList = document.getElementById("myList");
+			var CN = myList.childNodes;
+			var CN_len = myList.childNodes.length;
+			console.log(CN_len);
+			for (var i = 0; i < CN.length; i++) {
+				console.log(CN[i].nodeName);
+			}
+			var PN = myList.childNodes[0].parentNode.nodeName;
+			console.log(PN);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="box"></div>
+		
+		<script type="text/javascript">
+			function getElement(id) {
+				if(document.getElementById) {
+					console.log("switch 1");
+					return document.getElementById(id);
+				} else if(document.all) {
+					console.log("switch 2");
+					return document.all(id);
+				} else {
+					console.log("switch 3");
+					throw new Error("No way to retrieve element!");
+				}
+			}
+			getElement("box");
+		</script>
+	</body>
+
+</html>

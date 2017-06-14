@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			img {
+				border: 10px solid;
+				/*display: none;*/
+			}
+			
+			canvas {
+				border: 1px solid;
+			}
+		</style>
+	</head>
+
+	<body>
+		<img id="baby" src="/_lib/img/baby01.png" />
+		<canvas id="drawing" width="600" height="600">don't support canvas</canvas>
+
+		<script type="text/javascript">
+			var img1 = document.images[0];
+			var img2 = document.getElementsByTagName("img")[0];
+			var img3 = document.getElementById("baby");
+//			console.log(img1 + "," + img2 + "," + img3);
+//			alert(img1 + "," + img2 + "," + img3);
+
+			var drawing = document.getElementById("drawing");
+			if(drawing.getContext) {
+				var context = drawing.getContext("2d");
+				//alert(img1.src); //无法通过src属性判断图片是否load完
+				//alert(img1.complete); //通过complete判断
+				window.onload = function() {
+					//alert(img1.src); //无法通过src属性判断图片是否load完
+					//alert(img1.complete); //无法通过complete判断
+					if (img1.complete) {
+						//alert(img1.src); //无法通过src属性判断图片是否load完
+						//alert(img1.complete); //无法通过complete判断
+						context.drawImage(img1, 35, 10, 230, 450, 10, 10, 230, 450);
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>

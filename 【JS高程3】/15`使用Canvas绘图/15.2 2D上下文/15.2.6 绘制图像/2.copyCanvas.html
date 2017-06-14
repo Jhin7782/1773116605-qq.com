@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			img {
+				border: 10px solid;
+				/*display: none;*/
+			}
+			
+			canvas {
+				border: 1px solid;
+			}
+		</style>
+	</head>
+
+	<body>
+		<img id="baby" src="/_lib/img/baby01.png" />
+		<canvas id="drawing" width="600" height="400">don't support canvas</canvas>
+		<canvas id="drawing2" width="600" height="400">don't support canvas</canvas>
+
+		<script type="text/javascript">
+			var img1 = document.images[0];
+			var img2 = document.getElementsByTagName("img")[0];
+			var img3 = document.getElementById("baby");
+			//console.log(img1 + "," + img2 + "," + img3);
+			//alert(img1 + "," + img2 + "," + img3);
+
+			var drawing = document.getElementById("drawing");
+			var drawing2 = document.getElementById("drawing2");
+			if(drawing.getContext) {
+				var context = drawing.getContext("2d");
+				var context2 = drawing2.getContext("2d");
+				window.onload = function() {
+					context.drawImage(img1, 35, 10, 230, 450, 10, 10, 230, 450);
+					context2.drawImage(drawing, 0, 0); //传入三个参数是复制整个canvas
+
+					var imgURI = drawing.toDataURL("image/png");
+					var image = document.createElement("img");
+					image.src = imgURI;
+					document.body.appendChild(image);
+				}
+			}
+		</script>
+	</body>
+
+</html>

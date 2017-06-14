@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#p5_mouth123 {
+				/*width: 11.55rem;
+				height: 4.925rem;
+				比例：2.34517766
+				* */
+				width: 8rem;
+				height: 3.4113rem;
+				position: absolute;
+				top: 11.55rem;
+				left: 4rem;
+				animation: mouth_scale 0.8s linear infinite alternate;
+				-webkit-animation: mouth_scale 0.8s linear infinite alternate;
+				-moz-animation: mouth_scale 0.8s linear infinite alternate;
+				-ms-animation: mouth_scale 0.8s linear infinite alternate;
+			}
+			@keyframes mouth_scale {
+				from{
+					transform: scale(1);
+				}
+				to{
+					transform: scale(1.05);
+				}
+			}
+			@-webkit-keyframes mouth_scale {
+				from{
+					/*transform: scale(1);*/
+					transform-origin: center;
+					transform: rotate(0deg);
+					/*margin-top: 0;*/
+					
+				}
+				to{
+					/*transform: scale(1.05);*/
+					transform-origin: center;
+					transform: rotate(45deg);
+					/*margin-top: 100px;*/
+				}
+			}
+			@-moz-keyframes mouth_scale {
+				from{
+					transform: scale(1);
+				}
+				to{
+					transform: scale(1.05);
+				}
+			}
+			@-ms-keyframes mouth_scale {
+				from{
+					transform: scale(1);
+				}
+				to{
+					transform: scale(1.05);
+				}
+			}
+			
+			
+			#money3123 {
+				background-color: springgreen;
+				width: 421px;
+				animation: fallingdown 1s linear infinite alternate;
+				-webkit-animation: fallingdown 1s linear infinite alternate;
+			}
+			@keyframes fallingdown{
+				from{
+					transform: scale(1);
+				}
+				to{
+					transform: scale(0.7);
+				}
+			}
+			@-webkit-keyframes fallingdown{
+				from{
+					transform: scale(1);
+				}
+				to{
+					transform: scale(0.7);
+				}
+			}
+			
+			#p2_input2 {
+				background: transparent;
+				position: absolute;
+				top: 9rem;
+				left: 4.2rem;
+				width: 200px;
+				/*border: 1px solid black;*/
+			}
+			
+			#p2_input::-webkit-input-placeholder {
+				color: red;
+				line-height: 1.2rem;
+				animation: scale_small 1s linear infinite alternate;
+				-webkit-animation: scale_small 1s linear infinite alternate;
+			}
+			
+			@keyframes scale_small {
+				from {
+					transform: scale(1);
+				}
+				to {
+					transform: scale(0.5);
+				}
+			}
+			
+			@-webkit-keyframes scale_small {
+				from {
+					-webkit-transform: scale(1);
+				}
+				to {
+					-webkit-transform: scale(0.5);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="money3">
+			<img id="money33" src="img/p1/money3.png"/>
+		</div>
+		<img id="p5_mouth" src="img/p5/mouth.png"/>
+		<input type="text" name="money333" id="p2_input2" value="" placeholder="hahah" />
+	</body>
+</html>

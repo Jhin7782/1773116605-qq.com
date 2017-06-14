@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			canvas {
+				border: 1px solid ;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="drawing" width="400" height="400"></canvas>
+		
+		<script type="text/javascript">
+			var drawing = document.getElementById("drawing");
+			if (drawing.getContext) {
+				var context = drawing.getContext("2d");
+				//保存上下文状态(设置和变换)进入栈结构
+				context.fillStyle = "rosybrown";
+				context.save();
+				
+				context.fillStyle = "royalblue";
+				context.translate(100, 100);
+				context.save();
+				
+				context.fillStyle = "mediumturquoise";
+				context.fillRect(0, 0, 100, 200);
+				
+				//使用restore()方法从栈顶取回context状态
+				context.restore();
+				context.fillRect(10, 10, 100, 200);
+				
+				context.restore();
+				context.fillRect(0, 0, 100, 200);
+				
+			}
+		</script>
+	</body>
+</html>

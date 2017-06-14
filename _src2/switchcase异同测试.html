@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="1">
+			111
+		</div>
+		<div id="2">
+			222
+		</div>
+		<div id="3">
+			333
+		</div>
+
+		<script type="text/javascript">
+			var myid = document.getElementsByTagName("div");
+			for(var i = 0; i < myid.length; i++) {
+				console.log(myid[i].id);
+				switch (myid[i].id){
+					case 1:
+						console.log("???");
+						myid[i].innerHTML = "new 1";
+						break;
+					case 2:
+						myid[i].innerHTML = "new 1";
+						break;
+					case 3:
+						myid[i].innerHTML = "new 1";
+						break;
+					default:
+						myid[i].innerHTML = "new";
+						break;
+				}
+			}
+		</script>
+	</body>
+
+</html>

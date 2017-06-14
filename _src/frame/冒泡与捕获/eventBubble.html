@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#parent {
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+			<input type="button" id="son" value="btn" />
+		</div>
+		
+		<script type="text/javascript">
+			var capture = document.getElementById("parent");
+			var bubble = document.getElementById("son");
+			
+			bubble.addEventListener("click", function() {
+				console.log("son clicked");
+			});
+			
+			capture.addEventListener("click", function() {
+				console.log("parent clicked");
+			});
+			
+		</script>
+	</body>
+</html>

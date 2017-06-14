@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<canvas id="drawing" width="" height=""></canvas>
+		
+		<script type="text/javascript">
+			var drawing = document.getElementById("drawing");
+			if(drawing.getContext) {
+				var context = drawing.getContext("2d");
+				context.fillStyle = "aquamarine";
+				context.strokeStyle = "mediumaquamarine";
+				
+				context.font = "30px microsoft yahei";
+				context.textAlign = "start";
+				context.textBaseline = "top";
+				context.fillText("hello fillText();", 10, 10);
+				context.font = "30px Microsoft Yahei";
+				context.strokeText("hello fillText();", 10, 50);
+				var TextMetrics = context.measureText("hello fillText();");
+				console.log(TextMetrics.width);
+			}
+		</script>
+	</body>
+
+</html>

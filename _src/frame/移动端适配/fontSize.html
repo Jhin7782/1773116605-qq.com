@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			#box {
+				width: 5rem;
+				height: 100px;
+				border: 1px solid lightblue;
+				box-sizing: content-box;
+				float: left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+			this is a box
+		</div>
+		<div id="box">
+			this is a box
+		</div>
+
+		<script type="text/javascript">
+			var docEle = document.documentElement;
+
+			function calcSize() {
+				var docEle_cw = docEle.clientWidth;
+				docEle.style.fontSize = 0.1 * (docEle_cw >= 720 ? 720 : docEle_cw) + "px";
+				console.log(docEle_cw);
+			}
+			
+			window.onload = function() {
+				calcSize();
+			}
+			window.onresize = function() {
+				calcSize();
+			}
+		</script>
+	</body>
+
+</html>

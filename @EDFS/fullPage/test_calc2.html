@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.8.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#p2_input {
+				background: transparent;
+				color: black;
+				font-size: 1.2rem;
+				position: absolute;
+				top: 6rem;
+				left: 4.2rem;
+				/*border: 1px solid black;*/
+				width: 8rem;
+				height: 1.2rem;
+				text-align: right;
+			}
+			#p2_input::-webkit-input-placeholder {
+				color: darkgray;
+				line-height: 1.2rem;
+				animation: scale_small 1s linear infinite alternate;
+				-webkit-animation: scale_small 1s linear infinite alternate;
+			}
+			#p2_location {
+				background: transparent;
+				width: 4rem;
+				height: 6rem;
+				position: absolute;
+				top: 17.5rem;
+				left: 23.8rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="parent" style="position: relative;">
+			<!--<img id="p2_slogan" src="img/p2/slogan.png" />-->
+			<img id="calc" src="img/p2/calc.png" />
+			<!--<span id="interest_rate">历史年化利率按9%计算</span>-->
+			<!--<img id="p2_btn" src="img/p2/btn.png" />-->
+			<!--<span id="p2_joinus">立即加入重油投资，挽回损失</span>-->
+			<input type="number" name="" id="p2_input" value="" placeholder="输入你的闲钱" />
+			<input type="button" id="p2_location" onclick="calc()"/>
+			<input type="button" name="wtf" id="wtf" value="wtf" />
+		</div>
+		<script type="text/javascript">
+			$('#p2_location').bind("click", function() {
+				var money = $("#p2_input").val() * -0.09;
+				$("#p2_input").val(money);
+			})
+//			$('#p2_location').click(function(event) {
+//				var money = $("#p2_input").val() * -0.09;
+//				$("#p2_input").val(money);
+//				//event.stopPropagation();
+//			})
+			
+//			function calc () {
+//				alert("dd");
+//			}
+		</script>
+	</body>
+</html>

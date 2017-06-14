@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr = new Array(3);
+			for (var i = 0; i < arr.length; i++) {
+				console.log(arr.length);
+				var ranFloat = Math.random();
+				arr.push(ranFloat); //在数组末尾添加数据，会改变数组长度
+				console.log(arr.length);
+				if (arr.length>3) {
+					break;
+				}
+			}
+			console.log(arr);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<span id="clock">
+			
+		</span>
+		<script type="text/javascript">
+			var num = 0;
+			clock_interval = setInterval(function() {
+				if(num < 3) {
+					num += 0.01;
+					num = num.toFixed(2);
+					num = parseFloat(num);
+					console.log(num);
+				} else {
+					clearInterval(clock_interval);
+				}
+			}, 10);
+		</script>
+	</body>
+
+</html>

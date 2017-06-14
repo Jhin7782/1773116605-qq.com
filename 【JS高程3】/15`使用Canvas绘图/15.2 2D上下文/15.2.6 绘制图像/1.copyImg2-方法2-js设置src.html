@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="/_lib/utils/EleUtil.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			img {
+				border: 10px solid;
+				/*display: none;*/
+			}
+			
+			canvas {
+				border: 1px solid;
+			}
+		</style>
+	</head>
+
+	<body class="Body">
+		<div class="img-box"></div>
+		<canvas id="drawing" width="600" height="600">don't support canvas</canvas>
+
+		<script type="text/javascript">
+			var newEle = EleUtil.createEle("Body", "img", "babys", "id", "", "/_lib/img/baby01.png", false);
+			var drawing = document.getElementById("drawing");
+			if (drawing.getContext) {
+				var ctx = drawing.getContext("2d");
+				window.onload = function() {
+//					ctx.drawImage(newEle, 0, 0);
+					ctx.drawImage(newEle, 0, 10, 300, 200, 30, 30, 200, 300);
+				}
+			}
+		</script>
+	</body>
+
+</html>
